@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  5 DEC 2025 10:17
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  9 DEC 2025 15:30
  restricted system commands enabled.
  file:line:error style messages enabled.
-**"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/2025Latex/thesis_format/thesis_format.tex"
-("c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/2025Latex/thesis_format/thesis_format.tex"
+**"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex"
+("c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex"
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -2114,9 +2114,9 @@ Here is how much of LuaTeX's memory you used:
    avail lists: 1:42,2:199623,3:839,4:31391,5:21655,6:111,7:17285,8:4,9:42834,10:33,11:1308
  77389 multiletter control sequences out of 65536+600000
  146 fonts using 137269487 bytes
- 125i,8n,141p,1977b,2054s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,8n,141p,2000b,2054s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb>
-Output written on thesis_format.pdf (14 pages, 2238262 bytes).
+Output written on thesis_format.pdf (14 pages, 2238412 bytes).
 
 PDF statistics: 433 PDF objects out of 1000 (max. 8388607)
  248 compressed objects within 3 object streams

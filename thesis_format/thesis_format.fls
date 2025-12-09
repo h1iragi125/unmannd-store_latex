@@ -1,6 +1,6 @@
-PWD c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/2025Latex/thesis_format
+PWD c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format
 INPUT c:/texlive/2025/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/2025Latex/thesis_format/thesis_format.tex
+INPUT c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex
 OUTPUT thesis_format.log
 INPUT c:/texlive/2025/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT c:/texlive/2025/texmf-dist/tex/latex/base/ltluatex.lua
