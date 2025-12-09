@@ -1,0 +1,33 @@
+\graphicspath{{./contents/chapter2/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
+\chapter{解析手法}
+	\section{サーマルカメラ}
+		本研究では、混雑状況の測定に\figref{Camera}のサーマルカメラで撮影された赤外線画像を用いる。このサーマルカメラはMLX90640赤外線アレイモジュールを搭載したM5Stack用赤外線画像ユニットであり、小型のマイコンボードであるM5Stackに接続することにより撮影を行うことができる。
+		
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics{MLX90640.png}
+			\caption{Melexis社　MLX90640}
+			\label{Camera}
+		\end{figure}
+	
+			\subsection{サーマルカメラの精度}
+				MLX90640の性能を\tabref{MLX90640}に示す。測定範囲は-40℃～+300℃であり、混雑状況のモニタリングの際に観測される温度は測定可能であると考えられる。
+				
+				\vspace{0.5\baselineskip}
+				\begin{table}[h]
+					\centering
+					\caption{MLX90640の精度}
+					\begin{tabular}{|c|r|}
+						\hline	動作電圧	& 3～3.6V \\
+						\hline	消費電流	&	23mA\\
+						\hline	視野	&  110°×75°\\
+						\hline	測定範囲	&	-40℃～+300℃\\
+						\hline	分解能	& ±1.5℃\\
+						\hline	リフレッシュレート	&	0.5Hz～64Hz\\
+						\hline	解像度	&	32×24ピクセル\\
+						\hline
+					\end{tabular}
+					\label{MLX90640}
+				\end{table}		
+				

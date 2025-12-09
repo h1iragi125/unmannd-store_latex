@@ -1,0 +1,16 @@
+% appendixで示すコードののディレクトリパス(絶対パスが使えなくなる & 一度に1つしか指定できないので注意)
+\lstset{inputpath=./contents/appendix/source_code/program_files/}
+\chapter{プログラム}
+
+	\section{ソースコード}
+		以下はソースコードです．
+		\ref{rinkaku}に輪郭抽出に用いた一連のプログラムを示す。
+		\hypertarget{rinkaku}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=findContours,label=rinkaku]{heatmap.py}
+		}
+	
+		\ref{machine}に機械学習に用いた一連のプログラムを示す。
+		\hypertarget{macine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=MachineLearning,label=machine]{countpeople.py}
+		}
+	
