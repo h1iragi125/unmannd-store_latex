@@ -1,0 +1,19 @@
+\documentclass[report]{jlreq} % 文書の種類(ドキュメントクラス)の指定
+\begin{document} % 文書の開始
+	\Large
+	二次方程式$ax^{2}+bx+c=0$の解は次の式で与えられる。　% $~$で本文中に数式を挿入
+	例えば、$\displaystyle \frac{分子}{分母}$で分数、　$\displaystyle \sqrt{x}$で根号、 $\pm$でプラスマイナス演算子、 $a^{2}$で上付き文字を出力可能
+	
+	\[x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}\] % \[~\]で別行数式(数式番号なし)
+	
+	\begin{equation}　% equation環境(式番号付き0)
+		x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}
+	\end{equation}
+	
+	運動方程式は式\eqref{motion}で表せる。
+	\begin{equation} 
+		F = ma
+		\label{motion}
+	\end{equation}
+	
+\end{document} % 文書の終了

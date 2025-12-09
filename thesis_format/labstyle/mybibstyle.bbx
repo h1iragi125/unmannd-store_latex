@@ -1,0 +1,76 @@
+\ProvidesFile{mybibstyle.bbx}[2022/12/01\space my bib style]
+% biblatex+biber(LuaLaTeX)用の文献リストスタイルファイル（不具合があるかも）
+% ieeeのスタイルをベースにカスタマイズしている(https://github.com/josephwright/biblatex-ieee/blob/main/ieee.bbx)
+\RequireBibliographyStyle{./labstyle/ieee}%	言語を表示する\printlist{language}のみコメントアウト済み
+
+\ExecuteBibliographyOptions{giveninits=false}%	イニシャル表示を無効化
+
+\DeclareFieldFormat*{title}{``{#1}''}%	IEEEのフォーマットではダブルクォーテーションの中にカンマが入る(\mkbibquote)ため修正
+\DeclareFieldFormat{url}{URL\addcolon\space\url{#1}}
+
+
+% 日本語文献かの判定用の変数
+\newboolean{japanese}
+\setboolean{japanese}{false}
+
+\renewcommand{\labelnamepunct}{\addcolon\addspace}
+% 日本語文献の場合の措置
+\AtEveryBibitem{
+	\iflistundef{language}{}{%
+		\ifthenelse{\equal{\thefirstlistitem{language}}{japanese}}{%
+			\setboolean{japanese}{true}%
+			\renewcommand*{\newunitpunct}{，}%
+			\renewcommand*{\finentrypunct}{．}%
+			\renewcommand*{\multinamedelim}{・}%
+			\renewcommand*{\finalnamedelim}{・}%
+			\renewcommand*{\revsdnamepunct}{\addspace}%
+			\renewcommand*{\labelnamepunct}{：}%
+			\renewcommand*{\bibpagespunct}{，}%
+			\renewcommand*{\subtitlepunct}{，}%
+			\renewcommand*{\bibpagerefpunct}{，}%
+			\renewcommand*{\intitlepunct}{　}%
+			%\renewcommand*{\newblockpunct}{***}%
+			%\renewcommand*{\multilistdelim}{***}%
+			%\renewcommand*{\finallistdelim}{***}%
+			%\renewcommand*{\bibeidpunct}{***}%
+			
+			\DeclareFieldFormat*{title}{『{#1}』}%	題目に二重括弧を設定
+			\DeclareFieldFormat{journaltitle}{#1\isdot}%	雑誌名の太字を修正
+			\DeclareFieldFormat{urldate}{#1 閲覧}
+			
+			\renewbibmacro*{doi+eprint+url}{%
+				\setunit{．}%
+				\iftoggle{bbx:doi}
+					{\printfield{doi}}
+					{}%
+				\setunit{．}%
+				\iftoggle{bbx:eprint}
+					{\usebibmacro{eprint}}
+					{}%
+				\setunit{．}%
+				\iftoggle{bbx:url}
+					{\usebibmacro{url+urldate}}
+					{}%
+			}
+			
+			\renewbibmacro*{publisher+location+date}{%
+				\printlist{location}%
+				\iflistundef{publisher}
+				{\setunit*{，}}
+				{\setunit*{：}}%
+				\printlist{publisher}%
+				\setunit*{，}%
+				\usebibmacro{date}%
+				\newunit
+			}
+			
+		}{}%
+	}%
+}
+
+\DefineBibliographyStrings{english}{%
+	volume = {Vol\adddot},%
+	volumes = {Vol\adddot},%
+	jourvol = {Vol\adddot},%
+	number = {No\adddot},%
+}

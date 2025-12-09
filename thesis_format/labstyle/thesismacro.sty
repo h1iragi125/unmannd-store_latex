@@ -1,0 +1,615 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 卒論・修論用スタイルファイル(TeX Live向け)  									%%
+%% thesismacro.sty for LuaLaTeX (\documentclass[report]{jlreq})						%%
+%% "lualatex.exe -synctex=1 -interaction=nonstopmode --shell-escape %.tex"で起動			%%
+%% 2023/10/4 Haruki Tayama from Seikei Senior High School							%%
+%% e-mail: dm226316@cc.seikei.ac.jp, harukitayama94@i.softbank.jp						%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+%\ProvidesPackage{thesismacro}[2022/9/4]
+%---------- PACKAGE INSTALL -------------
+\usepackage{luatexja}					% LuaLaTeXで日本語を使うパッケージ
+\renewcommand{\jlreqxkanjiskip}{.15\zw plus .1\zw minus .1\zw}		% 和文文字欧文文字間の空き量の指定
+\usepackage{luacode}					% Lua言語でプログラムする場合のパッケージ(luacode*環境で使える)
+
+\usepackage{graphicx}					% jpgはコマンドプロンプトから予め"extractbb ~.jpg"で.xbbを作成する必要あり
+\usepackage{color}						% 色の設定 & .pngと.jpgを出力する際に必要
+\usepackage{xcolor}
+\usepackage{svg}						% svgファイルの挿入で使う(Inkscapeをダウンロード後，--shell-escapeでTeXを起動)
+\usepackage{pgf}						% Pythonなどでpgfファイルを作成したときに使える．
+\usepackage{tikz, pgfplots}				% TeX内での図やグラフの描画で使う
+\pgfplotsset{compat=1.7}				% pgfplotsのバージョンの指定
+\usepackage{here}						% 図の配置（[H]で強制的に配置->非推奨）
+\usepackage{subcaption}					% 関連した複数の図を並べるために必要
+\usepackage{pdfpages}					% 複数ページのpdfの挿入("\includepdf{}")
+
+\usepackage{lscape}						% 横書きにするコマンドを使用可能にする(landscape環境)
+\usepackage{booktabs}					% 
+\usepackage{tabularx}
+\usepackage{multirow}					% 表におけるセル結合を可能にする
+\usepackage{csvsimple}					% 
+\usepackage{array}						% 表の罫線を補正するパッケージ
+\usepackage{arraycols}
+\usepackage{longtable}
+
+\usepackage{siunitx}			% SI単位系の指定($\si{unit}$)
+\usepackage{physics2}					% 数式簡略化コマンド
+\usepackage{bm}							% ベクトルなどの太字 (\bm)
+\usepackage{amsmath, amssymb}			% 数式全般
+\usepackage{amsfonts}
+\usepackage{cases}
+\usepackage{mathtools}
+%\usepackage{mathrsfs}
+%\usepackage{unicode-math}
+\usepackage{relsize}
+\allowdisplaybreaks						% 数式等がページをまたぐようにする--->\pagebreak\begin{}で解除
+
+\usepackage[%
+	unicode=true,								% lualatex
+	pdfencoding=auto,							% 
+	pdfversion=1.7,							% pdf version
+	bookmarks=true,								% 
+	bookmarksnumbered=true,						% bookmarks numbered
+	pdfusetitle,								% metadata("\maketitle"で作成したデータ)
+	colorlinks=true,							% colored link
+	citecolor=black,							% cite color
+	linkcolor=black,							% reference color
+	urlcolor=black,								% url color
+	pdfa,										% PDF/Aへの指定
+	hyperfootnotes=false,						% \footnote{}コマンドのリンクをつけない
+]{hyperref} 							% ハイパーリンク機能
+\usepackage{hyperxmp}									% PDF/Aの設定に必要
+\hypersetup{pdfapart=3,pdfaconformance=u,keeppdfinfo}	% PDF/A
+\usepackage{url}
+%\usepackage{pxjahyper} 				% 日本語のしおり付きPDF作成(lualatexでは使えない)
+\usepackage{intopdf}					% pdfファイルの埋め込み("\attachandlink{file}{description}{link text}")
+\usepackage{bookmark}
+
+\usepackage{layout}						% \layoutでページレイアウトの表示
+\usepackage{pxrubrica}					% 圏点
+\usepackage{multicol}
+\usepackage{xtab}						% supertabularの後継パッケージ
+\usepackage{calc}
+
+\usepackage{globalvals}					% グローバル変数の設定
+\usepackage{bxwareki}					% 年月日の和暦表示
+\usepackage{setspace}
+
+\usepackage[absolute,overlay]{textpos}	% textblockの座標位置指定
+\usepackage{adjustbox}
+\usepackage{ifthen}						% if文を使うパッケージ
+%\usepackage{fancyhdr}					% 柱・ノンブルを設定するパッケージ
+
+\usepackage{moreverb}									% 
+\usepackage[xcolor,framemethod=tikz]{mdframed}		% 
+\usepackage{listings}						% ソースコード挿入用パッケージ
+%\usepackage{jvlisting}					% ソースコード挿入(日本語対応用->現状luatexjaを使用 & 他のパケージと衝突する)
+
+\usepackage{dirtree}						% ディレクトリツリーの作成用
+
+%\renewcommand{\sfdefault}{phv}				% デフォルトのサンセリフ体をHelveticaに設定
+%\usepackage[no-math,haranoaji,deluxe,match,expert]{luatexja-preset}	% 和文フォントの設定
+
+\usepackage{animate}
+
+% ---------- FRONT PAGE -------------
+
+% Range Parameter & Decoration
+\newcommand{\thesiskindline}{0.16\paperheight}
+\newcommand{\titlecenterline}{0.29\paperheight}
+\newcommand{\facultycenterline}{0.62\paperheight}
+\newcommand{\authorcenterline}{0.685\paperheight}
+\newcommand{\advisorcenterline}{0.80\paperheight}
+\newcommand{\datecenterline}{0.835\paperheight}
+
+\textblockorigin{0mm}{0mm} % Origin of the textblock in the paper
+
+\def\titleJP#1{\gdef\@titleJP{#1}}
+\def\titleEN#1{\gdef\@titleEN{#1}}
+\def\advisor#1{\gdef\@advisor{#1}}
+\def\filingdate#1{\gdef\@filingdate{#1}}
+
+\def\grade#1{\gdef\@grade{#1}}
+\def\authorsnum#1{\gdef\@authorsnum{#1}}
+\def\wareki#1{\gdef\@wareki{#1}}
+\def\modified#1{\gdef\@modified{#1}}
+
+\newcommand{\firstauthor}[3]{%
+	\gdef\@firstauthorid{#1}
+	\gdef\@firstauthorlastname{#2}
+	\gdef\@firstauthorfirstname{#3}
+}
+
+\newcommand{\secondauthor}[3]{%
+	\gdef\@secondauthorid{#1}
+	\gdef\@secondauthorlastname{#2}
+	\gdef\@secondauthorfirstname{#3}
+}
+
+\newcommand{\thirdauthor}[3]{%
+	\gdef\@thirdauthorid{#1}
+	\gdef\@thirdauthorlastname{#2}
+	\gdef\@thirdauthorfirstname{#3}
+}
+
+\def\calcfiscalyear#1#2{%
+	\gdef\@fiscalyear{\number#1}
+	\gdef\@fiscalmonth{\number#2}
+}
+
+\def\filingdate#1#2#3{%
+	\gdef\@yyyyf{#1}
+	\gdef\@mmf{#2}
+	\gdef\@ddf{#3}
+}
+
+\def\firstmodifiddate#1#2#3{%
+	\gdef\@fstmdfy{#1}
+	\gdef\@fstmdfm{#2}
+	\gdef\@fstmdfd{#3}
+}
+
+\def\secondmodifiddate#1#2#3{%
+	\gdef\@secmdfy{#1}
+	\gdef\@secmdfm{#2}
+	\gdef\@secmdfd{#3}
+}
+
+% Initialization
+\titleJP{}
+\titleEN{}
+\advisor{}
+
+\grade{}
+\authorsnum{}
+\modified{}
+
+%年度計算用コマンド
+\begin{luacode*}
+	function calcnendo(y, m)
+		tmpm = m - 3
+		if (tmpm < 0) then
+			tmpy = y - 1
+		else
+			tmpy = y
+		end
+		tex.sprint(tmpy)
+	end
+\end{luacode*}
+
+% 表紙出力用コマンドの定義
+\newcommand{\fluidlabtitleformat}{%
+	\newpage\null
+	\begin{center}
+		\let\footnote\thanks
+		
+		% Thesis kind parts (Bachelor or Master or Doctor)
+		\begin{textblock*}{\linewidth}[0.5,0.5](0.5\paperwidth,\thesiskindline)
+			\Large
+			\directlua{calcnendo(\@fiscalyear, \@fiscalmonth)}%
+			年度
+			\ifthenelse{\equal{\@grade}{B4}}{\quad 卒業論文}{}
+			\ifthenelse{\equal{\@grade}{M1}}{\quad 修士論文}{}
+			\ifthenelse{\equal{\@grade}{M2}}{\quad 修士論文}{}
+		\end{textblock*}\par
+		
+		% Title parts (JPN/ENG)
+		\begin{textblock*}{\linewidth}[0.5,0.5](0.5\paperwidth,\titlecenterline)%
+			\ifx\@titleJP\empty\else{%
+				{\huge
+				\begin{spacing}{1.0}
+					{\@titleJP}%
+				\end{spacing}
+				}
+				%\leavevmode\\
+				\vspace{8mm}
+			}\fi
+			\ifx\@titleEN\empty\else{%
+				{\Large \@titleEN}%
+			}\fi
+		\end{textblock*}\par
+		
+		% Faculity Parts
+		\begin{textblock*}{0.8\linewidth}[0.5,0.5](0.5\paperwidth,\facultycenterline)%
+			\Large
+			\ifthenelse{\equal{\@grade}{B4}}{成蹊大学$\;$理工学部$\;$システムデザイン学科\\流体力学研究室}{}
+			\ifthenelse{\equal{\@grade}{M1}}{成蹊大学大学院$\;$理工学研究科$\;$理工学専攻\\流体力学研究室}{}
+			\ifthenelse{\equal{\@grade}{M2}}{成蹊大学大学院$\;$理工学研究科$\;$理工学専攻\\流体力学研究室}{}
+		\end{textblock*}\par
+		
+		% Author Parts
+		\begin{textblock*}{\linewidth}[0.5,0.5](0.5\paperwidth,\authorcenterline)
+			\LARGE
+			\ifnum \@authorsnum=1{%
+				\begin{tabular}{ccc}
+					\@firstauthorid & \quad \@firstauthorlastname & \@firstauthorfirstname \\
+				\end{tabular}
+			}
+			\else{%
+				\ifnum \@authorsnum=2{%
+					\begin{tabular}{ccc}
+						\@firstauthorid & \quad \@firstauthorlastname & \@firstauthorfirstname \\
+						\@secondauthorid & \quad \@secondauthorlastname & \@secondauthorfirstname \\
+					\end{tabular}
+				}
+				\else{%
+					\ifnum \@authorsnum=3{%
+						\begin{tabular}{ccc}
+							\@firstauthorid & \quad \@firstauthorlastname & \@firstauthorfirstname \\
+							\@secondauthorid & \quad \@secondauthorlastname & \@secondauthorfirstname \\
+							\@thirdauthorid & \quad \@thirdauthorlastname & \@thirdauthorfirstname \\
+						\end{tabular}
+					}
+					\else{%
+						error
+					}\fi
+				}\fi
+			}\fi
+		\end{textblock*}\par
+		
+		% advisor Parts
+		\begin{textblock*}{0.8\linewidth}[0.5,0.5](0.5\paperwidth,\advisorcenterline)%
+			\ifx\@advisor\empty\else
+				{\Large 指導教授：\@advisor\leavevmode\\}
+			\fi
+		\end{textblock*}\par
+		
+		% Date Part
+		\begin{textblock*}{0.6\linewidth}[0.5,0.0](0.5\paperwidth,\datecenterline)
+			\Large
+			\ifnum \@modified=0{%
+				\begin{tabular}{rrrr}
+					提出日\quad & \number\@yyyyf 年 & \number\@mmf 月 & \number\@ddf 日\\
+				\end{tabular}
+			}
+			\else{%
+				\ifnum \@modified=1{%
+					\begin{tabular}{rrrr}
+						提出日\quad & \number\@yyyyf 年 & \number\@mmf 月 & \number\@ddf 日\\
+						修正日\quad & \number\@fstmdfy 年 & \number\@fstmdfm 月 & \number\@fstmdfd 日\\
+					\end{tabular}
+				}
+				\else{%
+					\ifnum \@authorsnum=2{%
+						\begin{tabular}{rrrr}
+							提出日\quad & \number\@yyyyf 年 & \number\@mmf 月 & \number\@ddf 日\\
+							第一次修正日\quad & \number\@fstmdfy 年 & \number\@fstmdfm 月 & \number\@fstmdfd 日\\
+							第二次修正日\quad & \number\@secmdfy 年 & \number\@secmdfm 月 & \number\@secmdfd 日\\
+						\end{tabular}
+					}
+					\else{%
+						error
+					}\fi
+				}\fi
+			}\fi
+		\end{textblock*}\par
+		
+	\end{center}
+}
+
+% ---------- TAYAMACRO -------------
+% 式番号を章毎に設定するコマンド
+\makeatletter
+\@addtoreset{equation}{chapter}
+\renewcommand\theequation{\thechapter.\arabic{equation}}	% "\def"でも可
+\makeatother
+
+% '%'のフォントを修正するコマンド
+\if0
+\DeclareSymbolFont{operators}{OT1}{pxr}{m}{n} \SetSymbolFont{operators}{bold}{OT1}{pxr}{bx}{n} \def\operator@font{\mathgroup\symoperators}
+\let\%\relax \DeclareFontFamily{OT1}{pxr}{} \DeclareFontShape{OT1}{pxr}{m}{n}{<->pxr}{} \DeclareSymbolFont{letA}{OT1}{pxr}{m}{n} \DeclareMathSymbol{\%}{0}{letA}{`\%}
+\fi
+
+% 参照時の表示の設定（「図1.1(a)」のように参照）
+\captionsetup[subfigure]{labelformat=simple}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+
+% ハイパーリンク付き参照コマンド
+\usepackage[nameinlink]{cleveref}
+% 章の参照
+\crefformat{chapter}{#2第#1章#3}
+\newcommand{\chapref}[1]{\cref{#1}}
+% 節の参照
+%\crefname{section}{}{}
+\crefformat{section}{#2#1節#3}
+\newcommand{\secref}[1]{\cref{#1}}
+% 小節の参照
+%\crefname{subsection}{}{}
+\crefformat{subsection}{#2#1節#3}
+% 図の参照
+\crefname{figure}{図}{図}		% {環境名}{単数形}{複数形}
+\crefformat{figure}{#2図#1#3}
+\newcommand{\figref}[1]{\cref{#1}}
+% 表の参照
+\crefname{table}{表}{表}
+\crefformat{table}{#2表#1#3}
+\newcommand{\tabref}[1]{\cref{#1}}
+% 式の参照
+\crefname{equation}{式}{式}
+\crefformat{equation}{#2式(#1)#3}
+\newcommand{\formref}[1]{\cref{#1}}
+% 付録の参照
+\crefname{appendix}{付録}{付録}
+\crefformat{appendix}{#2付録#1#3}
+\newcommand{\appref}[1]{\cref{#1}}
+% ソースコードの参照
+\crefname{listing}{ソースコード}{ソースコード}
+\crefformat{listing}{#2ソースコード#1#3}
+\newcommand{\scref}[1]{\cref{#1}}
+
+\newcommand{\crefpairconjunction}{，}
+\newcommand{\crefrangeconjunction}{--}
+\newcommand{\crefmiddleconjunction}{，}
+\newcommand{\creflastconjunction}{，及び}
+
+% \imageboxコマンド（サイズが異なる複数図を中央揃えかつキャプション位置を揃えるときに使用）
+\newsavebox{\imagebox}
+
+% ---------- TABLE OF CONTENTS -------------
+\makeatletter
+\def\l@chapter{%
+	% |\@dottedtocline|の代わりに独自の命令を使う
+	\my@dottedtocline
+	{0}%                    見出しのレベル（chapterは0）
+	{0.25\baselineskip}%    章間の行間
+	{0pt}%                  字下げ
+	{5\zw}%                 ラベル（「第1章」等）の幅
+	{\sffamily\gtfamily}%   フォント
+}
+% jlreqの|\@dottedtocline|を元に独自の命令を定義
+\def\my@dottedtocline#1#2#3#4#5#6#7{%
+	\jlreq@set@top@contents{#1}%
+	\ifnum #1>\c@tocdepth \else
+	\vskip #2\relax
+	{\leftskip #3\relax \rightskip \@tocrmarg \parfillskip -\rightskip
+		\parindent #3\relax\@afterindenttrue
+		\interlinepenalty\@M
+		\leavevmode
+		\@lnumwidth #4\relax
+		\@tempcnta=#1\relax
+		\advance\@tempcnta by -\jlreq@top@contents
+		\@tempdima=1\jlreq@mol
+		\multiply \@tempdima by \@tempcnta
+		\advance\leftskip \@lnumwidth \hbox{}\hskip -\leftskip
+		\advance\leftskip\@tempdima
+		{#5#6}\nobreak
+		%\leaders\hbox{$\m@th\mkern \@dotsep mu$\null\inhibitglue ・\inhibitglue\null$\m@th\mkern \@dotsep mu$}%		間を点線で埋める
+		\hfill\nobreak
+		%\hb@xt@\@pnumwidth{\hss\normalfont\normalcolor #7}%
+		\hb@xt@\@pnumwidth{\hss\normalfont\normalcolor \textbf{#7}}%
+		\par}%
+	\fi}
+\makeatother
+\setcounter{tocdepth}{1}	% chapter->0, section->1, subsection->2
+
+% ---------- INCLUDE SOURCE CODE -------------
+\renewcommand{\lstlistingname}{ソースコード}
+
+\usepackage{luatexja-fontspec}
+\newjfontfamily{\myjlstfamily}[%
+	YokoFeatures={JFM=jlreq},%
+	CharacterWidth=AlternateProportional,%
+]{HaranoAjiGothic}		% 原ノ味ゴシックのフォント定義
+
+\lstset{% listingsのグローバル設定
+	columns=fixed,  		% 等幅
+	basewidth=0.525em,  	% 字間詰め
+	%lineskip=baselineskip,	% 行間詰め
+	tabsize=4,				% タブの大きさ
+	captionpos = t,			% キャプションの場所("tb"ならば上下両方に記載)
+	breaklines=true,						% 枠外に行った時の自動改行
+	%breakindent=10pt,					% 自動改行後のインデント量(デフォルトでは20[pt])
+	frame=TBrl,	%枠：小文字->単重線，大文字->二重線(他:leftline,topline,bottomline,lines,single,shadowbox)
+	%framesep = 5pt,						% frameまでの間隔(行番号とプログラムの間)
+	numbers=left,							% 行番号の位置
+	stepnumber=1,							% 行番号の間隔
+	numberstyle=\ttfamily\scriptsize,		% 行番号の書体
+	basicstyle={\ttfamily \myjlstfamily \footnotesize},	% 標準の書体
+	commentstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{008000}},% コメントの書体(緑)日本語->"\myjlstfamily"で定義
+}
+
+% default setting
+\lstdefinestyle{mydefaultstyle}{%
+	%language={},						% プログラム言語(複数の言語に対応，C,C++も可)
+	%backgroundcolor={\color[gray]{.90}},	% 背景色と透過度
+	breaklines=true,						% 枠外に行った時の自動改行
+	%breakindent=10pt,					% 自動改行後のインデント量(デフォルトでは20[pt])
+	frame=TBrl,	%枠：小文字->単重線，大文字->二重線(他:leftline,topline,bottomline,lines,single,shadowbox)
+	%framesep = 5pt,						% frameまでの間隔(行番号とプログラムの間)
+	numbers=left,							% 行番号の位置
+	stepnumber=1,							% 行番号の間隔
+	numberstyle=\ttfamily\scriptsize,		% 行番号の書体
+	basicstyle={\ttfamily \myjlstfamily \footnotesize},	% 標準の書体
+	commentstyle={\ttfamily\myjlstfamily \footnotesize},% コメントの書体/日本語->"\myjlstfamily"で定義
+	stringstyle={\ttfamily\myjlstfamily \footnotesize},% str(文字列)のフォント設定
+}
+
+% Python Script setting
+\lstdefinestyle{mypystyle}{%
+	language={Python},						% プログラム言語(複数の言語に対応，C,C++も可)
+	%backgroundcolor={\color[gray]{.90}},	% 背景色と透過度
+	stringstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{a31515}},% str(文字列)のフォント設定(茶)
+	classoffset=0,deletekeywords={open,close,print,type,format},% 以下で修正するkeywords
+	classoffset=4,keywordstyle={\ttfamily \footnotesize \color[HTML]{8d5e26}},morekeywords={open,close,print},% 関数
+	classoffset=5,keywordstyle={\ttfamily \footnotesize \color[HTML]{af00db}},morekeywords={import,from,as,with,if,for,while,in,},% 予約語(keywords)の書体(紫)
+	classoffset=6,keywordstyle={\ttfamily \footnotesize \color[HTML]{001080}},morekeywords={format,type},% 個別に設定が必要なワード
+	identifierstyle={\ttfamily\footnotesize \color[HTML]{001080}},				% 変数名のフォントを設定(青)
+}%
+
+\lstnewenvironment{MyPythonScript}[1][]{%	PythonScript環境で使えるようにする
+	\lstset{style=mypystyle,
+	#1
+	}
+}{}
+
+% XML Script setting
+\lstdefinestyle{myxmlstyle}{%
+	language={XML},						% プログラム言語(複数の言語に対応，C,C++も可)
+	%backgroundcolor={\color[gray]{.90}},	% 背景色と透過度
+	stringstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{a31515}},% str(文字列)のフォント設定(茶)
+	%classoffset=0,deletekeywords={open,close,print,type,format},% 以下で修正するkeywords
+	%classoffset=4,keywordstyle={\ttfamily \footnotesize \color[HTML]{8d5e26}},morekeywords={open,close,print},% 関数
+	%classoffset=5,keywordstyle={\ttfamily \footnotesize \color[HTML]{af00db}},morekeywords={import,from,as,with,if,for,while,in,},% 予約語(keywords)の書体(紫)
+	%classoffset=6,keywordstyle={\ttfamily \footnotesize \color[HTML]{001080}},morekeywords={format,type},% 個別に設定が必要なワード
+	%identifierstyle={\ttfamily\footnotesize \color[HTML]{001080}},				% 変数名のフォントを設定(青)
+}%
+
+\lstnewenvironment{MyXMLScript}[1][]{%	PythonScript環境で使えるようにする
+	\lstset{style=mypystyle,
+	#1
+	}
+}{}
+
+% LaTeX .tex Script setting
+\lstdefinestyle{mylatexstyle}{%
+	language=[LaTeX]{TeX},					% TeX言語
+	backgroundcolor={\color[gray]{.90}},	% 背景色と透過度
+	breaklines=true,						% 枠外に行った時の自動改行
+	%breakindent=10pt,					% 自動改行後のインデント量(デフォルトでは20[pt])
+	frame=none,	%枠：小文字->単重線，大文字->二重線(他:leftline,topline,bottomline,lines,single,shadowbox)
+	%framesep = 5pt,						% frameまでの間隔(行番号とプログラムの間)
+	numbers=left,							% 行番号の位置
+	stepnumber=1,							% 行番号の間隔
+	numberstyle=\ttfamily\scriptsize,		% 行番号の書体
+	basicstyle={\ttfamily\footnotesize},	% 標準の書体
+	commentstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{008000}},% コメントの書体(緑)日本語->"\myjlstfamily"で定義
+	stringstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{a31515}},% str(文字列)のフォント設定(茶)
+	identifierstyle={\ttfamily\footnotesize \color[HTML]{001080}},				% 変数名のフォントを設定(青)
+}%
+\lstnewenvironment{LaTeXScript}[1][]{%
+	\lstset{style=mylatexstyle,
+	#1
+	}
+}{}
+
+% LaTeX .sty Script setting
+\lstdefinestyle{mytexstystyle}{%
+	language=[LaTeX]{TeX},					% TeX言語
+	%backgroundcolor={\color[gray]{.90}},	% 背景色と透過度
+	breaklines=true,						% 枠外に行った時の自動改行
+	%breakindent=10pt,						% 自動改行後のインデント量(デフォルトでは20[pt])
+	frame=TBrl,	%枠：小文字->単重線，大文字->二重線(他:leftline,topline,bottomline,lines,single,shadowbox)
+	%framesep = 5pt,						% frameまでの間隔(行番号とプログラムの間)
+	numbers=left,							% 行番号の位置
+	stepnumber=1,							% 行番号の間隔
+	numberstyle=\ttfamily\scriptsize,		% 行番号の書体
+	basicstyle={\ttfamily\footnotesize},	% 標準の書体
+	commentstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{008000}},% コメントの書体(緑)日本語->"\myjlstfamily"で定義
+	stringstyle={\ttfamily\myjlstfamily \footnotesize \color[HTML]{a31515}},% str(文字列)のフォント設定(茶)
+	identifierstyle={\ttfamily\footnotesize \color[HTML]{001080}},				% 変数名のフォントを設定(青)
+}%
+\lstnewenvironment{TeXstyScript}[1][]{%
+	\lstset{style=mytexstystyle,
+	#1
+	}
+}{}
+
+% ---------- DIRECTORY TREE -------------
+% アイコン表示（ディレクトリツリー内で参照）
+\newcommand{\baticon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/bat_file.png}}\;}
+\newcommand{\csvicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/csv_file.png}}\;}
+\newcommand{\excelicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/excel_file.png}}\;}
+\newcommand{\fileicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/file.png}}\;}
+\newcommand{\foldericon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/folder.png}}\;}
+\newcommand{\imgicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/img_file.png}}\;}
+\newcommand{\isoicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/iso_file.png}}\;}
+\newcommand{\movieicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/movie_file.png}}\;}
+\newcommand{\mpicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/mp_file.png}}\;}
+\newcommand{\mpficon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/mp4_file.png}}\;}
+\newcommand{\pdficon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/pdf_file.png}}\;}
+\newcommand{\ppticon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/ppt_file.png}}\;}
+\newcommand{\psicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/ps_file.png}}\;}
+\newcommand{\pythonicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/python_file.png}}\;}
+\newcommand{\texicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/tex_file.png}}\;}
+\newcommand{\txticon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/txt_file.png}}\;}
+\newcommand{\vspyicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/vs_py_file.png}}\;}
+\newcommand{\zipicon}{\raisebox{-4pt}{\includegraphics[keepaspectratio,height=16pt]{./labstyle/icon_imgs/zip_file.png}}\;}
+
+% ---------- REFERENCE ----------
+\RequirePackage{kvoptions}
+
+% 参考文献設定->この.styファイル読み込み時にオプションで指定（thebibenv->thebibliography環境，usebiber->biblatex+biber）
+\DeclareBoolOption[false]{thebibenv}
+\DeclareBoolOption[false]{usebiber}
+
+\ProcessKeyvalOptions*
+\makeatletter
+% 参考文献章の作成にthebibliography環境を使用する際の設定
+\ifthesismacro@thebibenv
+	\renewenvironment{thebibliography}[1]{%
+		%　jlreq.cls内で定義されているthebibliography環境を再定義(\chapter*{\refname}で「参考文献」を出力に修正)
+		\jlreq@oldfontcommand@enable
+		\phantomsection\chapter{\refname}% default:section*{}
+		\@mkboth{\refname}{\refname}%
+		\list{\@biblabel{\@arabic\c@enumiv}}%
+		{\settowidth\labelwidth{\@biblabel{#1}}%	\newcommand内でrenewenvironment(環境の再定義)のため##1
+		\labelsep=1\jlreq@zw
+		\leftmargin\labelwidth
+		\advance\leftmargin\labelsep
+		\itemindent=0pt
+		\@openbib@code
+		\usecounter{enumiv}%
+		\let\p@enumiv\@empty
+		\renewcommand\theenumiv{\@arabic\c@enumiv}}%
+		\sloppy
+		\clubpenalty4000
+		\@clubpenalty\clubpenalty
+		\widowpenalty4000%
+		\sfcode`\.\@m
+	}{%
+		\def\@noitemerr{\@latex@warning{Empty~`thebibliography'~environment}}%
+		\endlist
+		\jlreq@oldfontcommand@disable
+	}
+	\let\@openbib@code\@empty
+	
+	% 本文中での参考文献の参照を上付きで表示させるコマンド
+	\usepackage[superscript]{cite}				% citeパッケージ（上付き引用の設定）
+	%\renewcommand\citeform[1]{[##1]}
+	\def\@citess#1{\textsuperscript{[#1]}}
+\fi
+
+% 参考文献章の作成にbiberを使用する際の設定
+\ifthesismacro@usebiber
+	\RequirePackage[%
+		backend=biber,						% biberを使用
+		autocite=superscript,				%　引用スタイルを上付き文字にする("autocite{}"or"supercite"で引用)
+		sorting=none,						% 引用された順にsorrtする
+		%citestyle=numeric-comp,			% 引用スタイル（compressed：複数指定した場合に範囲として表示 or 引用スタイルファイル.cbxを指定)
+		%bibstyle=ieee,						% 文献リストスタイル(or 文献リストスタイルファイル.bbxを指定)
+		style=./labstyle/mybibstyle,			% 文献リスト及び引用スタイル(同一名の.bbx&.cbx)--->どちらかを指定する場合はbibstyle or citestyle(IEEEstyleをベースに日本語対応化・不具合があるかも)
+	]{biblatex}						% 文献リスト(.bib)からの文献引用パッケージ
+	
+	\defbibheading{bibliography}[\refname]{\phantomsection\chapter{参考文献}}	% 章題として「参考文献」を表示
+	
+	% 本文中において上付き文字で参考文献を参照するようにするコマンド
+	\newrobustcmd*{\mkbibbracketedsuperscript}[1]{\mkbibsuperscript{\mkbibbrackets{#1}}}	% "##1"はnewcommand内で記述しているため
+	\DeclareCiteCommand{\supercite}[\mkbibbracketedsuperscript]{%
+		\usebibmacro{cite:init}%
+		\let\multicitedelim=\supercitedelim\iffieldundef{prenote}{}{\BibliographyWarning{Ignoring prenote argument}}%
+		\iffieldundef{postnote}{}{\BibliographyWarning{Ignoring postnote argument}}}%
+	{\usebibmacro{citeindex}%
+		\usebibmacro{cite:comp}}{}{\usebibmacro{cite:dump}}
+	\DeclareMultiCiteCommand{\supercites}[\mkbibbracketedsuperscript]{\supercite}{\supercitedelim}
+	
+	
+	% 文献リストの表示レイアウトの設定（参考文献ページ）
+	\defbibenvironment{bibliography}{%
+		\list{\printtext[labelnumberwidth]{\printfield{prefixnumber}\printfield{labelnumber}}}
+		{\setlength{\labelsep}{1em}%
+			\setlength{\itemsep}{0.5\baselineskip}%
+			\setlength{\baselineskip}{1.0\baselineskip}%
+		}%
+		%\renewcommand*{\makelabel}[1]{\hss##1}
+	}
+	{\endlist}
+	{\item}
+	
+	\let\cite=\autocite
+	\let\cites=\autocites
+\fi
+\makeatother
+
+\endinput

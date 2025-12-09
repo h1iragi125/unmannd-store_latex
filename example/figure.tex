@@ -1,0 +1,12 @@
+\documentclass[report]{jlreq} % 文書の種類(ドキュメントクラス)の指定
+\usepackage{graphicx} % 図の挿入
+\begin{document}
+	\Large
+	図\ref{samplefig}はサンプル画像である。
+	\begin{figure}[h]　% 図の自動配置
+		\centering % 中央揃えの指定
+		\includegraphics[scale=0.5]{./figure/sample.png}
+		\caption{sample}
+		\label{samplefig}
+	\end{figure}
+\end{document}

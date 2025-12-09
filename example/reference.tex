@@ -1,0 +1,9 @@
+\documentclass[report]{jlreq} % 文書の種類(ドキュメントクラス)の指定
+\begin{document}
+	\Large
+	本文中での参照は\verb|\cite{bibid}|コマンドを用いて、\cite{book}
+	上付きの場合は、$^{\cite{book}}$
+	\begin{thebibliography}{99} % 参考文献のリストに設定する番号の桁数
+		\bibitem{book} 奥村晴彦/黒木祐介：[改訂第8版]\LaTeXe  美文書作成入門, 技術評論社,　2020.
+	\end{thebibliography}
+\end{document}
