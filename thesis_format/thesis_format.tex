@@ -9,7 +9,7 @@
 %\addbibresource{./contents/reference/reference.bib}	% 参考文献リスト(.bib)を指定(biberの実行が必要)
 
 % 和題("\\"で任意の改行位置を設定可能)
-\titleJP{IoTを用いた無人店舗における\\遠隔在庫把握システムの構築}
+\titleJP{IoTを用いた無人店舗における\\[-1.0em]遠隔在庫把握システムの構築}
 % 英題（"\\"で任意の改行位置を設定可能）
 \titleEN{Development of a Remote Inventory Monitoring System \\for Unmanned Retail Stores Using IoT}
 % 著者の学年(B4卒業論文->B4，修士論文->M2)
@@ -17,8 +17,8 @@
 % 著者の人数(単著->1，共著->2 or 3)
 \authorsnum{2}
 % "\(n th)auther{student ID}{lastname}{firstname}"->(不要な箇所は空白 or コメントアウト・削除)
-\firstauthor{M222221}{今井}{直幸}
-\secondauthor{M222222}{今井}{直太郎}
+\firstauthor{S226109}{前澤}{柊飛}
+\secondauthor{S226003}{秋元}{大生}
 %\thirdauthor{M222222}{石塚}{伶}
 % 指導教員名
 \advisor{小川 隆申}
@@ -31,10 +31,10 @@
 
 % PDFメタデータの設定(任意)
 \hypersetup{%
-	pdftitle={論文フォーマット},				% PDFタイトル
-	pdfsubject={template},					% PDFサブタイトル
-	pdfauthor={Naoyuki Imai},				% 著者
-	pdfkeywords={LuaLaTeX,template},		% キーワード
+	pdftitle={IoTを用いた無人店舗における遠隔在庫把握システムの構築},				% PDFタイトル
+	pdfsubject={Development of a Remote Inventory Monitoring System for Unmanned Retail Stores Using IoT}					% PDFサブタイトル
+	pdfauthor={前澤 柊飛, 秋元 大生}				% 著者
+	pdfkeywords={IoT,Stores,店舗,Remote,遠隔,Monitoring,在庫把握}		% キーワード
 }
 
 \begin{document}
@@ -60,14 +60,23 @@
 	% ---　序論(chapter1)
 	\include{./contents/chapter1/introduction}
 	
-	% ---　ex)解析手法(chapter2)
-	\include{./contents/chapter2/method}
+	% ---　画像処理によるデータ収集(chapter2)
+	\include{./contents/chapter2/image_processing}
 	
-	% --- ex)結果(chapter3)
-	\include{./contents/chapter3/result}
+	% ---　超音波センサによるデータ収集(chapter3)
+	\include{./contents/chapter3/dis_sensor}
 	
-	% --- 結論(chapter4)
-	\include{./contents/chapter4/conclusion}
+	% --- デプスカメラによるデータ収集(chapter4)
+	\include{./contents/chapter4/depth_camera}
+
+	% --- IoT技術の比較と選択(chapter5)
+	\include{./contents/chapter5/IoT_conparion}
+
+	% --- LINE BOTを用いた遠隔在庫把握(chapter6)
+	\include{./contents/chapter6/line_bot}
+
+	% --- 結論(chapter7)
+	\include{./contents/chapter7/conclusion}
 	
 	\backmatter			% \chapter毎に\phantomsectionの設定が必要(これでハイパーリンクを設定)
 	

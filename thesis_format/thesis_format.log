@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  18 DEC 2025 16:16
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  18 DEC 2025 17:03
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex"
@@ -1731,7 +1731,7 @@ Package translations Info: No language package found. I am going to use `english
 LaTeX Warning: Unused global option(s):
     [jlreq_warnings].
 
-(./thesis_format.aux (./contents/sub/symbols.aux) (./contents/chapter1/introduction.aux) (./contents/chapter2/method.aux) (./contents/chapter3/result.aux) (./contents/chapter4/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
+(./thesis_format.aux (./contents/sub/symbols.aux) (./contents/chapter1/introduction.aux) (./contents/chapter2/image_processing.aux) (./contents/chapter3/dis_sensor.aux) (./contents/chapter4/depth_camera.aux) (./contents/chapter5/IoT_conparion.aux) (./contents/chapter6/line_bot.aux) (./contents/chapter7/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
 \openout1 = thesis_format.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -1936,7 +1936,7 @@ LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <15.14037> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 14.00003pt on input line 4.
-<./contents/chapter1/figures/gakushoku.png, id=64, 593.0958pt x 338.2236pt>
+<./contents/chapter1/figures/gakushoku.png, id=69, 593.0958pt x 338.2236pt>
 File: ./contents/chapter1/figures/gakushoku.png Graphic file (type png)
 <use ./contents/chapter1/figures/gakushoku.png>
 Package luatex.def Info: ./contents/chapter1/figures/gakushoku.png  used on input line 12.
@@ -1950,9 +1950,9 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 
 <./contents/chapter1/figures/gakushoku.png>]
-\openout2 = ./contents/chapter2/method.aux
- (./contents/chapter2/method.tex
-<./contents/chapter2/figures/MLX90640.png, id=74, 138.9555pt x 83.1105pt>
+\openout2 = ./contents/chapter2/image_processing.aux
+ (./contents/chapter2/image_processing.tex
+<./contents/chapter2/figures/MLX90640.png, id=79, 138.9555pt x 83.1105pt>
 File: ./contents/chapter2/figures/MLX90640.png Graphic file (type png)
 <use ./contents/chapter2/figures/MLX90640.png>
 Package luatex.def Info: ./contents/chapter2/figures/MLX90640.png  used on input line 9.
@@ -1982,8 +1982,8 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 
 
 <./contents/chapter2/figures/MLX90640.png>]
-\openout2 = ./contents/chapter3/result.aux
- (./contents/chapter3/result.tex)
+\openout2 = ./contents/chapter3/dis_sensor.aux
+ (./contents/chapter3/dis_sensor.tex)
 
 [3
 
@@ -1991,10 +1991,37 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 
 
 ]
-\openout2 = ./contents/chapter4/conclusion.aux
- (./contents/chapter4/conclusion.tex)
+\openout2 = ./contents/chapter4/depth_camera.aux
+ (./contents/chapter4/depth_camera.tex)
 
 [4
+
+
+
+
+]
+\openout2 = ./contents/chapter5/IoT_conparion.aux
+ (./contents/chapter5/IoT_conparion.tex)
+
+[5
+
+
+
+
+]
+\openout2 = ./contents/chapter6/line_bot.aux
+ (./contents/chapter6/line_bot.tex)
+
+[6
+
+
+
+
+]
+\openout2 = ./contents/chapter7/conclusion.aux
+ (./contents/chapter7/conclusion.tex)
+
+[7
 
 
 
@@ -2003,7 +2030,7 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 \openout2 = ./contents/reference/reference.aux
  (./contents/reference/reference.tex)
 
-[5
+[8
 
 
 
@@ -2013,7 +2040,7 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 \openout2 = ./contents/sub/acknowledgement.aux
  (./contents/sub/acknowledgement.tex)
 
-[6
+[9
 
 
 
@@ -2092,7 +2119,7 @@ File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
 Package caption Warning: Unused \captionsetup[subfigure] on input line 306.
 See the caption package documentation for explanation.
 
-(./thesis_format.aux (./contents/sub/symbols.aux) (./contents/chapter1/introduction.aux) (./contents/chapter2/method.aux) (./contents/chapter3/result.aux) (./contents/chapter4/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
+(./thesis_format.aux (./contents/sub/symbols.aux) (./contents/chapter1/introduction.aux) (./contents/chapter2/image_processing.aux) (./contents/chapter3/dis_sensor.aux) (./contents/chapter4/depth_camera.aux) (./contents/chapter5/IoT_conparion.aux) (./contents/chapter6/line_bot.aux) (./contents/chapter7/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2104,19 +2131,19 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56188 strings out of 475506
- 1166548,2373549 words of node,token memory allocated
+ 56314 strings out of 475506
+ 1166544,2373549 words of node,token memory allocated
  1415 words of node memory still in use:
    11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 247 attribute, 100 glue_spec, 34 attribute_list, 4 write, 14 user_defined nodes
-   avail lists: 1:36,2:199623,3:839,4:31391,5:21655,6:111,7:17285,8:3,9:42834,10:33,11:1308
- 77385 multiletter control sequences out of 65536+600000
+   avail lists: 1:50,2:199623,3:839,4:31391,5:21655,6:111,7:17285,8:5,9:42834,10:45,11:1308
+ 77442 multiletter control sequences out of 65536+600000
  145 fonts using 137137799 bytes
  125i,8n,141p,2000b,2054s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb>
-Output written on thesis_format.pdf (14 pages, 2239284 bytes).
+<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on thesis_format.pdf (17 pages, 2258205 bytes).
 
-PDF statistics: 420 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 174 named destinations out of 1000 (max. 131072)
- 143 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 448 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 180 named destinations out of 1000 (max. 131072)
+ 167 words of extra memory for PDF output out of 10000 (max. 100000000)
 
