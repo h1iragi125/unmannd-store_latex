@@ -1,17 +1,17 @@
 \graphicspath{{./contents/chapter3/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
 \chapter{超音波センサによるデータ収集}
 	\section{使用する超音波センサの説明}
-		次に、超音波センサを用いてセンサと商品間の距離を計測した。使用したセンサはRainbow E-Technology社のHR-SC04である。このセンサは単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。マイコンボードにはRaspberry Pi Pico 2 WHを使用した。
+		次に、超音波センサを用いてセンサと商品間の距離を計測した。使用したセンサはDFRobot社のSEN0581とである。このセンサは単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。マイコンボードにはRaspberry Pi Pico 2 WHを使用した。
 
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
 			\centering
 			\includegraphics{hcsr04.jpg}
 			\caption{Rainbow E-Technology社 HC-SR04}
-			\label{Camera}
+			\label{ultrasound_sensor}
 		\end{figure}
 	
-			\subsection{超音波センサの精度}
+			\subsection{超音波センサの性能}
 				HC-SR04の性能を\tabref{HC-SR04}に示す。測定可能距離は0.02m～4.5mであり、商品棚での在庫検出は可能であると考えられる。
 				
 				\vspace{0.5\baselineskip}
@@ -19,8 +19,8 @@
 					\centering
 					\caption{HC-SR04の精度}
 					\begin{tabular}{|c|r|}
-						\hline	動作電圧	& 3~5.5V \\
-						\hline	測定可能距離	& 0.02~4.5m\\
+						\hline	動作電圧	& 3～5.5V \\
+						\hline	測定可能距離	& 0.02～4.5m\\
 						\hline	測定方式	& 超音波 \\
 						\hline	動作温度	& -10～70℃\\
 						\hline
