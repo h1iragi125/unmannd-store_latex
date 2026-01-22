@@ -9,9 +9,9 @@
 %\addbibresource{./contents/reference/reference.bib}	% 参考文献リスト(.bib)を指定(biberの実行が必要)
 
 % 和題("\\"で任意の改行位置を設定可能)
-\titleJP{IoTを用いた無人店舗における\\[-1.0em]遠隔在庫把握システムの構築}
+\titleJP{画像処理およびセンサを用いた\\[-1.0em]遠隔在庫把握システムの構築}
 % 英題（"\\"で任意の改行位置を設定可能）
-\titleEN{Development of a Remote Inventory Monitoring System \\for Unmanned Retail Stores Using IoT}
+\titleEN{Development of a Remote Inventory Monitoring System \\ Using Image Processing and Sensors}
 % 著者の学年(B4卒業論文->B4，修士論文->M2)
 \grade{B4}
 % 著者の人数(単著->1，共著->2 or 3)
@@ -31,10 +31,10 @@
 
 % PDFメタデータの設定(任意)
 \hypersetup{%
-	pdftitle={IoTを用いた無人店舗における遠隔在庫把握システムの構築},				% PDFタイトル
-	pdfsubject={Development of a Remote Inventory Monitoring System for Unmanned Retail Stores Using IoT}					% PDFサブタイトル
+	pdftitle={画像処理およびセンサを用いた遠隔在庫把握システムの構築},				% PDFタイトル
+	pdfsubject={Development of a Remote Inventory Monitoring System Using Image Processing and Sensors}					% PDFサブタイトル
 	pdfauthor={前澤 柊飛, 秋元 大生}				% 著者
-	pdfkeywords={IoT,Stores,店舗,Remote,遠隔,Monitoring,在庫把握}		% キーワード
+	pdfkeywords={Sensors,Stores,店舗,Remote,遠隔,Monitoring,在庫把握}		% キーワード
 }
 
 \begin{document}
@@ -48,7 +48,7 @@
 	
 	\frontmatter		% \chapter毎に\phantomsectionの設定が必要(これでハイパーリンクを設定)
 	% ---　記号・略語一覧
-	\include{./contents/sub/symbols}
+	% \include{./contents/sub/symbols}
 	
 	% ---------- TABLE OF CONTENTS ----------
 	\tableofcontents	% 目次の表示
@@ -60,23 +60,20 @@
 	% ---　序論(chapter1)
 	\include{./contents/chapter1/introduction}
 	
-	% ---　画像処理によるデータ収集(chapter2)
+	% ---　画像処理による在庫検出(chapter2)
 	\include{./contents/chapter2/image_processing}
 	
-	% ---　超音波センサによるデータ収集(chapter3)
+	% ---　超音波センサによる在庫検出(chapter3)
 	\include{./contents/chapter3/dis_sensor}
 	
-	% --- デプスカメラによるデータ収集(chapter4)
+	% --- デプスカメラによる在庫検出(chapter4)
 	\include{./contents/chapter4/depth_camera}
 
-	% --- IoT技術の比較と選択(chapter5)
-	\include{./contents/chapter5/IoT_conparion}
+	% --- LINE BOTを用いた遠隔在庫把握(chapter5)
+	\include{./contents/chapter5/line_bot}
 
-	% --- LINE BOTを用いた遠隔在庫把握(chapter6)
-	\include{./contents/chapter6/line_bot}
-
-	% --- 結論(chapter7)
-	\include{./contents/chapter7/conclusion}
+	% --- 結論(chapter6)
+	\include{./contents/chapter6/conclusion}
 	
 	\backmatter			% \chapter毎に\phantomsectionの設定が必要(これでハイパーリンクを設定)
 	
