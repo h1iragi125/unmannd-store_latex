@@ -1,4 +1,40 @@
 \graphicspath{{./contents/chapter3/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
-\chapter{結果}
-	結果である。
+\chapter{超音波センサによるデータ収集}
+	\section{使用する超音波センサの説明}
+		次に、超音波センサを用いてセンサと商品間の距離を計測した。使用したセンサはRainbow E-Technology社のHR-SC04である。このセンサは単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。マイコンボードにはRaspberry Pi Pico 2 WHを使用した。
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics{hcsr04.jpg}
+			\caption{Rainbow E-Technology社 HC-SR04}
+			\label{Camera}
+		\end{figure}
 	
+			\subsection{超音波センサの精度}
+				HC-SR04の性能を\tabref{HC-SR04}に示す。測定可能距離は0.02m～4.5mであり、商品棚での在庫検出は可能であると考えられる。
+				
+				\vspace{0.5\baselineskip}
+				\begin{table}[h]
+					\centering
+					\caption{HC-SR04の精度}
+					\begin{tabular}{|c|r|}
+						\hline	動作電圧	& 3~5.5V \\
+						\hline	測定可能距離	& 0.02~4.5m\\
+						\hline	測定方式	& 超音波 \\
+						\hline	動作温度	& -10～70℃\\
+						\hline
+					\end{tabular}
+					\label{HC-SR04}
+				\end{table}		
+				
+	\section{超音波センサの配置と距離の検出方法}
+		超音波センサを11号館1階の無人店舗の商品棚の奥側のスペースに配置し、商品との距離を計測する。距離の検出方法は、超音波がセンサから発信され商品に反射して戻ってくるまでの時間を計測することで行う。距離は以下の式で求められる。
+		\begin{equation}
+			距離 = \frac{音速 \times 時間}{2}
+		\end{equation}
+		ここで、音速は約343m/sである。
+		
+
+	\section{超音波センサの試行の結果と考察}
+		今回は、何センチのとき在庫あり、何センチのとき在庫なしと設定した。だが、商品と棚の手前部分にスペースがある場合、正確に距離を計測できない。そのため、本研究では超音波センサ単体での在庫把握は困難であると判断した。
