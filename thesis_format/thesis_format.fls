@@ -606,6 +606,10 @@ INPUT ./contents/chapter4/figures/SEN0581.jpg
 INPUT ./contents/chapter4/figures/SEN0581.jpg
 OUTPUT ./contents/chapter5/line_bot.aux
 INPUT ./contents/chapter5/line_bot.tex
+INPUT ./contents/chapter5/figures/図6.1.png
+INPUT ./contents/chapter5/figures/図6.1.png
+INPUT ./contents/chapter5/figures/図6.2.png
+INPUT ./contents/chapter5/figures/図6.2.png
 OUTPUT ./contents/chapter6/conclusion.aux
 INPUT ./contents/chapter6/conclusion.tex
 OUTPUT ./contents/reference/reference.aux
