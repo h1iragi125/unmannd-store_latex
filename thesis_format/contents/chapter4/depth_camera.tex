@@ -1,10 +1,31 @@
 \graphicspath{{./contents/chapter4/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
+<<<<<<< HEAD
 \chapter{デプスカメラによる在庫検出}
+=======
+\chapter{デプスカメラによるデータ収集}
+	本章では、本研究で行ったデプスカメラによる在庫数の把握について述べる。
+>>>>>>> 5a77109aeb827988624a5518bc65643c46af16a5
 	\section{使用するデプスカメラの説明}
-		本研究ではデプスカメラを用い、センサと商品間の距離を計測した。使用したセンサはである。このセンサ単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。マイコンボードにはRaspberry Pi 4 Model Bを使用した。
+		本研究では、超音波センサだけでなくデプスカメラも用いて無人店舗内の在庫数の把握を行った。使用したデプスカメラはDFRobot社のSEN0581とArducam社のB0410である。
 	
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics{SEN0581.jpg}
+			\caption{DFRobot社 SEN0581}
+			\label{sen0581}
+		\end{figure}
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics{SEN0581.jpg}
+			\caption{Arducam社 B0410}
+			\label{b0410}
+		\end{figure}
+
 			\subsection{デプスカメラの精度}
-				D435の性能をに示す。測定範囲は0.1m～10mであり、混雑状況のモニタリングの際に観測される距離は測定可能であると考えられる。
+				これらのデプスカメラの性能をに示す。
 				
 				\vspace{0.5\baselineskip}
 				\begin{table}[h]
@@ -18,7 +39,7 @@
 						\hline	深度分解能	& 1mm\\
 						\hline
 					\end{tabular}
-					
+					\label{sen5081_spec}
 				\end{table}
 	\section{デプスカメラの配置と距離の検出方法}
-		デプスカメラを11号館1階の無人店舗の商品棚の奥側のスペースに配置し、商品との距離を計測する。距離の検出方法は、カメラから赤外線を発信し、商品に反射して戻ってくるまでの時間を計測することで行う。距離は以下の式で求められる。
+		
