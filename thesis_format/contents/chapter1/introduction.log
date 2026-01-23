@@ -1,0 +1,294 @@
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  23 JAN 2026 12:14
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex"
+("c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex"
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended collection.
+luaotfload | conf : Root cache directory is "C:/texlive/2025/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-resolved path "c:/texlive/2025/texmf-dist/tex/luatex/luaotfload/fontloader-2023-12-28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/texlive/2025/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'.
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:1: Undefined control sequence.
+l.1 \graphicspath
+                 {{./contents/chapter1/figures/}}	% 図・画像ファイル...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \graphicspath{{.
+                    /contents/chapter1/figures/}}	% 図・画像ファイル...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]./contents/chapter1/figures/ 
+ []
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:3: Undefined control sequence.
+l.3 \chapter
+            {序論}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \chapter{序
+                論}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:4: Undefined control sequence.
+l.4 	\section
+             {研究背景}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+\citation{live}
+luaotfload | db : Font names database loaded from C:/texlive/2025/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:5: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.5 ...IoT（Internet of Things）$^{\cite{live}
+                                                  }$，感知器や測定器...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `live' on page  undefined on input line 5.
+
+\citation{live}
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:5: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.5 ...取得するセンシング$^{\cite{live}
+                                                  }$，コンピューター...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `live' on page  undefined on input line 5.
+
+\citation{live}
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:5: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.5 ...lligence）などが該当し$^{\cite{live}
+                                                  }$，農業，製造業，...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `live' on page  undefined on input line 5.
+
+\citation{live}
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:5: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.5 ...で活用が進んでいる$^{\cite{live}
+                                                  }$．
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `live' on page  undefined on input line 5.
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:8: Undefined control sequence.
+l.8 ...購買施設の１つとして，図\figref
+                                                  {Store}に示す無人店舗...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:10: LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 		\begin{figure}
+                     [H]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:12: Undefined control sequence.
+l.12 			\includegraphics
+                        [scale=0.5\linewidth]{図1.1.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:12: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.12 			\includegraphics[scale=0.5\linewidth]
+                                             {図1.1.jpg}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:12: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.12 			\includegraphics[scale=0.5\linewidth]
+                                             {図1.1.jpg}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:13: LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 			\caption
+                {大学内の無人店舗}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:15: LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 		\end{figure}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--16
+[]序論
+ []
+
+
+Overfull \hbox (20.91559pt too wide) in paragraph at lines 3--16
+Things）$[][]$，感知器や測定器などを用いて対象の定量的な情報を取得するセンシング$[][]$，コンピューターに人間の知的活動を模倣させるAI（Artificial
+ []
+
+
+Overfull \hbox (20.91559pt too wide) in paragraph at lines 3--16
+Intelligence）などが該当し$[][]$，農業，製造業，医療，物流と幅広い分野で活用が進んでいる$[][]$．
+ []
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:17: Undefined control sequence.
+l.17 	\section
+              {研究目的}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/contents/chapter1/introduction.tex:17: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 	\section{研
+                  究目的}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--19
+[]研究目的
+ []
+
+)
+! Emergency stop.
+<*> ..._format/contents/chapter1/introduction.tex"
+                                                  
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 26 strings out of 475506
+ 100000,552014 words of node,token memory allocated 8814 words of node memory still in use:
+   24 hlist, 3 local_par, 1 dir, 8 math, 34 glue, 3 kern, 6 penalty, 1120 glyph, 36 attribute, 39 glue_spec, 36 attribute_list, 1 write nodes
+   avail lists: 2:4,4:10,5:8,7:3,8:4,10:9
+ 23151 multiletter control sequences out of 65536+600000
+ 26 fonts using 1476743 bytes
+ 19i,5n,30p,1442b,130s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

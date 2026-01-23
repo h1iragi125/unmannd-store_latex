@@ -1,33 +1,334 @@
 \graphicspath{{./contents/chapter2/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
-\chapter{解析手法}
-	\section{サーマルカメラ}
-		本研究では、混雑状況の測定に\figref{Camera}のサーマルカメラで撮影された赤外線画像を用いる。このサーマルカメラはMLX90640赤外線アレイモジュールを搭載したM5Stack用赤外線画像ユニットであり、小型のマイコンボードであるM5Stackに接続することにより撮影を行うことができる。
-		
+\chapter{画像処理による在庫検出}
+無人店舗の在庫状況に関するデータの収集を実現するため，複数の技術的アプローチについて検討を行い，最適な在庫検出手法を明確にする．本章では，画像処理技術を用いた在庫検出について，OpenCVを用いた検出方法，輪郭抽出，座標による商品識別，検出した結果と考察を説明する．
+	\section{画像取得に用いた機器}
+		画像処理を行うにあたり，無人店舗の商品棚の画像を取得するため，スマートフォンのカメラ機能を利用した．本章では，画像処理技術を用いた在庫検出の実現性について検討することを主な目的としているため，コスト削減や画像取得の容易さの観点からこの選択をした．実際の画像取得に用いたスマートフォンを\figref{Camera}に，取得した商品棚の画像を\figref{onigiri}，\figref{colorful}に示す．
+		% [width=.5\linewidth]
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
 			\centering
-			\includegraphics{MLX90640.png}
-			\caption{Melexis社　MLX90640}
+			\includegraphics[width=.4\linewidth]{図2.1.png}
+			\caption{画像取得用スマートフォン}
 			\label{Camera}
 		\end{figure}
-	
-			\subsection{サーマルカメラの精度}
-				MLX90640の性能を\tabref{MLX90640}に示す。測定範囲は-40℃～+300℃であり、混雑状況のモニタリングの際に観測される温度は測定可能であると考えられる。
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{.45\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.2.jpg}
+				\caption{おにぎりを中心とする商品棚}
+				\label{onigiri}
+			\end{minipage}
+			\hfill
+			\vspace{0.5\baselineskip}
+			\begin{minipage}{.45\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.3.png}
+				\caption{様々な色の商品が並ぶ棚}
+				\label{colorful}
+			\end{minipage}
+		\end{figure}
+
+		画像を一定の品質で取得するため，カメラは等倍かつ品棚から約３ｍの位置で撮影を行う．\figref{shelf}に示す一部結果を可視化した画像において，商品の周りに検出を表現する矩形（バウンディングボックス）が表示されていることから，本章で用いたスマートフォンのカメラ機能は，画像処理による商品検出に十分な性能を満たしていると判断した．スマートフォンのカメラ性能を\tabref{smartphone}に示す．
 				
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.4.png}
+			\caption{一部商品棚の検出結果}
+			\label{shelf}
+		\end{figure}
+
+		\vspace{0.5\baselineskip}
+		\begin{table}[h]
+			\centering
+			\caption{スマートフォンのカメラ性能}
+			\begin{tabular}{|c|r|}
+				\hline	使用機種	& Sony Xperia 10 VI 5G \\
+				\hline	使用カメラ  & メインカメラ\\
+				\hline	画像解像度 & 1920×1080\\
+				\hline	総画素数 & 約207万画素\\
+				\hline
+			\end{tabular}
+			\label{smartphone}
+		\end{table}		
+				
+	\tabref{smartphone}に示した使用するカメラの画像解像度が1920×1080であることから，本章は，解像度1920×1080と同様，もしくはそれ以上の性能を有するカメラを用いたときの画像処理技術による在庫検出について検討する．
+
+	\section{OpenCV}
+	OpenCV（Open Source Computer Vision Library）は，画像および動画に関する処理機能・検出機能をまとめたオープンソースのライブラリである[5]． WindowsやLinux，iOS，AndroidなどさまざまなOSに対応しており，Raspberry Piなどの端末上で利用することもできる．さらに，豊富な画像処理機能を搭載しており，高度な画像処理を比較的容易に実装できるという特徴を有しているため，本研究の目的達成に重要な，様々な種類の商品の高精度検出およびリアルタイム性のあるデータ収集に最適だと考え，今回OpenCVを使用した．
+		
+		\subsection{グレースケール変換}
+		OpenCVの機能にグレースケール変換がある．これは，色の情報を省き，明るさの度合いという情報のみで表現するための画像処理であり[6]，\figref{gray}に示すグレースケール変換前後の画像比較から分かる通り，グレースケール変換によって，画像内の明暗を明確にすることができる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図2.5.png}
+			\caption{グレースケール変換を適用した画像}
+			\label{gray}
+		\end{figure}
+
+		通常，処理を行う前のカラー画像（以下RGB画像とする）は，R（Red），G（Green），B（Blue）の３つの値（以下RGB値とする）で表現され，それぞれ０～255の数値をとる．一方，グレースケール変換を行った画像（以下グレースケール画像とする）は，輝度という１つの値で表現され [7]，０～255の数値をとる．\figref{kido}に示す輝度の値による明るさの違いから分かる通り，値が小さいと暗く，大きいと明るく表現される．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.6.png}
+			\caption{輝度の値による明るさ}
+			\label{kido}
+		\end{figure}
+
+		グレースケール変換の仕組みについて説明する．変換方法は複数存在するが，OpenCVでは，加重平均法が用いられている[8]．グレースケール画像を表現する輝度という値は，RGB画像のRGB値から計算された値であり，加重平均法はR，G，Bの値それぞれに重み付けをして輝度を計算する方法である．
+		\noindent OpenCVにおいて輝度は
+
+		\begin{equation}　% equation環境(式番号付き0)
+			輝度 = 0.2989 \times R + 0.5870 \times G + 0.1140 \times B
+			\label{kidosiki}
+		\end{equation}
+		
+		\noindent である．このRGBそれぞれに対する重みは，緑の光が最も検知しやすく，青の光は比較的検知しにくい[9]という人間の視覚特性をもとに設定されている．
+
+		グレースケール変換の活用が有効な場面を検討する． RGBはデジタル機器同様，人間の視覚が光の総量に強く依存する性質を利用して構造化されており[10]，光の三原色として表現される．そのため，RGB値をすべて255にして表現される色は白であり，RGB値をすべて０にして表現される色は黒である．\eqref{kidosiki}より，RGB値をすべて255にしたとき，輝度の値は最大である255をとり，RGB値をすべて０にしたとき，輝度の値は最小である０をとる．したがって，画像にグレースケール変換を適用した際，白に近い色を持つ物体は明るく表現され、黒に近い色を持つ物体は暗く表現される．
+		本研究において，\figref{white}に示す実際の商品棚の一部から分かる通り，研究対象である無人店舗の一部の商品棚は，おにぎりのような白に近い色が特徴的な商品を中心に扱っている．また，\figref{black}に示す実際の商品棚の全体から分かる通り，無人店舗の商品棚全体が黒いデザインとなっている．したがって，おにぎりを中心に扱う商品棚に関しては，グレースケール変換を活用することで，商品と背景の差が明確になり，精度の高い検出が期待できる．加えて，グレースケール画像が輝度という１つの値で表現できる特徴から，情報量の削減による処理の高速化が期待できる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{.4\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.7.png}
+				\caption{白に近い色を持つ商品が多い棚}
+				\label{white}
+			\end{minipage}
+			\hfill
+			\vspace{0.5\baselineskip}
+			\begin{minipage}{.5\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.8.png}
+				\caption{無人店舗の商品棚全体}
+				\label{black}
+			\end{minipage}
+		\end{figure}
+
+		\subsection{HSV変換}
+		OpenCVの機能にHSV変換がある．これは，RGB画像を色相（Hue），彩度（Saturation），明度（Value）の３つの要素で表現された画像（以下HSV画像とする）に変換する機能である[11]．
+		色相（Hue）について説明する．これは，具体的な色の種類を表す要素で，\figref{colorwheel}に示す実際のカラーホイールから分かる通り，０～359の値を用いて様々な色を表現する．しかし，OpenCVでは効率的な処理を目的として８bit画像を主な対象としているため，扱う数値を０～255の範囲で表現することが望ましい．そのため，\figref{OpenCVwheel}に示すOpenCV のカラーホイールから分かる通り，OpenCVは色相の値を1/2にスケーリングし，０～179の値を用いて色を表現する[12]．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{.45\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.9.png}
+				\caption{一般的な色相範囲}
+				\label{colorwheel}
+			\end{minipage}
+			\hfill
+			\vspace{0.5\baselineskip}
+			\begin{minipage}{.4\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.10.png}
+				\caption{OpenCVの色相範囲}
+				\label{OpenCVwheel}
+			\end{minipage}
+		\end{figure}
+
+		彩度（Saturation）について説明する．これは，色の鮮やかさや濃さを表す要素で[11]，色相と異なり，数値に明確な範囲が存在しないため，OpenCVは0～255の範囲に値をスケーリングして表現する．\figref{saido}に示す数値ごとの彩度表現から分かる通り，彩度の値が255をとるとき色は最も鮮やかになり，０の値をとるとき最も鈍くなる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.11.png}
+			\caption{彩度の値による変化}
+			\label{saido}
+		\end{figure}
+
+		明度（Value）について説明する．これは，色の明るさを表す要素で[11]，彩度と同様に，数値に明確な範囲が存在しないため，OpenCVは0～255の範囲に値をスケーリングして表現する．\figref{value}に示す数値ごとの明度表現から分かる通り，明度の値が255をとるとき色は最も明るくなり，０の値をとるとき最も暗くなる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.12.png}
+			\caption{明度の値による変化}
+			\label{value}
+		\end{figure}
+
+		HSV変換の仕組みについて説明する．グレースケール変換同様，HSV変換においてもRGB値を基に計算されている．RGB値をそれぞれ$R$，$G$，$B$とし，これらを０～１の範囲で表現したものをそれぞれ$R’$，$G’$，$B’$（$R’=\frac{R}{255}$，$G’=\frac{G}{255}$，$B’=\frac{B}{255}$）とする．また，RGBの最大値（$max（R，G，B）$）を$C_{max}$，最小値（$min（R，G，B）$）を$C_{min}$とし，その差（$C_{max}-C_{min}$）を$∆$とする．
+		\noindent 色相（$H$）は，$C_{min}=R$のとき
+
+		\begin{equation}　% equation環境(式番号付き0)
+			H = \frac{1}{2}(60 \times (\frac{B'-G'}{Δ}) + 180)
+			\label{H1}
+		\end{equation}
+
+		\noindent であり，$C_{min}=G$のとき
+
+		\begin{equation}　% equation環境(式番号付き0)
+			H = \frac{1}{2}(60 \times (\frac{R'-B'}{Δ}) + 300)
+			\label{H2}
+		\end{equation}
+
+		\noindent であり，$C_{min}=B$のとき
+
+		\begin{equation}　% equation環境(式番号付き0)
+			H = \frac{1}{2}(60 \times (\frac{G'-R'}{Δ}) + 60)
+			\label{H3}
+		\end{equation}
+
+		\noindent である．また，OpenCVでは$∆＝0$ のとき，$H=0$として定義される．
+
+		\noindent 彩度（$S$）は
+
+		\begin{equation}　% equation環境(式番号付き0)
+			S = \frac{Δ}{C_{max}}
+			\label{S}
+		\end{equation}
+
+		\noindent である．また，OpenCVでは$C_{max}=0$ のとき，$S=0$として定義される．
+		
+		\noindent 明度（$V$）は
+
+		\begin{equation}　% equation環境(式番号付き0)
+			V = C_{max}
+			\label{V}
+		\end{equation}
+
+		\noindent である[13]．
+
+		HSVは，色を鮮やかさや明るさという直感的に分かりやすい要素で表現するため，原色の組み合わせで表現するRGBに比べ，各要素を変動させた場合の色の変化がイメージしやすく，細かな色の調整が簡単にできる．
+		本研究において，\figref{colorful}に示した実際の商品棚の一部から分かる通り，無人店舗の一部の商品棚は，様々な色の商品を扱っている．そのため，輝度の値が商品によって異なり，\figref{colorgray}に示す様々な色の商品が並ぶ棚のグレースケール画像を用いた検出結果から分かる通り，検出精度が低くなる．そこでHSV画像を活用することで，安定した精度の検出が期待できる．
+
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.13.png}
+			\caption{様々な色の商品が並ぶ棚のグレースケール検出}
+			\label{colorgray}
+		\end{figure}
+
+	\section{輪郭抽出}
+	商品の位置を特定するにあたり，グレースケール画像およびHSV画像から商品の輪郭抽出を行う．具体的には，商品と背景を判別するための閾値を設定し，これを満たす画素集合を輪郭として抽出する．閾値とは，判断の境目となる値のことで[14]，OpenCVでは，利用者が任意に設定できる．
+
+		\subsection{グレースケール画像の輪郭抽出}
+		グレースケール画像に適用する閾値を考える．2.2.1節で述べたように，グレースケール画像では，輝度という０～255の範囲をとる１つの値で表現されるため，閾値はこの値を用いて適用する．
+		\figref{light}に示す照明が商品棚へ及ぼす影響から分かる通り，無人店舗の商品棚は4段ある棚の段数のうち，最上段のみ照明が強く当たる構造になっている．そのため，輝度の値で表現するグレースケール画像では，全体に同一の閾値を設定すると，最上段とその他の段で検出精度に差が生じる．この問題に対処するため，画像内座標を利用し，最上段とそれ以外の範囲を切り分け，最上段の閾値を180～255，それ以外の範囲を100～255にそれぞれ設定する．この閾値は，\figref{white}に示したグレースケール変換の適用する商品棚において，様々な閾値を試した結果，最も検出精度が高くなると判断した値である．照明の当たり方を考慮した閾値設定のイメージを\figref{ikiti}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.14.png}
+			\caption{照明の商品棚への影響}
+			\label{light}
+		\end{figure}
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.15.png}
+			\caption{グレースケール画像の閾値設定のイメージ}
+			\label{ikiti}
+		\end{figure}
+
+		\subsection{HSV画像の輪郭抽出}
+		HSV画像に適用する閾値を考える．2.2.2節で述べたように，HSV画像では，0～179の範囲をとる色相，０～255の範囲をとる彩度，明度という３つの値で表現されるため，閾値はこれらの値を用いて適用する．
+		\figref{colorful}に示したHSV変換を適用する商品棚から分かる通り，様々な色の商品が存在するため，画像全体に同一の閾値を設定すると商品ごとの検出精度に差が生じる．この問題に対処するため，画像内座標を利用し，商品ごとに閾値を設定する．\figref{colorgray}に示したグレースケール変換では検出精度が低くなる商品棚において，各商品に設定した閾値を\tabref{colorikiti}に示す．この閾値は，\figref{colorgray}に示したグレースケール変換を適用する商品棚において，存在する商品に対し様々な閾値を試した結果，最も検出精度が高くなると判断した値である．商品ごとの閾値設定のイメージを\figref{HSVikiti}に示す．また，\tabref{colorikiti}に示す閾値のうち，商品名がnoneとなっているのは，\figref{colorgray}において商品が存在しない棚で誤検出が起こらないか確かめるためのものである．
+
 				\vspace{0.5\baselineskip}
-				\begin{table}[h]
-					\centering
-					\caption{MLX90640の精度}
-					\begin{tabular}{|c|r|}
-						\hline	動作電圧	& 3～3.6V \\
-						\hline	消費電流	&	23mA\\
-						\hline	視野	&  110°×75°\\
-						\hline	測定範囲	&	-40℃～+300℃\\
-						\hline	分解能	& ±1.5℃\\
-						\hline	リフレッシュレート	&	0.5Hz～64Hz\\
-						\hline	解像度	&	32×24ピクセル\\
-						\hline
-					\end{tabular}
-					\label{MLX90640}
-				\end{table}		
-				
+		\begin{table}[h]
+			\centering
+			\caption{HSV画像における閾値設定}
+			\begin{tabular}{|c|r|r|r|}
+				\hline	商品名	& 色相（H） & 彩度（S） & 明度（V） \\ \hline
+				\hline	白玉粒あんベーグル  & 20～35 & 100～255 & 100～255\\
+				\hline	クランベリー＆クリームチーズベーグル & 20～35 & 100～255 & 100～255\\
+				\hline	イチジク＆クリームチーズベーグル & 20～35 & 100～255 & 100～255\\
+				\hline  明太ポテトベーグル & 10～25 & 100～255 & 20～200\\
+				\hline  ビーフカレーベーグル & 10～25 & 100～255 & 20～200\\
+				\hline  ベーコンペッパーベーグル & 20～35 & 100～255 & 100～255\\
+				\hline  アップルシナモンベーグル & 20～35 & 100～255 & 100～255\\
+				\hline  チーズベーグル & 10～25 & 100～255 & 20～200\\
+				\hline  none & 10～70 & 100～255 & 100～255\\
+				\hline
+			\end{tabular}
+			\label{colorikiti}
+		\end{table}	
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.16.png}
+			\caption{HSV画像の閾値設定イメージ}
+			\label{HSVikiti}
+		\end{figure}
+
+		\subsection{輪郭抽出の手法}
+		輪郭抽出を行うにあたり，RETR EXTERNALとCHAIN APPROX SIMPLEという２つの定数を用いる．
+		閾値を設定した画像は，各画素において輝度もしくはHSVの値が閾値を満たすか満たさないかのどちらかに区別される．RETR EXTERNALは，閾値を満たす画素の集合のうち，その最外周の輪郭のみを抽出する[15]．閾値を満たす画素を白，満たさない画素を黒で表現した商品棚を\figref{sirokuro}に示す．また，RETR EXTERNALによる輪郭抽出のイメージを\figref{retr}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.17.png}
+			\caption{商品と背景を白と黒で表現した画像}
+			\label{sirokuro}
+		\end{figure}
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.18.png}
+			\caption{RETR EXTERNALの輪郭抽出イメージ}
+			\label{retr}
+		\end{figure}
+
+		輪郭は無数の点によって表現される．CHAIN APPROX SIMPLEは，輪郭が完全に直線になる部分の点を省いて表現する[15]．これによって，リアルタイム性が求められる本研究において，特に重要となる処理の高速化を実現できる．CHAIN APPROX SIMPLEによる輪郭表現のイメージを\figref{chain}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.19.png}
+			\caption{CHAIN APPROX SIMPLEの輪郭抽出イメージ}
+			\label{chain}
+		\end{figure}
+
+	\section{類似商品の識別}
+	\figref{similar}に示す見た目の近い異なる商品から分かる通り，無人店舗には見た目から種類の識別が困難な商品が存在する．そこで，抽出した輪郭を基に，画像内座標を用いて商品の種類を識別する．
+
+	\vspace{0.5\baselineskip}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{図2.20.png}
+		\caption{見た目の近い商品}
+		\label{similar}
+	\end{figure}
+	
+		\subsection{輪郭の座標表現}
+		抽出した商品の輪郭を，１点の座標で表現する．手法としては，輪郭をバウンディングボックスと呼ばれる矩形で表し，その中心点の座標を算出する．\figref{box}に示すバウンディングボックスおよび中心点のイメージから分かる通り，バウンディングボックスは，抽出した輪郭を完全に含み，かつ最小になる矩形であり，バウンディングボックス左上の画像内座標$（x，ｙ）$，バウンディングボックスの幅$w$，バウンディングボックスの高さ$h$という４つの情報と，これらの情報から算出したバウンディングボックスの中心点の画像内座標で表現する．
+		\noindent 中心点の画像内$x$座標$C_x$は
+
+		\begin{equation}　% equation環境(式番号付き0)
+			C_x = x + \frac{w}{2}
+			\label{Cx}
+		\end{equation}
+
+		\noindent であり，画像内$y$座標$C_y$は
+
+		\begin{equation}　% equation環境(式番号付き0)
+			C_y = y + \frac{h}{2}
+			\label{Cy}
+		\end{equation}
+
+		\noindent である．バウンディングボックスで商品の輪郭を表現し，画像内の商品の位置を１つの座標$（C_x，C_y）$で定義することによって，商品の画像内の位置情報を利用する処理の高速化が期待できる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.21.png}
+			\caption{バウンディングボックスおよび中心点イメージ}
+			\label{box}
+		\end{figure}
+
