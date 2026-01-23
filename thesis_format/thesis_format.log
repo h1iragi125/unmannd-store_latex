@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  23 JAN 2026 03:46
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  23 JAN 2026 18:36
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex"
@@ -2115,30 +2115,7 @@ File: ./contents/chapter2/figures/図2.3.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.3.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.3.png  used on input line 28.
 (luatex.def)             Requested size: 197.999pt x 102.98204pt.
-(load cache: extra_lmroman12-regular.luc)
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
-LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <12.97745> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
-LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <12.97745> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 35.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 12.00002pt on input line 35.
 
-LaTeX Warning: Reference `MLX90640' on page 1 undefined on input line 35.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
 
 [3
 
@@ -2147,10 +2124,243 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./contents/chapter2/figures/図2.1.png>]
 
-[4<./contents/chapter2/figures/図2.2.jpg><./contents/chapter2/figures/図2.3.png>]
+LaTeX Warning: Reference `shelf' on page 1 undefined on input line 34.
+
+
+LaTeX Warning: Reference `smartphone' on page 1 undefined on input line 34.
+
+<./contents/chapter2/figures/図2.4.png, id=60, 903.375pt x 481.8pt>
+File: ./contents/chapter2/figures/図2.4.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.4.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.4.png  used on input line 39.
+(luatex.def)             Requested size: 307.99919pt x 164.26563pt.
+
+LaTeX Warning: Reference `smartphone' on page 1 undefined on input line 58.
+
+
+
+[4<./contents/chapter2/figures/図2.2.jpg><./contents/chapter2/figures/図2.3.png><./contents/chapter2/figures/図2.4.png>](load cache: extra_lmroman12-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <12.97745> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <12.97745> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+
+
+LaTeX Warning: Reference `gray' on page 1 undefined on input line 64.
+
+<./contents/chapter2/figures/図2.5.png, id=72, 755.82375pt x 264.23718pt>
+File: ./contents/chapter2/figures/図2.5.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.5.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.5.png  used on input line 69.
+(luatex.def)             Requested size: 352.00195pt x 123.05852pt.
+
+LaTeX Warning: Reference `kido' on page 1 undefined on input line 74.
+
+<./contents/chapter2/figures/図2.6.png, id=73, 893.58844pt x 287.57437pt>
+File: ./contents/chapter2/figures/図2.6.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.6.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.6.png  used on input line 79.
+(luatex.def)             Requested size: 307.99919pt x 99.12111pt.
+
+
+[5<./contents/chapter2/figures/図2.5.png>]
+
+LaTeX Warning: Reference `kidosiki' on page 6 undefined on input line 94.
+
+
+LaTeX Warning: Reference `white' on page 1 undefined on input line 95.
+
+
+LaTeX Warning: Reference `black' on page 1 undefined on input line 95.
+
+<./contents/chapter2/figures/図2.7.png, id=84, 286.06876pt x 270.25969pt>
+File: ./contents/chapter2/figures/図2.7.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.7.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.7.png  used on input line 102.
+(luatex.def)             Requested size: 175.99762pt x 166.27263pt.
+<./contents/chapter2/figures/図2.8.png, id=85, 855.94781pt x 370.38374pt>
+File: ./contents/chapter2/figures/図2.8.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.8.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.8.png  used on input line 110.
+(luatex.def)             Requested size: 220.00038pt x 95.19543pt.
+
+
+[6<./contents/chapter2/figures/図2.6.png>]
+
+LaTeX Warning: Reference `colorwheel' on page 1 undefined on input line 118.
+
+
+LaTeX Warning: Reference `OpenCVwheel' on page 1 undefined on input line 118.
+
+<./contents/chapter2/figures/図2.9.png, id=98, 489.32813pt x 402.75468pt>
+File: ./contents/chapter2/figures/図2.9.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.9.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.9.png  used on input line 125.
+(luatex.def)             Requested size: 197.999pt x 162.96725pt.
+<./contents/chapter2/figures/図2.10.png, id=99, 450.18187pt x 402.75468pt>
+File: ./contents/chapter2/figures/図2.10.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.10.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.10.png  used on input line 133.
+(luatex.def)             Requested size: 175.99762pt x 157.45471pt.
+
+LaTeX Warning: Reference `saido' on page 1 undefined on input line 139.
+
+
+
+[7<./contents/chapter2/figures/図2.7.png><./contents/chapter2/figures/図2.8.png><./contents/chapter2/figures/図2.9.png><./contents/chapter2/figures/図2.10.png>]
+<./contents/chapter2/figures/図2.11.png, id=113, 1018.55531pt x 264.23718pt>
+File: ./contents/chapter2/figures/図2.11.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.11.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.11.png  used on input line 144.
+(luatex.def)             Requested size: 307.99919pt x 79.90074pt.
+
+
+LaTeX Warning: Reference `value' on page 1 undefined on input line 149.
+
+<./contents/chapter2/figures/図2.12.png, id=114, 1166.85938pt x 349.305pt>
+File: ./contents/chapter2/figures/図2.12.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.12.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.12.png  used on input line 154.
+(luatex.def)             Requested size: 307.99919pt x 92.1976pt.
+
+
+[8<./contents/chapter2/figures/図2.11.png><./contents/chapter2/figures/図2.12.png>]
+
+LaTeX Warning: Reference `colorful' on page 1 undefined on input line 202.
+
+
+LaTeX Warning: Reference `colorgray' on page 1 undefined on input line 202.
+
+<./contents/chapter2/figures/図2.13.png, id=131, 454.69875pt x 446.41782pt>
+File: ./contents/chapter2/figures/図2.13.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.13.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.13.png  used on input line 208.
+(luatex.def)             Requested size: 264.00314pt x 259.19498pt.
+
+
+[9<./contents/chapter2/figures/図2.13.png>]
+
+LaTeX Warning: Reference `light' on page 1 undefined on input line 218.
+
+
+LaTeX Warning: Reference `white' on page 1 undefined on input line 218.
+
+
+LaTeX Warning: Reference `ikiti' on page 1 undefined on input line 218.
+
+<./contents/chapter2/figures/図2.14.png, id=143, 965.85844pt x 660.96938pt>
+File: ./contents/chapter2/figures/図2.14.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.14.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.14.png  used on input line 223.
+(luatex.def)             Requested size: 307.99919pt x 210.76819pt.
+<./contents/chapter2/figures/図2.15.png, id=144, 855.94781pt x 642.14906pt>
+File: ./contents/chapter2/figures/図2.15.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.15.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.15.png  used on input line 231.
+(luatex.def)             Requested size: 264.00314pt x 198.05492pt.
+
+
+[10<./contents/chapter2/figures/図2.14.png>]
+
+LaTeX Warning: Reference `colorful' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `colorgray' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `colorikiti' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `colorgray' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `HSVikiti' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `colorikiti' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: Reference `colorgray' on page 1 undefined on input line 238.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./contents/chapter2/figures/図2.16.png, id=155, 577.40718pt x 674.52pt>
+File: ./contents/chapter2/figures/図2.16.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.16.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.16.png  used on input line 263.
+(luatex.def)             Requested size: 264.00314pt x 308.42006pt.
+
+
+[11<./contents/chapter2/figures/図2.15.png>]
+
+LaTeX Warning: Reference `sirokuro' on page 1 undefined on input line 270.
+
+
+LaTeX Warning: Reference `retr' on page 1 undefined on input line 270.
+
+
+
+[12<./contents/chapter2/figures/図2.16.png>]
+<./contents/chapter2/figures/図2.17.png, id=175, 454.69875pt x 334.24875pt>
+File: ./contents/chapter2/figures/図2.17.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.17.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.17.png  used on input line 275.
+(luatex.def)             Requested size: 264.00314pt x 194.0684pt.
+<./contents/chapter2/figures/図2.18.png, id=176, 731.73375pt x 360.59718pt>
+File: ./contents/chapter2/figures/図2.18.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.18.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.18.png  used on input line 283.
+(luatex.def)             Requested size: 264.00314pt x 130.101pt.
+
+
+LaTeX Warning: Reference `chain' on page 1 undefined on input line 288.
+
+<./contents/chapter2/figures/図2.19.png, id=177, 1050.92625pt x 519.44063pt>
+File: ./contents/chapter2/figures/図2.19.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.19.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.19.png  used on input line 293.
+(luatex.def)             Requested size: 264.00314pt x 130.486pt.
+
+
+[13<./contents/chapter2/figures/図2.17.png><./contents/chapter2/figures/図2.18.png>]
+
+LaTeX Warning: Reference `similar' on page 1 undefined on input line 299.
+
+<./contents/chapter2/figures/図2.20.png, id=188, 596.2275pt x 359.09157pt>
+File: ./contents/chapter2/figures/図2.20.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.20.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.20.png  used on input line 304.
+(luatex.def)             Requested size: 307.99919pt x 185.50133pt.
+
+LaTeX Warning: Reference `box' on page 1 undefined on input line 310.
+
+
+
+[14<./contents/chapter2/figures/図2.19.png><./contents/chapter2/figures/図2.20.png>]
+<./contents/chapter2/figures/図2.21.png, id=201, 510.40688pt x 456.95718pt>
+File: ./contents/chapter2/figures/図2.21.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.21.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.21.png  used on input line 330.
+(luatex.def)             Requested size: 264.00314pt x 236.36403pt.
+)
+
+[15<./contents/chapter2/figures/図2.21.png>]
 \openout2 = ./contents/chapter3/dis_sensor.aux
  (./contents/chapter3/dis_sensor.tex
-<./contents/chapter3/figures/hcsr04.jpg, id=70, 256.96pt x 192.72pt>
+<./contents/chapter3/figures/hcsr04.jpg, id=212, 256.96pt x 192.72pt>
 File: ./contents/chapter3/figures/hcsr04.jpg Graphic file (type jpg)
 <use ./contents/chapter3/figures/hcsr04.jpg>
 Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input line 9.
@@ -2161,18 +2371,18 @@ LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
 
 
 
-[5
+[16
 
 
 
 
 <./contents/chapter3/figures/hcsr04.jpg>])
 
-[6]
+[17]
 \openout2 = ./contents/chapter4/depth_camera.aux
  (./contents/chapter4/depth_camera.tex)
 
-[7
+[18
 
 
 
@@ -2181,7 +2391,7 @@ LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
 \openout2 = ./contents/chapter5/line_bot.aux
  (./contents/chapter5/line_bot.tex)
 
-[8
+[19
 
 
 
@@ -2190,7 +2400,7 @@ LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
 \openout2 = ./contents/chapter6/conclusion.aux
  (./contents/chapter6/conclusion.tex)
 
-[9
+[20
 
 
 
@@ -2199,7 +2409,7 @@ LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
 \openout2 = ./contents/reference/reference.aux
  (./contents/reference/reference.tex)
 
-[10
+[21
 
 
 
@@ -2211,7 +2421,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'cite.live'
 \openout2 = ./contents/sub/acknowledgement.aux
  (./contents/sub/acknowledgement.tex)
 
-[11
+[22
 
 
 
@@ -2294,7 +2504,7 @@ Package caption Warning: Unused \captionsetup[subfigure] on input line 306.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 18).
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 29).
                Rerun to correct this.
 
 (./thesis_format.aux (./contents/chapter1/introduction.aux) (./contents/chapter2/image_processing.aux) (./contents/chapter3/dis_sensor.aux) (./contents/chapter4/depth_camera.aux) (./contents/chapter5/line_bot.aux) (./contents/chapter6/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
@@ -2312,19 +2522,19 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56227 strings out of 475506
- 1166632,2373549 words of node,token memory allocated
- 1492 words of node memory still in use:
-   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 280 attribute, 101 glue_spec, 37 attribute_list, 4 write, 14 user_defined nodes
-   avail lists: 1:25,2:199623,3:839,4:31391,5:21655,6:110,7:17285,8:23,9:42834,10:46,11:1308
- 77442 multiletter control sequences out of 65536+600000
+ 56544 strings out of 475506
+ 1166634,2373549 words of node,token memory allocated
+ 1876 words of node memory still in use:
+   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 456 attribute, 101 glue_spec, 53 attribute_list, 4 write, 14 user_defined nodes
+   avail lists: 1:26,2:199623,3:839,4:31391,5:21655,6:110,7:17285,8:41,9:42834,10:46,11:1308
+ 77661 multiletter control sequences out of 65536+600000
  146 fonts using 137269807 bytes
  125i,8n,141p,2000b,2054s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on thesis_format.pdf (18 pages, 3218741 bytes).
+<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on thesis_format.pdf (29 pages, 11892140 bytes).
 
-PDF statistics: 469 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 633 PDF objects out of 1000 (max. 8388607)
  2 compressed objects within 1 object stream
- 191 named destinations out of 1000 (max. 131072)
- 191 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 235 named destinations out of 1000 (max. 131072)
+ 215 words of extra memory for PDF output out of 10000 (max. 100000000)
 
