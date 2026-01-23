@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  23 JAN 2026 18:36
+This is LuaHBTeX, Version 1.21.0 (TeX Live 2025)  (format=lualatex 2025.12.5)  23 JAN 2026 19:21
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"c:/Users/66hii/OneDrive - 学校法人成蹊学園　成蹊大学/ドキュメント/流体力学研究室/卒論VScode/unmannd-store_latex/thesis_format/thesis_format.tex"
@@ -2319,20 +2319,20 @@ File: ./contents/chapter2/figures/図2.17.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.17.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.17.png  used on input line 275.
 (luatex.def)             Requested size: 264.00314pt x 194.0684pt.
-<./contents/chapter2/figures/図2.18.png, id=176, 731.73375pt x 360.59718pt>
+<./contents/chapter2/figures/図2.18.png, id=176, 1115.66812pt x 556.32843pt>
 File: ./contents/chapter2/figures/図2.18.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.18.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.18.png  used on input line 283.
-(luatex.def)             Requested size: 264.00314pt x 130.101pt.
+(luatex.def)             Requested size: 307.99919pt x 153.58076pt.
 
 
 LaTeX Warning: Reference `chain' on page 1 undefined on input line 288.
 
-<./contents/chapter2/figures/図2.19.png, id=177, 1050.92625pt x 519.44063pt>
+<./contents/chapter2/figures/図2.19.png, id=177, 1114.91531pt x 550.30594pt>
 File: ./contents/chapter2/figures/図2.19.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.19.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.19.png  used on input line 293.
-(luatex.def)             Requested size: 264.00314pt x 130.486pt.
+(luatex.def)             Requested size: 307.99919pt x 152.01895pt.
 
 
 [13<./contents/chapter2/figures/図2.17.png><./contents/chapter2/figures/図2.18.png>]
@@ -2355,52 +2355,124 @@ File: ./contents/chapter2/figures/図2.21.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.21.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.21.png  used on input line 330.
 (luatex.def)             Requested size: 264.00314pt x 236.36403pt.
-)
+
+
+LaTeX Warning: Reference `sirokuro' on page 1 undefined on input line 335.
+
+
+LaTeX Warning: Reference `chushutujoken' on page 1 undefined on input line 335.
+
+<./contents/chapter2/figures/図2.22.png, id=202, 779.16093pt x 384.6872pt>
+File: ./contents/chapter2/figures/図2.22.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.22.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.22.png  used on input line 340.
+(luatex.def)             Requested size: 307.99919pt x 152.06422pt.
+
 
 [15<./contents/chapter2/figures/図2.21.png>]
+
+LaTeX Warning: Reference `nosize' on page 1 undefined on input line 345.
+
+
+LaTeX Warning: Reference `oksize' on page 1 undefined on input line 345.
+
+<./contents/chapter2/figures/図2.23.png, id=213, 453.94594pt x 566.115pt>
+File: ./contents/chapter2/figures/図2.23.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.23.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.23.png  used on input line 352.
+(luatex.def)             Requested size: 197.999pt x 246.92317pt.
+<./contents/chapter2/figures/図2.24.png, id=214, 454.69875pt x 604.50844pt>
+File: ./contents/chapter2/figures/図2.24.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.24.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.24.png  used on input line 360.
+(luatex.def)             Requested size: 197.999pt x 263.23576pt.
+
+
+[16<./contents/chapter2/figures/図2.22.png>])
+
+[17<./contents/chapter2/figures/図2.23.png><./contents/chapter2/figures/図2.24.png>]
 \openout2 = ./contents/chapter3/dis_sensor.aux
  (./contents/chapter3/dis_sensor.tex
-<./contents/chapter3/figures/hcsr04.jpg, id=212, 256.96pt x 192.72pt>
-File: ./contents/chapter3/figures/hcsr04.jpg Graphic file (type jpg)
-<use ./contents/chapter3/figures/hcsr04.jpg>
-Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input line 9.
-(luatex.def)             Requested size: 256.95937pt x 192.71951pt.
-
-
-LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
-
-
-
-[16
-
-
-
-
-<./contents/chapter3/figures/hcsr04.jpg>])
-
-[17]
-\openout2 = ./contents/chapter4/depth_camera.aux
- (./contents/chapter4/depth_camera.tex)
 
 [18
 
 
 
+]
+
+[19
 
 ]
+
+LaTeX Warning: Reference `ultrasound_sensor' on page 1 undefined on input line 15.
+
+<./contents/chapter3/figures/hcsr04.jpg, id=248, 256.96pt x 192.72pt>
+File: ./contents/chapter3/figures/hcsr04.jpg Graphic file (type jpg)
+<use ./contents/chapter3/figures/hcsr04.jpg>
+Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input line 21.
+(luatex.def)             Requested size: 256.95937pt x 192.71951pt.
+
+LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 28.
+
+
+
+[20
+
+<./contents/chapter3/figures/hcsr04.jpg>])
+
+[21]
+\openout2 = ./contents/chapter4/depth_camera.aux
+ (./contents/chapter4/depth_camera.tex
+
+[22
+
+
+
+]
+
+[23
+
+]
+<./contents/chapter4/figures/SEN0581.jpg, id=284, 226.8475pt x 150.5625pt>
+File: ./contents/chapter4/figures/SEN0581.jpg Graphic file (type jpg)
+<use ./contents/chapter4/figures/SEN0581.jpg>
+Package luatex.def Info: ./contents/chapter4/figures/SEN0581.jpg  used on input line 14.
+(luatex.def)             Requested size: 226.84694pt x 150.56212pt.
+File: ./contents/chapter4/figures/SEN0581.jpg Graphic file (type jpg)
+<use ./contents/chapter4/figures/SEN0581.jpg>
+Package luatex.def Info: ./contents/chapter4/figures/SEN0581.jpg  used on input line 22.
+(luatex.def)             Requested size: 226.84694pt x 150.56212pt.
+
+
+[24
+
+<./contents/chapter4/figures/SEN0581.jpg>])
+
+[25]
 \openout2 = ./contents/chapter5/line_bot.aux
  (./contents/chapter5/line_bot.tex)
 
-[19
+[26
 
 
 
 
 ]
 \openout2 = ./contents/chapter6/conclusion.aux
- (./contents/chapter6/conclusion.tex)
+ (./contents/chapter6/conclusion.tex(load cache: extra_lmsans10-regular.luc)
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 10.00002pt on input line 9.
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <10.81454> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 10.00002pt on input line 9.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <10.81454> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 10.00002pt on input line 9.
+)
 
-[20
+[27
 
 
 
@@ -2409,7 +2481,7 @@ LaTeX Warning: Reference `HC-SR04' on page 1 undefined on input line 15.
 \openout2 = ./contents/reference/reference.aux
  (./contents/reference/reference.tex)
 
-[21
+[28
 
 
 
@@ -2421,7 +2493,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'cite.live'
 \openout2 = ./contents/sub/acknowledgement.aux
  (./contents/sub/acknowledgement.tex)
 
-[22
+[29
 
 
 
@@ -2430,34 +2502,41 @@ warning  (pdf backend): ignoring duplicate destination with the name 'cite.live'
 \openout2 = ./contents/appendix/source_code/print_sourcecode.aux
  (./contents/appendix/source_code/print_sourcecode.tex
 
-LaTeX Warning: Reference `rinkaku' on page 1 undefined on input line 7.
+LaTeX Warning: Reference `measurepy' on page 1 undefined on input line 6.
 
 (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 10.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 9.
 (load cache: extra_lmmono10-regular.luc)
 LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/m/n' will be
-(Font)              scaled to size 10.00002pt on input line 10.
+(Font)              scaled to size 10.00002pt on input line 9.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/m/n' will be
-(Font)              scaled to size 10.00002pt on input line 10.
+(Font)              scaled to size 10.00002pt on input line 9.
 LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 10.
+(Font)              scaled to size 8.00003pt on input line 9.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 10.
+(Font)              scaled to size 8.00003pt on input line 9.
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/heatmap.py(load cache: extra_lmmono8-regular.luc)
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/measure.py(load cache: extra_lmmono8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 7.0pt on input line 1.
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8.65166> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 23.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 20.
 (load cache: extra_lmmonolt10-bold.luc)
 LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/b/n' will be
-(Font)              scaled to size 8.00003pt on input line 23.
+(Font)              scaled to size 8.00003pt on input line 20.
 LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/b/n' will be
-(Font)              scaled to size 8.00003pt on input line 23.
+(Font)              scaled to size 8.00003pt on input line 20.
+)
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
 
+LaTeX Warning: Reference `machine' on page 1 undefined on input line 11.
+
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/countpeople.py
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
@@ -2467,33 +2546,22 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 
 
-])
-Removing  `ltj.listings_unicode' from `process_input_buffer'.
-
-LaTeX Warning: Reference `machine' on page 2 undefined on input line 12.
-
-Removing  `ltj.process_input_buffer' from `process_input_buffer'.
-Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/countpeople.py
+]
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
-[2]
-
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.3'
-[3])
+[2])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.)
 
 
-warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
-[4]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.3'
+[3]
 \openout2 = ./contents/appendix/data/raw_data.aux
  (./contents/appendix/data/raw_data.tex)
 
 
-warning  (pdf backend): ignoring duplicate destination with the name 'page.5'
-[5
+warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
+[4
 
 
 
@@ -2504,7 +2572,7 @@ Package caption Warning: Unused \captionsetup[subfigure] on input line 306.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 29).
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (1 not 35).
                Rerun to correct this.
 
 (./thesis_format.aux (./contents/chapter1/introduction.aux) (./contents/chapter2/image_processing.aux) (./contents/chapter3/dis_sensor.aux) (./contents/chapter4/depth_camera.aux) (./contents/chapter5/line_bot.aux) (./contents/chapter6/conclusion.aux) (./contents/reference/reference.aux) (./contents/sub/acknowledgement.aux) (./contents/appendix/source_code/print_sourcecode.aux) (./contents/appendix/data/raw_data.aux))
@@ -2522,19 +2590,19 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 56544 strings out of 475506
- 1166634,2373549 words of node,token memory allocated
- 1876 words of node memory still in use:
-   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 456 attribute, 101 glue_spec, 53 attribute_list, 4 write, 14 user_defined nodes
-   avail lists: 1:26,2:199623,3:839,4:31391,5:21655,6:110,7:17285,8:41,9:42834,10:46,11:1308
- 77661 multiletter control sequences out of 65536+600000
- 146 fonts using 137269807 bytes
- 125i,8n,141p,2000b,2054s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56594 strings out of 475506
+ 1166665,2373549 words of node,token memory allocated
+ 1900 words of node memory still in use:
+   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 467 attribute, 101 glue_spec, 54 attribute_list, 4 write, 14 user_defined nodes
+   avail lists: 1:25,2:170046,3:793,4:27131,5:18572,6:108,7:15694,8:41,9:37080,10:46,11:1114
+ 77690 multiletter control sequences out of 65536+600000
+ 148 fonts using 137533503 bytes
+ 125i,9n,141p,2000b,1944s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on thesis_format.pdf (29 pages, 11892140 bytes).
+Output written on thesis_format.pdf (35 pages, 13581239 bytes).
 
-PDF statistics: 633 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 692 PDF objects out of 1000 (max. 8388607)
  2 compressed objects within 1 object stream
- 235 named destinations out of 1000 (max. 131072)
- 215 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 241 named destinations out of 1000 (max. 131072)
+ 255 words of extra memory for PDF output out of 10000 (max. 100000000)
 
