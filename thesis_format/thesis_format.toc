@@ -13,24 +13,28 @@
 \contentsline {section}{\numberline {2.4}類似商品の識別}{14}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}輪郭の座標表現}{14}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}座標による商品の識別}{17}{subsection.2.4.2}%
-\contentsline {chapter}{\numberline {第3章}超音波センサによる在庫の把握}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}超音波センサによる在庫把握の方法}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}研究に使用した装置}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}超音波センサの性能}{19}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}マイコンボードを含めた装置全体}{19}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}超音波センサの配置}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}超音波センサの試行の結果と考察}{19}{section.3.4}%
-\contentsline {chapter}{\numberline {第4章}デプスカメラによるデータ収集}{20}{chapter.4}%
-\contentsline {section}{\numberline {4.1}使用するデプスカメラの説明}{20}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}デプスカメラの精度}{21}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}デプスカメラの配置と距離の検出方法}{21}{section.4.2}%
-\contentsline {chapter}{\numberline {第5章}LINE Botを用いた遠隔の在庫把握}{22}{chapter.5}%
-\contentsline {chapter}{\numberline {第6章}総合的考察}{23}{chapter.6}%
-\contentsline {section}{\numberline {6.1}本研究の限界と今後の課題}{23}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}本研究の課題}{23}{subsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.1}超音波センサに関する課題}{23}{subsubsection.6.1.1.1}%
-\contentsline {chapter}{参考文献}{24}{section*.29}%
-\contentsline {chapter}{謝辞}{25}{section*.30}%
+\contentsline {section}{\numberline {2.5}検出結果と考察}{19}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}グレースケール画像の検出結果}{19}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}HSV画像の検出結果}{20}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}考察}{20}{subsection.2.5.3}%
+\contentsline {chapter}{\numberline {第3章}超音波センサによる在庫の把握}{22}{chapter.3}%
+\contentsline {section}{\numberline {3.1}超音波センサによる在庫把握の方法}{22}{section.3.1}%
+\contentsline {section}{\numberline {3.2}研究に使用した装置}{23}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}超音波センサの性能}{23}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}マイコンボードを含めた装置全体}{23}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}超音波センサの配置}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}超音波センサの試行の結果と考察}{23}{section.3.4}%
+\contentsline {chapter}{\numberline {第4章}デプスカメラによるデータ収集}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}使用するデプスカメラの説明}{24}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}デプスカメラの精度}{25}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}デプスカメラの配置と距離の検出方法}{25}{section.4.2}%
+\contentsline {chapter}{\numberline {第5章}LINE Botを用いた遠隔の在庫把握}{26}{chapter.5}%
+\contentsline {chapter}{\numberline {第6章}総合的考察}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}本研究の限界と今後の課題}{27}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}本研究の課題}{27}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}超音波センサに関する課題}{27}{subsubsection.6.1.1.1}%
+\contentsline {chapter}{参考文献}{28}{section*.35}%
+\contentsline {chapter}{謝辞}{29}{section*.36}%
 \contentsline {chapter}{\numberline {付録A}プログラム}{1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}ソースコード}{1}{section.A.1}%
 \contentsline {chapter}{\numberline {付録B}原稿非掲載データ}{4}{appendix.B}%
