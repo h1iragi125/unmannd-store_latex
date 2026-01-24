@@ -167,7 +167,7 @@ from flask import Flask
 
 # HTMLで記述
 def status():
-    *@html = f"""
+    html = (
     <!DOCTYPE html>
     <html lang="ja">
     <head>
@@ -203,7 +203,7 @@ def status():
         </ul>
     </body>
     </html>
-    """@*
+    )
     return html
     \end{lstlisting}
 
@@ -247,7 +247,7 @@ def handle_message(event):
 		\begin{minipage}{.45\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{図5.7.png}
-			\caption{リッチメニュー}
+			\caption{リッチメニュー表示}
 			\label{menu}
 		\end{minipage}
 		\hfill
@@ -255,8 +255,80 @@ def handle_message(event):
 		\begin{minipage}{.45\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{図5.8.png}
-			\caption{リッチメッセージ}
+			\caption{リッチメッセージ表示}
 			\label{message}
 		\end{minipage}
 	\end{figure}
+
+    無人店舗の商品は数が多いため，商品名とその見た目を記憶するのは困難である．そのため，\figref{menu}および\figref{message}に示す実際のLINE公式アカウントのトーク画面から分かる通り，リッチメニューおよびリッチメッセージを用いて商品棚や商品名の見た目と名称を同時に表示することで，利用者の想定する商品を選択することができる．
+    6.2節で述べたように，在庫データを返信するには，利用者の送信するメッセージテキストが，あらかじめ定めたテキストに完全に一致している必要がある．\figref{menutap}および\figref{messagetap}に示すLINE公式アカウント上のやり取りから分かる通り，リッチメニューおよびリッチメッセージはバナーをタップすると必ず固定のメッセージが送信され，そのメッセージは公式アカウント管理者が設定できる．そのため，これらを利用することで，迅速かつ正確な在庫データの提供が可能になる．
+
+    \vspace{0.5\baselineskip}
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{図5.9.png}
+			\caption{リッチメニューのタップ操作}
+			\label{menutap}
+		\end{minipage}
+		\hfill
+		\vspace{0.5\baselineskip}
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{図5.10.png}
+			\caption{リッチメッセージのタップ操作}
+			\label{messagetap}
+		\end{minipage}
+	\end{figure}
+
+    リッチメニューおよびリッチメッセージの設定方法について説明する．\figref{menusettei}に示すLINE公式アカウントのリッチメニュー設定画面から，リッチメニューの表現テンプレート，適用する画像およびテキスト，タップ操作時のアクション，メニューバーをそれぞれ設定する．これに表示期間を設定し，公開することで \figref{menu}に示したように，トーク画面を開いた際にリッチメニューが表示される．
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.11.png}
+			\caption{リッチメニュー設定画面}
+			\label{menusettei}
+	\end{figure}
+
+    \figref{messagesettei}に示すLINE公式アカウントのリッチメッセージ設定画面から，リッチメッセージの表現テンプレート，適用する画像およびテキスト，タップ操作時のアクションをそれぞれ設定する．その後，\figref{return}に示すLINE公式アカウントの応答メッセージ設定画面から，リッチメッセージが返信として表示されるためのキーワードを設定することで，図6.8に示したように，利用者がキーワードを公式アカウントに送信した際，対応するリッチメッセージが表示される．利用者のキーワード送信を，リッチメニューおよび別のリッチメッセージでタップ操作した際のアクションに設定することで，タップ操作のみで特定の商品に辿り着くことができる．リッチメニューおよびリッチメッセージを利用した商品検索の流れを\figref{search}に示す．
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.12.png}
+			\caption{リッチメッセージ設定画面}
+			\label{messagesettei}
+	\end{figure}
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.13.png}
+			\caption{応答メッセージ設定画面}
+			\label{return}
+	\end{figure}
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.14.png}
+			\caption{商品検索の流れ}
+			\label{search}
+	\end{figure}
+
+    \section{システムの動作結果と考察，課題}
+    \figref{kasika}に示したFlaskサーバの格納データ可視化画面から分かる通り，Raspberry pi3からFlaskサーバへのデータ送信および格納については，正確に行うことができた．
+    6.2節で述べたように，Messaging API，Webhook，ngrokを用いて，利用者が「ブルーベリー＆クリームチーズベーグル」の在庫を把握するため，LINE公式アカウントにメッセージを送信した際の結果を\figref{result}に示す．この結果から，LINE Botを用いた在庫データの把握が可能であると判断した．
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図5.15.png}
+			\caption{遠隔在庫把握の結果}
+			\label{result}
+	\end{figure}
+
+    6.2節で述べたように，本研究では，処理の軽量化のためFlaskサーバに最新のデータのみを格納している．しかし，過去の在庫データの履歴を時刻情報などと併せて保持することで，遠隔の在庫把握以外，例えば，商品の時刻ごとの売れ行きや天気，季節による売れ行きの変化など，様々な目的に応用できると考える．
     
