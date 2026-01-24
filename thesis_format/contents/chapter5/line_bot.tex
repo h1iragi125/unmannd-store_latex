@@ -12,7 +12,7 @@
         \vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.6\linewidth]{図6.1.png}
+			\includegraphics[width=.7\linewidth]{図5.1.png}
 			\caption{LINE上のやり取りの様子}
 			\label{yaritori}
 		\end{figure}
@@ -26,9 +26,74 @@
         \vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.8\linewidth]{図6.2.png}
+			\includegraphics[width=.8\linewidth]{図5.2.png}
 			\caption{遠隔在庫把握システムの構造}
 			\label{system}
 		\end{figure}
 
-        Messaging APIを利用するためには，図6.3に示すLINE BotのMessaging API設定画面（以下LINE Developers画面とする）のように，チャネルアクセストークンの発行が必要である．これは，Messaging APIを安全に利用するための認証キーであり，本研究ではFlaskサーバからLINEプラットフォームへメッセージ送信を行うための身分証としての役割を果たす．図6.3は，リスク回避のため，チャネルアクセストークンを隠して示している．
+        Messaging APIを利用するためには，\figref{access}に示すLINE BotのMessaging API設定画面（以下LINE Developers画面とする）のように，チャネルアクセストークンの発行が必要である．これは，Messaging APIを安全に利用するための認証キーであり，本研究ではFlaskサーバからLINEプラットフォームへメッセージ送信を行うための身分証としての役割を果たす．\figref{access}は，セキュリティ上の理由から，チャネルアクセストークンを隠して示している．
+
+        \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.3.png}
+			\caption{チャネルアクセストークン発行画面}
+			\label{access}
+		\end{figure}
+
+        \subsection{Webhookとngrok}
+        Webhookは，特定のイベントが発生した際，あらかじめ設定したアプリケーションに通知を自動で送信する仕組みであり[21]，\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，本研究では，在庫データを管理するFlaskサーバに対し，イベントの発生を通知する際に用いる．遠隔在庫把握システムにおけるイベントとは，利用者からのメッセージを指し，Webhookを利用することで，利用者のメッセージに対して応答する仕組みを実現できる．
+        Webhookを利用し，イベントの発生を通知するにあたり，ローカル環境で動作するサーバから外部ネットワークへの通信はツールを用いず実現できるが，外部ネットワークからローカル環境への通信は特定のツールが必要という問題が存在する．この問題を解決するツールの1つにngrokがあり[22]，\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，本研究ではインターネット上のLINEプラットフォームから学内LAN内にあるFlaskサーバにWebhookを送信するためngrokを用いる．このツールの特徴として，無料かつ簡単に利用できる点が挙げられる．また，ngrokは，より便利な機能を備えた有償版もあるが，本研究では，LINE Botの有効性調査に支障のない無料版を用いる．
+        LINE Botにおけるngrokを用いたWebhookの具体的な設定方法について説明する．テキストベースのプログラム実行ツール（以下ターミナルとする）において，\ref{source5.1}に示すFlaskサーバのポート公開コードのように，ポート番号を5000としてngrokに公開URLを生成させる．ここで，ポート番号を5000としているのは，Flaskサーバのデフォルト設定がこの番号のためであり[23]，任意に変更することができるが，本研究ではデフォルトの番号を用いている．生成される公開URLを\figref{URL}に示すが，セキュリティ上の理由から，URLを隠して示している．
+
+        \begin{lstlisting}[language=Python, caption=ソースコード5.1, label=source5.1]
+ngrok http 5000
+		\end{lstlisting}
+
+        \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.9\linewidth]{図5.4.png}
+			\caption{ngrokで生成される公開URL}
+			\label{URL}
+		\end{figure}
+
+        \figref{URL}に示したngrokによって生成される公開URLに「/callback」を付与したものを，\figref{Webhook}に示すLINE DevelopersのWebhook設定画面のように，Webhook URLとして設定し，Webhookの利用をONにする．ここで，「/ callback」は，本研究においてFlaskサーバがWebhookを受け取るための窓口を示しており，利用者のメッセージに沿った応答をするために必要なコードである．これらの作業によって，公式アカウントに利用者がメッセージを送信した際，インターネット上のLINEプラットフォームを通じて，学内LAN内のFlaskサーバへイベントの発生を通知できる．「/callback」を用いたWebhookの窓口設定に関するコードを\ref{source5.2}に示す．このコードにおいて，signatureはWebhookの通知がLINEプラットフォームから送られた正規のものであるか，改ざんされていないかを認証するための署名であり，bodyはメッセージ内容，ユーザIDなどのイベント情報を文字列で取得するためのコードである．また，\figref{Webhook}はセキュリティ上の理由から，Webhook URLを隠して示している．
+
+        \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.5.png}
+			\caption{Webhook設定画面}
+			\label{Webhook}
+		\end{figure}
+
+        \begin{lstlisting}[language=Python, caption=ソースコード5.2, label=source5.2]
+from flask import Flask, request, abort
+from linebot import WebhookHandler
+
+# Webhook受信
+@app.route("/callback", methods=['POST'])
+def callback():
+
+    # LINEからの改ざん防止用署名を取得
+    signature = request.headers['X-Line-Signature']
+
+    # イベント情報（JSON形式）を取得
+    body = request.get_data(as_text=True)
+    print("Received body:", body)
+
+    # 処理の受け渡し
+    try:
+        handler.handle(body, signature)
+
+    # エラー発生時の処理
+    except Exception as e:
+        print("[ERROR] LINE handler:", e)
+        abort(400)
+
+    return 'OK'
+		\end{lstlisting}
+    
+    \section{遠隔在庫把握システムの流れ}
+    まず，Flaskサーバに在庫データを格納する仕組みについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，デプスカメラで検出した商品在庫の個数情報を，Raspberry pi3を用いてJSON形式でFlaskサーバに送信する．この際，Flaskサーバに保持するデータは各商品１つであり，10秒間隔で最新のデータに更新する．ここで，最新のデータのみを格納している理由としては，Flaskサーバの処理を軽くするためである．また，素早く返信を行うために，利用者からのメッセージを検知してFlaskサーバがデータ取得を始めるのではなく，Flaskサーバにあらかじめ格納されている最新の在庫データを用いて返信を行う．Raspberry pi3に実装するFlaskサーバへデータを送信するためのコードをソースコード6.2に示す．本研究では，LINE Botの有効性調査のため，実際に検出された値ではなく，１つの商品の検出値に見立てた実験用のダミー値を利用している．実用化の際には、無人店舗の全商品の在庫を検出，データとして格納することを想定している．注意点として，Flaskサーバを立てるPCとRaspberry pi3は同一LAN内で通信を行う必要がある．本研究では，学内LANを用いている．また，セキュリティ上の理由から，ソースコード6.2においてFlaskサーバを立てたPCのIPアドレスは，実際のものではなく，例を示している．
