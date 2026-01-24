@@ -1667,4 +1667,667 @@ Package: luatexja-fontspec-29e 2024-05-27 fontspec support of LuaTeX-ja
 )) (c:/texlive/2025/texmf-dist/tex/latex/haranoaji/HaranoAjiGothic.fontspec)(load cache: extra_haranoajigothic-regular.luc)
 
 Package fontspec Info: 
-(fo
+(fontspec)             HaranoAjiGothic-Regular scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Regular scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Regular scale = 0.9246826171875.
+
+(load cache: extra_haranoajigothic-heavy.luc)
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Heavy scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Heavy scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Regular scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Regular scale = 0.9246826171875.
+
+(load cache: extra_haranoajigothic-bold.luc)
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Bold scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             HaranoAjiGothic-Bold scale = 0.9246826171875.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'HaranoAjiGothic(0)' created for font
+(fontspec)             'HaranoAjiGothic' with options
+(fontspec)             [YokoFeatures={JFM=jlreq},TateFeatures={JFM=jlreqv},Scale=0.9246826171875,Kerning=Off,Script=CJK,Extension
+(fontspec)             = .otf,UprightFont = *-Regular,BoldFont =
+(fontspec)             *-Bold,FontFace = {l}{n}{ *-Regular },FontFace =
+(fontspec)             {eb}{n}{ *-Heavy
+(fontspec)             },YokoFeatures={JFM=jlreq},CharacterWidth=AlternateProportional].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+
+ (c:/texlive/2025/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+LaTeX Info: Redefining \cite on input line 441.
+)) (c:/texlive/2025/texmf-dist/tex/luatex/luatexja/patches/lltjp-array.sty
+Package: lltjp-array 2024-07-21 Patch to array for LuaTeX-ja
+)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 40.
+
+
+LaTeX Warning: Unused global option(s):
+    [jlreq_warnings].
+
+(./thesis_format.aux (./contents/chapter1/introduction.aux) (./contents/chapter2/image_processing.aux
+
+LaTeX Warning: Label `cameraclass' multiply defined.
+
+
+LaTeX Warning: Label `cameraclass@cref' multiply defined.
+
+) (./contents/chapter3/dis_sensor.aux) (./contents/chapter4/depth_camera.aux) (./contents/chapter5/line_bot.aux))
+\openout1 = thesis_format.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+ (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count500
+\scratchdimen=\dimen437
+\scratchbox=\box179
+\nofMPsegments=\count501
+\nofMParguments=\count502
+\everyMPshowfont=\toks68
+\MPscratchCnt=\count503
+\MPscratchDim=\dimen438
+\MPnumerator=\count504
+\makeMPintoPDFobject=\count505
+\everyMPtoPDFconversion=\toks69
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.7).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(c:/texlive/2025/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: xtab package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (c:/texlive/2025/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (c:/texlive/2025/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 40.
+Package hyperref Info: Link coloring ON on input line 40.
+\c@lstlisting=\count506
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 44.
+LaTeX Font Info:    Calculating math sizes for size <15.14037> on input line 44.
+LaTeX Font Info:    Trying loading font information for OT1+lmr on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying loading font information for OML+lmm on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying loading font information for OMS+lmsy on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying loading font information for OMX+lmex on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <15.14037> on input line 44.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.5982> on input line 44.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.57018> on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 9.79997pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 7.0pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.79997pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 7.0pt on input line 44.
+LaTeX Font Info:    Trying loading font information for U+msa on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying loading font information for U+msb on input line 44.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 17.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 17.00003pt on input line 44.
+LaTeX Font Info:    Calculating math sizes for size <18.38472> on input line 44.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <18.38472> on input line 44.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12.86925> on input line 44.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9.19235> on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 11.89996pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 8.5pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 17.00003pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 11.89996pt on input line 44.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 8.5pt on input line 44.
+
+
+[1
+
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}](load cache: extra_lmsans17-regular.luc)
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 54.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 54.
+(load cache: extra_lmsans10-bold.luc)
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <21.62909> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 54.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <21.62909> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 20.00003pt on input line 54.
+ (./thesis_format.toc)
+\tf@toc=\write6
+
+\openout6 = thesis_format.toc
+
+
+[1
+
+
+]
+\openout2 = ./contents/chapter1/introduction.aux
+ (./contents/chapter1/introduction.tex(load cache: extra_lmsans12-regular.luc)
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 4.
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <15.14037> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <15.14037> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 14.00003pt on input line 4.
+LaTeX Font Info:    Calculating math sizes for size <10.81454> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.81454> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.57014> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.40727> on input line 4.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.99997pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 5.0pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 6.99997pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 5.0pt on input line 4.
+(load cache: extra_lmroman8-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 6.99997pt on input line 4.
+(load cache: extra_lmroman8-bold.luc)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <7.57014> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 6.99997pt on input line 4.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <7.57014> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 6.99997pt on input line 4.
+
+
+LaTeX Warning: Citation `1.1' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `1.2' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `1.3' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `1.4' on page 1 undefined on input line 4.
+
+<./contents/chapter1/figures/図1.1.jpg, id=27, 238.8925pt x 351.3125pt>
+File: ./contents/chapter1/figures/図1.1.jpg Graphic file (type jpg)
+<use ./contents/chapter1/figures/図1.1.jpg>
+Package luatex.def Info: ./contents/chapter1/figures/図1.1.jpg  used on input line 12.
+(luatex.def)             Requested size: 220.00038pt x 323.52768pt.
+
+
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1
+
+
+
+])
+
+[2<./contents/chapter1/figures/図1.1.jpg>]
+\openout2 = ./contents/chapter2/image_processing.aux
+ (./contents/chapter2/image_processing.tex
+<./contents/chapter2/figures/図2.1.png, id=49, 820.56563pt x 833.36343pt>
+File: ./contents/chapter2/figures/図2.1.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.1.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.1.png  used on input line 10.
+(luatex.def)             Requested size: 175.99762pt x 178.73729pt.
+<./contents/chapter2/figures/図2.2.jpg, id=50, 4015.0pt x 3011.25pt>
+File: ./contents/chapter2/figures/図2.2.jpg Graphic file (type jpg)
+<use ./contents/chapter2/figures/図2.2.jpg>
+Package luatex.def Info: ./contents/chapter2/figures/図2.2.jpg  used on input line 20.
+(luatex.def)             Requested size: 197.999pt x 148.45772pt.
+<./contents/chapter2/figures/図2.3.png, id=51, 505.13719pt x 262.73157pt>
+File: ./contents/chapter2/figures/図2.3.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.3.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.3.png  used on input line 28.
+(luatex.def)             Requested size: 197.999pt x 102.98204pt.
+
+
+[3
+
+
+
+
+<./contents/chapter2/figures/図2.1.png>]
+<./contents/chapter2/figures/図2.4.png, id=65, 903.375pt x 481.8pt>
+File: ./contents/chapter2/figures/図2.4.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.4.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.4.png  used on input line 39.
+(luatex.def)             Requested size: 307.99919pt x 164.26563pt.
+
+
+[4<./contents/chapter2/figures/図2.2.jpg><./contents/chapter2/figures/図2.3.png><./contents/chapter2/figures/図2.4.png>](load cache: extra_lmroman12-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/b/n' in size <12.97745> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <12.97745> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 64.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 12.00002pt on input line 64.
+<./contents/chapter2/figures/図2.5.png, id=79, 755.82375pt x 264.23718pt>
+File: ./contents/chapter2/figures/図2.5.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.5.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.5.png  used on input line 69.
+(luatex.def)             Requested size: 352.00195pt x 123.05852pt.
+<./contents/chapter2/figures/図2.6.png, id=81, 893.58844pt x 287.57437pt>
+File: ./contents/chapter2/figures/図2.6.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.6.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.6.png  used on input line 79.
+(luatex.def)             Requested size: 307.99919pt x 99.12111pt.
+
+
+[5<./contents/chapter2/figures/図2.5.png>]
+<./contents/chapter2/figures/図2.7.png, id=96, 286.06876pt x 270.25969pt>
+File: ./contents/chapter2/figures/図2.7.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.7.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.7.png  used on input line 102.
+(luatex.def)             Requested size: 175.99762pt x 166.27263pt.
+<./contents/chapter2/figures/図2.8.png, id=97, 855.94781pt x 370.38374pt>
+File: ./contents/chapter2/figures/図2.8.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.8.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.8.png  used on input line 110.
+(luatex.def)             Requested size: 220.00038pt x 95.19543pt.
+
+
+[6<./contents/chapter2/figures/図2.6.png>]
+<./contents/chapter2/figures/図2.9.png, id=112, 489.32813pt x 402.75468pt>
+File: ./contents/chapter2/figures/図2.9.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.9.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.9.png  used on input line 125.
+(luatex.def)             Requested size: 197.999pt x 162.96725pt.
+<./contents/chapter2/figures/図2.10.png, id=113, 450.18187pt x 402.75468pt>
+File: ./contents/chapter2/figures/図2.10.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.10.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.10.png  used on input line 133.
+(luatex.def)             Requested size: 175.99762pt x 157.45471pt.
+
+
+[7<./contents/chapter2/figures/図2.7.png><./contents/chapter2/figures/図2.8.png><./contents/chapter2/figures/図2.9.png><./contents/chapter2/figures/図2.10.png>]
+<./contents/chapter2/figures/図2.11.png, id=127, 1018.55531pt x 264.23718pt>
+File: ./contents/chapter2/figures/図2.11.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.11.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.11.png  used on input line 144.
+(luatex.def)             Requested size: 307.99919pt x 79.90074pt.
+<./contents/chapter2/figures/図2.12.png, id=129, 1166.85938pt x 349.305pt>
+File: ./contents/chapter2/figures/図2.12.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.12.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.12.png  used on input line 154.
+(luatex.def)             Requested size: 307.99919pt x 92.1976pt.
+
+
+[8<./contents/chapter2/figures/図2.11.png><./contents/chapter2/figures/図2.12.png>]
+<./contents/chapter2/figures/図2.13.png, id=149, 454.69875pt x 446.41782pt>
+File: ./contents/chapter2/figures/図2.13.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.13.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.13.png  used on input line 208.
+(luatex.def)             Requested size: 264.00314pt x 259.19498pt.
+
+
+[9<./contents/chapter2/figures/図2.13.png>]
+<./contents/chapter2/figures/図2.14.png, id=165, 965.85844pt x 660.96938pt>
+File: ./contents/chapter2/figures/図2.14.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.14.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.14.png  used on input line 223.
+(luatex.def)             Requested size: 352.00195pt x 240.88368pt.
+<./contents/chapter2/figures/図2.15.png, id=166, 855.94781pt x 642.14906pt>
+File: ./contents/chapter2/figures/図2.15.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.15.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.15.png  used on input line 231.
+(luatex.def)             Requested size: 352.00195pt x 264.07649pt.
+
+
+[10<./contents/chapter2/figures/図2.14.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./contents/chapter2/figures/図2.16.png, id=185, 577.40718pt x 674.52pt>
+File: ./contents/chapter2/figures/図2.16.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.16.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.16.png  used on input line 263.
+(luatex.def)             Requested size: 264.00314pt x 308.42006pt.
+
+
+[11<./contents/chapter2/figures/図2.15.png>]
+
+[12<./contents/chapter2/figures/図2.16.png>]
+<./contents/chapter2/figures/図2.17.png, id=207, 454.69875pt x 334.24875pt>
+File: ./contents/chapter2/figures/図2.17.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.17.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.17.png  used on input line 275.
+(luatex.def)             Requested size: 264.00314pt x 194.0684pt.
+<./contents/chapter2/figures/図2.18.png, id=208, 1115.66812pt x 556.32843pt>
+File: ./contents/chapter2/figures/図2.18.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.18.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.18.png  used on input line 283.
+(luatex.def)             Requested size: 307.99919pt x 153.58076pt.
+<./contents/chapter2/figures/図2.19.png, id=210, 1114.91531pt x 550.30594pt>
+File: ./contents/chapter2/figures/図2.19.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.19.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.19.png  used on input line 293.
+(luatex.def)             Requested size: 307.99919pt x 152.01895pt.
+
+
+[13<./contents/chapter2/figures/図2.17.png><./contents/chapter2/figures/図2.18.png>]
+<./contents/chapter2/figures/図2.20.png, id=223, 596.2275pt x 359.09157pt>
+File: ./contents/chapter2/figures/図2.20.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.20.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.20.png  used on input line 304.
+(luatex.def)             Requested size: 307.99919pt x 185.50133pt.
+
+
+[14<./contents/chapter2/figures/図2.19.png><./contents/chapter2/figures/図2.20.png>]
+<./contents/chapter2/figures/図2.21.png, id=237, 612.03656pt x 563.85657pt>
+File: ./contents/chapter2/figures/図2.21.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.21.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.21.png  used on input line 330.
+(luatex.def)             Requested size: 264.00314pt x 243.21933pt.
+<./contents/chapter2/figures/図2.22.png, id=240, 779.16093pt x 384.6872pt>
+File: ./contents/chapter2/figures/図2.22.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.22.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.22.png  used on input line 340.
+(luatex.def)             Requested size: 307.99919pt x 152.06422pt.
+
+
+[15<./contents/chapter2/figures/図2.21.png>]
+<./contents/chapter2/figures/図2.23.png, id=253, 453.94594pt x 566.115pt>
+File: ./contents/chapter2/figures/図2.23.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.23.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.23.png  used on input line 352.
+(luatex.def)             Requested size: 197.999pt x 246.92317pt.
+<./contents/chapter2/figures/図2.24.png, id=254, 454.69875pt x 604.50844pt>
+File: ./contents/chapter2/figures/図2.24.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.24.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.24.png  used on input line 360.
+(luatex.def)             Requested size: 197.999pt x 263.23576pt.
+
+
+[16<./contents/chapter2/figures/図2.22.png>]
+<./contents/chapter2/figures/図2.25.png, id=264, 803.25093pt x 467.49657pt>
+File: ./contents/chapter2/figures/図2.25.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.25.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.25.png  used on input line 373.
+(luatex.def)             Requested size: 307.99919pt x 179.26268pt.
+
+
+[17<./contents/chapter2/figures/図2.23.png><./contents/chapter2/figures/図2.24.png>]
+<./contents/chapter2/figures/図2.26.png, id=276, 796.47563pt x 458.46281pt>
+File: ./contents/chapter2/figures/図2.26.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.26.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.26.png  used on input line 387.
+(luatex.def)             Requested size: 307.99919pt x 177.28873pt.
+
+
+[18<./contents/chapter2/figures/図2.25.png><./contents/chapter2/figures/図2.26.png>]
+<./contents/chapter2/figures/図2.27.png, id=289, 454.69875pt x 478.78876pt>
+File: ./contents/chapter2/figures/図2.27.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.27.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.27.png  used on input line 401.
+(luatex.def)             Requested size: 264.00314pt x 277.9899pt.
+
+
+[19<./contents/chapter2/figures/図2.27.png>]
+<./contents/chapter2/figures/図2.28.png, id=305, 639.89063pt x 733.99219pt>
+File: ./contents/chapter2/figures/図2.28.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.28.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.28.png  used on input line 414.
+(luatex.def)             Requested size: 264.00314pt x 302.83151pt.
+
+
+[20<./contents/chapter2/figures/図2.28.png>]
+<./contents/chapter2/figures/図2.29.png, id=319, 888.31876pt x 455.45157pt>
+File: ./contents/chapter2/figures/図2.29.png Graphic file (type png)
+<use ./contents/chapter2/figures/図2.29.png>
+Package luatex.def Info: ./contents/chapter2/figures/図2.29.png  used on input line 427.
+(luatex.def)             Requested size: 264.00314pt x 135.35779pt.
+<./contents/chapter2/figures/図2.30.JPG, id=321, 4015.0pt x 3011.25pt>
+File: ./contents/chapter2/figures/図2.30.JPG Graphic file (type jpg)
+<use ./contents/chapter2/figures/図2.30.JPG>
+Package luatex.def Info: ./contents/chapter2/figures/図2.30.JPG  used on input line 437.
+(luatex.def)             Requested size: 220.00038pt x 164.99896pt.
+)
+
+[21<./contents/chapter2/figures/図2.29.png><./contents/chapter2/figures/図2.30.JPG>]
+\openout2 = ./contents/chapter3/dis_sensor.aux
+ (./contents/chapter3/dis_sensor.tex
+<./contents/chapter3/figures/hcsr04.jpg, id=332, 256.96pt x 192.72pt>
+File: ./contents/chapter3/figures/hcsr04.jpg Graphic file (type jpg)
+<use ./contents/chapter3/figures/hcsr04.jpg>
+Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input line 15.
+(luatex.def)             Requested size: 256.95937pt x 192.71951pt.
+
+
+[22
+
+
+
+
+<./contents/chapter3/figures/hcsr04.jpg>])
+
+[23]
+\openout2 = ./contents/chapter4/depth_camera.aux
+ (./contents/chapter4/depth_camera.tex
+<./contents/chapter4/figures/SEN0581.jpg, id=356, 226.8475pt x 150.5625pt>
+File: ./contents/chapter4/figures/SEN0581.jpg Graphic file (type jpg)
+<use ./contents/chapter4/figures/SEN0581.jpg>
+Package luatex.def Info: ./contents/chapter4/figures/SEN0581.jpg  used on input line 10.
+(luatex.def)             Requested size: 226.84694pt x 150.56212pt.
+File: ./contents/chapter4/figures/SEN0581.jpg Graphic file (type jpg)
+<use ./contents/chapter4/figures/SEN0581.jpg>
+Package luatex.def Info: ./contents/chapter4/figures/SEN0581.jpg  used on input line 18.
+(luatex.def)             Requested size: 226.84694pt x 150.56212pt.
+
+
+[24
+
+
+
+
+<./contents/chapter4/figures/SEN0581.jpg>])
+
+[25]
+\openout2 = ./contents/chapter5/line_bot.aux
+ (./contents/chapter5/line_bot.tex
+<./contents/chapter5/figures/図5.1.png, id=377, 709.90219pt x 377.15906pt>
+File: ./contents/chapter5/figures/図5.1.png Graphic file (type png)
+<use ./contents/chapter5/figures/図5.1.png>
+Package luatex.def Info: ./contents/chapter5/figures/図5.1.png  used on input line 15.
+(luatex.def)             Requested size: 307.99919pt x 163.637pt.
+
+
+[26
+
+
+
+
+]
+<./contents/chapter5/figures/図5.2.png, id=389, 1096.095pt x 420.82219pt>
+File: ./contents/chapter5/figures/図5.2.png Graphic file (type png)
+<use ./contents/chapter5/figures/図5.2.png>
+Package luatex.def Info: ./contents/chapter5/figures/図5.2.png  used on input line 29.
+(luatex.def)             Requested size: 352.00195pt x 135.141pt.
+
+
+[27<./contents/chapter5/figures/図5.1.png>]
+<./contents/chapter5/figures/図5.3.png, id=401, 1226.33156pt x 590.95781pt>
+File: ./contents/chapter5/figures/図5.3.png Graphic file (type png)
+<use ./contents/chapter5/figures/図5.3.png>
+Package luatex.def Info: ./contents/chapter5/figures/図5.3.png  used on input line 39.
+(luatex.def)             Requested size: 352.00195pt x 169.62402pt.
+
+
+[28<./contents/chapter5/figures/図5.2.png><./contents/chapter5/figures/図5.3.png>] (c:/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 49.
+(load cache: extra_lmmono10-regular.luc)
+LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/m/n' will be
+(Font)              scaled to size 10.00002pt on input line 49.
+LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/m/n' will be
+(Font)              scaled to size 10.00002pt on input line 49.
+LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/m/n' will be
+(Font)              scaled to size 8.00003pt on input line 49.
+LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/m/n' will be
+(Font)              scaled to size 8.00003pt on input line 49.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.(load cache: extra_lmmono8-regular.luc)
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 7.0pt on input line 50.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+<./contents/chapter5/figures/図5.4.png, id=416, 1008.76875pt x 120.45pt>
+File: ./contents/chapter5/figures/図5.4.png Graphic file (type png)
+<use ./contents/chapter5/figures/図5.4.png>
+Package luatex.def Info: ./contents/chapter5/figures/図5.4.png  used on input line 56.
+(luatex.def)             Requested size: 395.998pt x 47.28407pt.
+<./contents/chapter5/figures/図5.5.png, id=421, 1085.55562pt x 531.48563pt>
+File: ./contents/chapter5/figures/図5.5.png Graphic file (type png)
+<use ./contents/chapter5/figures/図5.5.png>
+Package luatex.def Info: ./contents/chapter5/figures/図5.5.png  used on input line 66.
+(luatex.def)             Requested size: 352.00195pt x 172.3415pt.
+
+
+[29<./contents/chapter5/figures/図5.4.png>]
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <8.65166> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 72.
+(load cache: extra_lmmonolt10-bold.luc)
+LaTeX Font Info:    Font shape `JT3/HaranoAjiGothic(0)/b/n' will be
+(Font)              scaled to size 8.00003pt on input line 72.
+LaTeX Font Info:    Font shape `JY3/HaranoAjiGothic(0)/b/n' will be
+(Font)              scaled to size 8.00003pt on input line 72.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+
+[30<./contents/chapter5/figures/図5.5.png>]
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.
+
+[31]
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+
+LaTeX Warning: Reference `kasika' on page 1 undefined on input line 161.
+
+Removing  `ltj.process
