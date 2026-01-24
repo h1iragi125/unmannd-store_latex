@@ -220,7 +220,7 @@
 		\vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.7\linewidth]{図2.14.png}
+			\includegraphics[width=.8\linewidth]{図2.14.png}
 			\caption{照明の商品棚への影響}
 			\label{light}
 		\end{figure}
@@ -228,7 +228,7 @@
 		\vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.6\linewidth]{図2.15.png}
+			\includegraphics[width=.8\linewidth]{図2.15.png}
 			\caption{グレースケール画像の閾値設定のイメージ}
 			\label{ikiti}
 		\end{figure}
@@ -364,4 +364,78 @@
 		\end{figure}
 
 		\subsection{座標による商品の識別}
+		画像処理による検出を実用化する際，特定の距離と画角からの撮影を想定している．また，無人店舗の商品棚は特定の位置に商品が配置されている．これらを踏まえ，各商品の棚の範囲情報と，抽出した商品の輪郭を表現するバウンディングボックスの中心点の座標情報から商品の種類を特定する．
+		\figref{shelfwide}に示す商品の範囲情報のイメージから分かる通り，各商品の棚の範囲を矩形（以下棚範囲矩形とする）で表現する．手法としては，棚範囲矩形の左上と右下の画像内座標を事前に取得し，商品ごとに定義する．これは，画像内座標が商品によって異なるためである．また，棚範囲矩形と商品の名称を対応させ，各商品の存在する範囲を定義する．% 画像内座標を取得するコードをソースコード2.1に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.25.png}
+			\caption{棚範囲矩形のイメージ}
+			\label{shelfwide}
+		\end{figure}
+
+		% \begin{lstlisting}[language=Python, caption=ソースコード, label=source1]
+			
+		% \end{lstlisting}
+		
+		商品名を対応させた棚範囲矩形と，2.4.1節で述べた商品の輪郭を表すバウンディングボックスの中心点の座標情報を用いて，商品の種類を特定する．具体的には，バウンディングボックスの中心点が特定の棚範囲矩形内に含まれているか，座標情報を用いることで検出し，含まれていた場合，その棚範囲矩形に対応する商品名を割り当てることで，バウンディングボックスが表す商品を特定する．バウンディングボックスの中心点と棚範囲矩形を用いた商品の特定イメージを\figref{shelfimage}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.26.png}
+			\caption{棚範囲矩形を用いた商品検出のイメージ}
+			\label{shelfimage}
+		\end{figure}
+
+	\section{検出結果と考察}
+	画像処理による商品検出では，\figref{onigiri}に示したおにぎりなどの白に近い色が特徴的な商品が並ぶ棚に対しては，グレースケール変換を利用し，\figref{colorful}に示した様々な色の商品が並ぶ棚に対しては，HSV変換を利用する．
+
+		\subsection{グレースケール画像の検出結果}
+		グレースケール画像の検出結果を\figref{grayresult}に示す．この図では，商品ごとの棚範囲矩形，輪郭のバウンディングボックスとその中心点を表現しており，バウンディングボックスの誤検出を確かめるため，商品が存在しない一部の棚にも閾値100～255の棚範囲矩形を設定している．また，棚範囲矩形をそれぞれ異なる色で表現し，輪郭のバウンディングボックスを対応する棚範囲矩形と同じ色で示している．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.27.png}
+			\caption{グレースケール画像の検出結果}
+			\label{grayresult}
+		\end{figure}
+
+		\figref{grayresult}の検出結果から分かる通り，輪郭の検出と商品の識別が可能であり，商品が存在しない場所で輪郭のバウンディングボックスの誤検出も発生しないことが分かる．一方で，複数の商品をまとめて１つと検出してしまう現象が確認できる． 
+
+		\subsection{HSV画像の検出結果}
+		HSV画像の検出結果を\figref{HSVresult}に示す．2.5.1節で述べたグレースケール画像の検出と同様，棚範囲矩形と輪郭のバウンディングボックス，その中心点，商品が存在しない棚の棚範囲矩形の設定，輪郭のバウンディングボックスと棚範囲矩形の対応の同色表示をそれぞれ表現している．ここで，商品が存在しない棚における棚範囲矩形の閾値は\tabref{colorikiti}に示すnoneの値を用いる．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.28.png}
+			\caption{HSV画像の検出結果}
+			\label{HSVresult}
+		\end{figure}
+
+		\figref{HSVresult}の検出結果から分かる通り，輪郭の検出と商品の識別が可能であり，商品が存在しない場所で輪郭のバウンディングボックスの誤検出も発生しないことが分かる．また，\figref{colorgray}に示した様々な色の商品が並ぶ棚のグレースケール画像から分かる通り，輝度の値がそれぞれ異なる商品が並ぶ棚は，グレースケール変換を用いた場合，検出精度が低くなるが，HSV変換を用いることで，検出精度の向上が見込める．一方で，グレースケール画像と同様に，複数の商品をまとめて１つと検出してしまう現象が確認できる．
+
+		\subsection{考察}
+		2.5.1節および2.5.2節で述べた検出結果から，白に近い色が特徴的な商品が並ぶ棚に関してはグレースケール変換を用い，様々な色の商品が並ぶ棚に関してはHSV変換を用いるのが最適だと考える．\figref{cameraclass}に示す無人店舗の商品棚の分類から分かる通り，グレースケール変換を適用すべき商品棚とHSV変換を適用すべき商品棚は，それぞれ全体の半分の棚範囲を有している．そのため，実用化の際には，グレースケール画像を取得するカメラ，HSV画像を取得するカメラの計２台が必要だと考える．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.6\linewidth]{図2.29.png}
+			\caption{画像処理を適用する棚分類}
+			\label{cameraclass}
+		\end{figure}
+
+		\figref{cameraclass}に示す無人店舗の設置場所から分かる通り，無人店舗は屋内に設置されている．そのため，天気をはじめとする外部環境の変化の影響を受けづらく，適切な閾値を設定することで，安定した検出が可能であると考える．しかし，2.5.1節および2.5.2節で述べた検出結果から，グレースケール画像を用いた検出およびHSV画像を用いた検出どちらにおいても，正確な個数の検出は困難だと考える．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.5\linewidth]{図2.30.JPG}
+			\caption{画像処理を適用する棚分類}
+			\label{cameraclass}
+		\end{figure}
 
