@@ -44,9 +44,9 @@
         \subsection{Webhookとngrok}
         Webhookは，特定のイベントが発生した際，あらかじめ設定したアプリケーションに通知を自動で送信する仕組みであり[21]，\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，本研究では，在庫データを管理するFlaskサーバに対し，イベントの発生を通知する際に用いる．遠隔在庫把握システムにおけるイベントとは，利用者からのメッセージを指し，Webhookを利用することで，利用者のメッセージに対して応答する仕組みを実現できる．
         Webhookを利用し，イベントの発生を通知するにあたり，ローカル環境で動作するサーバから外部ネットワークへの通信はツールを用いず実現できるが，外部ネットワークからローカル環境への通信は特定のツールが必要という問題が存在する．この問題を解決するツールの1つにngrokがあり[22]，\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，本研究ではインターネット上のLINEプラットフォームから学内LAN内にあるFlaskサーバにWebhookを送信するためngrokを用いる．このツールの特徴として，無料かつ簡単に利用できる点が挙げられる．また，ngrokは，より便利な機能を備えた有償版もあるが，本研究では，LINE Botの有効性調査に支障のない無料版を用いる．
-        LINE Botにおけるngrokを用いたWebhookの具体的な設定方法について説明する．テキストベースのプログラム実行ツール（以下ターミナルとする）において，\ref{source5.1}に示すFlaskサーバのポート公開コードのように，ポート番号を5000としてngrokに公開URLを生成させる．ここで，ポート番号を5000としているのは，Flaskサーバのデフォルト設定がこの番号のためであり[23]，任意に変更することができるが，本研究ではデフォルトの番号を用いている．生成される公開URLを\figref{URL}に示すが，セキュリティ上の理由から，URLを隠して示している．
+        LINE Botにおけるngrokを用いたWebhookの具体的な設定方法について説明する．テキストベースのプログラム実行ツール（以下ターミナルとする）において，ソースコード\ref{source5.1}に示すFlaskサーバのポート公開コードのように，ポート番号を5000としてngrokに公開URLを生成させる．ここで，ポート番号を5000としているのは，Flaskサーバのデフォルト設定がこの番号のためであり[23]，任意に変更することができるが，本研究ではデフォルトの番号を用いている．生成される公開URLを\figref{URL}に示すが，セキュリティ上の理由から，URLを隠して示している．
 
-        \begin{lstlisting}[language=Python, caption=ソースコード5.1, label=source5.1]
+        \begin{lstlisting}[language=Python, caption=Flaskサーバのポート公開用コード, label=source5.1]
 ngrok http 5000
 		\end{lstlisting}
 
@@ -58,7 +58,7 @@ ngrok http 5000
 			\label{URL}
 		\end{figure}
 
-        \figref{URL}に示したngrokによって生成される公開URLに「/callback」を付与したものを，\figref{Webhook}に示すLINE DevelopersのWebhook設定画面のように，Webhook URLとして設定し，Webhookの利用をONにする．ここで，「/ callback」は，本研究においてFlaskサーバがWebhookを受け取るための窓口を示しており，利用者のメッセージに沿った応答をするために必要なコードである．これらの作業によって，公式アカウントに利用者がメッセージを送信した際，インターネット上のLINEプラットフォームを通じて，学内LAN内のFlaskサーバへイベントの発生を通知できる．「/callback」を用いたWebhookの窓口設定に関するコードを\ref{source5.2}に示す．このコードにおいて，signatureはWebhookの通知がLINEプラットフォームから送られた正規のものであるか，改ざんされていないかを認証するための署名であり，bodyはメッセージ内容，ユーザIDなどのイベント情報を文字列で取得するためのコードである．また，\figref{Webhook}はセキュリティ上の理由から，Webhook URLを隠して示している．
+        \figref{URL}に示したngrokによって生成される公開URLに「/callback」を付与したものを，\figref{Webhook}に示すLINE DevelopersのWebhook設定画面のように，Webhook URLとして設定し，Webhookの利用をONにする．ここで，「/ callback」は，本研究においてFlaskサーバがWebhookを受け取るための窓口を示しており，利用者のメッセージに沿った応答をするために必要なコードである．これらの作業によって，公式アカウントに利用者がメッセージを送信した際，インターネット上のLINEプラットフォームを通じて，学内LAN内のFlaskサーバへイベントの発生を通知できる．「/callback」を用いたWebhookの窓口設定に関するコードをソースコード\ref{source5.2}に示す．このコードにおいて，signatureはWebhookの通知がLINEプラットフォームから送られた正規のものであるか，改ざんされていないかを認証するための署名であり，bodyはメッセージ内容，ユーザIDなどのイベント情報を文字列で取得するためのコードである．また，\figref{Webhook}はセキュリティ上の理由から，Webhook URLを隠して示している．
 
         \vspace{0.5\baselineskip}
 		\begin{figure}[H]
@@ -68,7 +68,7 @@ ngrok http 5000
 			\label{Webhook}
 		\end{figure}
 
-        \begin{lstlisting}[language=Python, caption=ソースコード5.2, label=source5.2]
+        \begin{lstlisting}[language=Python, caption=Webhookの窓口設定用コード, label=source5.2]
 from flask import Flask, request, abort
 from linebot import WebhookHandler
 
@@ -96,4 +96,123 @@ def callback():
 		\end{lstlisting}
     
     \section{遠隔在庫把握システムの流れ}
-    まず，Flaskサーバに在庫データを格納する仕組みについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，デプスカメラで検出した商品在庫の個数情報を，Raspberry pi3を用いてJSON形式でFlaskサーバに送信する．この際，Flaskサーバに保持するデータは各商品１つであり，10秒間隔で最新のデータに更新する．ここで，最新のデータのみを格納している理由としては，Flaskサーバの処理を軽くするためである．また，素早く返信を行うために，利用者からのメッセージを検知してFlaskサーバがデータ取得を始めるのではなく，Flaskサーバにあらかじめ格納されている最新の在庫データを用いて返信を行う．Raspberry pi3に実装するFlaskサーバへデータを送信するためのコードをソースコード6.2に示す．本研究では，LINE Botの有効性調査のため，実際に検出された値ではなく，１つの商品の検出値に見立てた実験用のダミー値を利用している．実用化の際には、無人店舗の全商品の在庫を検出，データとして格納することを想定している．注意点として，Flaskサーバを立てるPCとRaspberry pi3は同一LAN内で通信を行う必要がある．本研究では，学内LANを用いている．また，セキュリティ上の理由から，ソースコード6.2においてFlaskサーバを立てたPCのIPアドレスは，実際のものではなく，例を示している．
+    まず，Flaskサーバに在庫データを格納する仕組みについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，デプスカメラで検出した商品在庫の個数情報を，Raspberry pi3を用いてJSON形式でFlaskサーバに送信する．この際，Flaskサーバに保持するデータは各商品１つであり，10秒間隔で最新のデータに更新する．ここで，最新のデータのみを格納している理由としては，Flaskサーバの処理を軽くするためである．また，素早く返信を行うために，利用者からのメッセージを検知してFlaskサーバがデータ取得を始めるのではなく，Flaskサーバにあらかじめ格納されている最新の在庫データを用いて返信を行う．Raspberry pi3に実装するFlaskサーバへデータを送信するためのコードをソースコード\ref{source5.3}に示し，Flaskサーバ側に実装するRaspberry pi3から送信されるデータ受信用のコードをソースコード\ref{source5.4}に示す．本研究では，LINE Botの有効性調査のため，実際に検出された値ではなく，１つの商品の検出値に見立てた実験用のダミー値を利用している．実用化の際には、無人店舗の全商品の在庫を検出，データとして格納することを想定している．注意点として，Flaskサーバを立てるPCとRaspberry pi3は同一LAN内で通信を行う必要がある．本研究では，学内LANを用いている．また，セキュリティ上の理由から，ソースコード\ref{source5.3}においてFlaskサーバを立てたPCのIPアドレスは，実際のものではなく，例を示している．
+
+    \begin{lstlisting}[language=Python, caption=Raspberry pi3におけるFlaskサーバへのデータ送信用コード, label=source5.3]
+import requests
+import json
+import time
+
+# サーバのURL指定
+FLASK_SERVER_URL = "http:// {サーバを立てたPCのIPアドレス（IPv4）}:5000/upload
+
+# データ送信準備
+def send_data_to_server(value):
+    data = {"value": value}
+    try:
+        res = requests.post(FLASK_SERVER_URL, json=data)
+        print(f"[SEND] Sent{value}, Status: {res.status_code}")
+
+    # エラー処理
+    except Exception as e:
+        print(f"[ERROR] {e}")
+
+# データ定期送信
+if __name__ == "__main__":
+    while True:
+
+        # センサ値のダミーデータ
+        fake_value = 5
+        send_data_to_server(fake_value)
+        time.sleep(10)
+    \end{lstlisting}
+
+    \begin{lstlisting}[language=Python, caption=Flaskサーバ側に実装するRaspberryからのデータ受信用コード, label=source5.4]
+from flask import Flask, request, jsonify
+from datetime import datetime
+
+# Raspberry pi3からデータ受信
+@app.route("/upload", methods=['POST'])
+def upload():
+
+    # JSON形式でデータ受信
+    try:
+        data = request.get_json()
+
+	# データの妥当性確認
+        if not data or "value" not in data:
+            return jsonify({"error": "Invalid JSON"}), 400
+
+	# データ取得
+        value = data["value"]
+
+	# 最新データに更新
+        latest_data["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        latest_data["value"] = value
+
+        print(f"[UPLOAD] Received new data from device: {value}")
+
+        return jsonify({"status": "success", "received_value": value}), 200
+    except Exception as e:
+        print("[ERROR] Upload failed:", e)
+        return jsonify({"error": str(e)}), 500
+    \end{lstlisting}
+
+    ソースコード\ref{source5.5}に示すWebブラウザを用いたデータ閲覧のためのコードを用いて，Flaskサーバに格納される最新の在庫データを可視化する．\figref{kasika}示す可視化したデータから分かる通り，商品名，更新時間，数量を可視化している．
+
+    \begin{lstlisting}[language=Python, caption=ブラウザ上でのデータ閲覧用コード, label=source5.5]
+from flask import Flask
+
+@app.route("/status")
+
+# HTMLで記述
+def status():
+    html = f"""
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>最新データ</title>
+        <style>
+            body {{
+                font-family: "Segoe UI", sans-serif;
+                background-color: #ffffff;
+                color: #000000;
+                padding: 50px;
+            }}
+            h1 {{
+                font-size: 28px;
+                font-weight: 700; /* 太め */
+                margin-bottom: 20px;
+            }}
+            ul {{
+                list-style-type: none;
+                padding-left: 10px;
+                font-size: 18px;
+                font-weight: 400; /* 通常の太さ */
+                line-height: 1.8;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>最新データ</h1>
+        <ul>
+            <li>商品名：ブルーベリー＆クリームチーズベーグル</li>
+            <li>時間：{latest_data['timestamp']}</li>
+            <li>数量：{latest_data['value']}</li>
+        </ul>
+    </body>
+    </html>
+    """
+    return html
+    \end{lstlisting}
+
+    \vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.8\linewidth]{図5.6.png}
+			\caption{ブラウザで可視化した在庫データ}
+			\label{kasika}
+	\end{figure}
+
+    Flaskサーバに最新の在庫データが格納されることを前提に，LINE公式アカウントに利用者がメッセージを送信してから返信されるまでの，LINEプラットフォームとFLASKサーバ間のMessaging APIとWebhookの通信の流れについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，利用者がメッセージを送信した際，そのメッセージはLINEプラットフォームが受け取る．その後，6.1.3節で述べたように，ngrokによる Webhookの利用で，Flaskサーバへイベント発生の通知を行い，利用者からのメッセージを認識，その内容があらかじめ定めたテキストと一致した場合，自動で返信を行う．この返信には6.1.2節で述べたように，Messaging APIが用いられ，本研究では商品名を「ブルーベリー＆クリームチーズベーグル」とし，「「ブルーベリー＆クリームチーズベーグル」の在庫」というメッセージを受信した際にその個数を返答するよう設定，検証を行う．この返答は，LINEプラットフォームを通じて，利用者へ送信される．利用者からのメッセージテキストを認識し，Messaging APIを用いて返答するためのコードをソースコード\ref{source5.6}に示す．
