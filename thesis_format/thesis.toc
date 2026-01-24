@@ -37,13 +37,13 @@
 \contentsline {section}{\numberline {5.2}遠隔在庫把握システムの流れ}{33}{section.5.2}%
 \contentsline {section}{\numberline {5.3}公式アカウント上のメッセージ送信手法}{37}{section.5.3}%
 \contentsline {section}{\numberline {5.4}システムの動作結果と考察，課題}{42}{section.5.4}%
-\contentsline {chapter}{\numberline {第6章}総合的考察}{44}{chapter.6}%
-\contentsline {section}{\numberline {6.1}本研究の限界と今後の課題}{44}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}本研究の課題}{44}{subsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.1}超音波センサに関する課題}{44}{subsubsection.6.1.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.2}デプスカメラに関する課題}{45}{subsubsection.6.1.1.2}%
-\contentsline {chapter}{参考文献}{46}{section*.50}%
-\contentsline {chapter}{謝辞}{47}{section*.51}%
+\contentsline {chapter}{\numberline {第6章}総合的考察}{45}{chapter.6}%
+\contentsline {section}{\numberline {6.1}本研究の限界と今後の課題}{45}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}本研究の課題}{45}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}超音波センサに関する課題}{45}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}デプスカメラに関する課題}{46}{subsubsection.6.1.1.2}%
+\contentsline {chapter}{参考文献}{47}{section*.50}%
+\contentsline {chapter}{謝辞}{48}{section*.51}%
 \contentsline {chapter}{\numberline {付録A}プログラム}{1}{appendix.A}%
 \contentsline {section}{\numberline {A.1}ソースコード}{1}{section.A.1}%
 \contentsline {chapter}{\numberline {付録B}原稿非掲載データ}{5}{appendix.B}%
