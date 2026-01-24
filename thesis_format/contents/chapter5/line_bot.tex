@@ -58,7 +58,7 @@ ngrok http 5000
 			\label{URL}
 		\end{figure}
 
-        \figref{URL}に示したngrokによって生成される公開URLに「/callback」を付与したものを，\figref{Webhook}に示すLINE DevelopersのWebhook設定画面のように，Webhook URLとして設定し，Webhookの利用をONにする．ここで，「/ callback」は，本研究においてFlaskサーバがWebhookを受け取るための窓口を示しており，利用者のメッセージに沿った応答をするために必要なコードである．これらの作業によって，公式アカウントに利用者がメッセージを送信した際，インターネット上のLINEプラットフォームを通じて，学内LAN内のFlaskサーバへイベントの発生を通知できる．「/callback」を用いたWebhookの窓口設定に関するコードをソースコード\ref{source5.2}に示す．このコードにおいて，signatureはWebhookの通知がLINEプラットフォームから送られた正規のものであるか，改ざんされていないかを認証するための署名であり，bodyはメッセージ内容，ユーザIDなどのイベント情報を文字列で取得するためのコードである．また，\figref{Webhook}はセキュリティ上の理由から，Webhook URLを隠して示している．
+        \figref{URL}に示したngrokによって生成される公開URLに「/callback」を付与したものを，\figref{Webhook}に示すLINE DevelopersのWebhook設定画面のように，Webhook URLとして設定し，Webhookの利用をONにする．ここで，「/ callback」は，本研究においてFlaskサーバがWebhookを受け取るための窓口を示しており，利用者のメッセージに沿った応答をするために必要なコードである．また，Webhook利用時に自動で発行されるチャネルシークレットという文字列を用いてWebhookの認証を行う．チャネルシークレットはLINE Developersから確認できる．これらの作業によって，公式アカウントに利用者がメッセージを送信した際，インターネット上のLINEプラットフォームを通じて，学内LAN内のFlaskサーバへイベントの発生を通知できる．「/callback」を用いたWebhookの窓口設定に関するコードをソースコード\ref{source5.2}に示す．このコードにおいて，signatureはWebhookの通知がLINEプラットフォームから送られた正規のものであるか，改ざんされていないかを認証するための署名であり，bodyはメッセージ内容，ユーザIDなどのイベント情報を文字列で取得するためのコードである．また，\figref{Webhook}はセキュリティ上の理由から，Webhook URLを隠して示している．
 
         \vspace{0.5\baselineskip}
 		\begin{figure}[H]
@@ -215,4 +215,28 @@ def status():
 			\label{kasika}
 	\end{figure}
 
-    Flaskサーバに最新の在庫データが格納されることを前提に，LINE公式アカウントに利用者がメッセージを送信してから返信されるまでの，LINEプラットフォームとFLASKサーバ間のMessaging APIとWebhookの通信の流れについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，利用者がメッセージを送信した際，そのメッセージはLINEプラットフォームが受け取る．その後，6.1.3節で述べたように，ngrokによる Webhookの利用で，Flaskサーバへイベント発生の通知を行い，利用者からのメッセージを認識，その内容があらかじめ定めたテキストと一致した場合，自動で返信を行う．この返信には6.1.2節で述べたように，Messaging APIが用いられ，本研究では商品名を「ブルーベリー＆クリームチーズベーグル」とし，「「ブルーベリー＆クリームチーズベーグル」の在庫」というメッセージを受信した際にその個数を返答するよう設定，検証を行う．この返答は，LINEプラットフォームを通じて，利用者へ送信される．利用者からのメッセージテキストを認識し，Messaging APIを用いて返答するためのコードをソースコード\ref{source5.6}に示す．
+    Flaskサーバに最新の在庫データが格納されることを前提に，LINE公式アカウントに利用者がメッセージを送信してから返信されるまでの，LINEプラットフォームとFLASKサーバ間のMessaging APIとWebhookの通信の流れについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，利用者がメッセージを送信した際，そのメッセージはLINEプラットフォームが受け取る．その後，6.1.3節で述べたように，ngrokによる Webhookの利用で，Flaskサーバへイベント発生の通知を行い，利用者からのメッセージを認識，その内容があらかじめ定めたテキストと一致した場合，自動で返信を行う．この返信には6.1.2節で述べたように，Messaging APIが用いられ，本研究では商品名を「ブルーベリー＆クリームチーズベーグル」とし，「「ブルーベリー＆クリームチーズベーグル」の在庫」というメッセージを受信した際にその個数を返答するよう設定，検証を行う．この返答は，LINEプラットフォームを通じて，利用者へ送信される．利用者からのメッセージテキストを認識し，Messaging APIを用いて返答するためのコードをソースコード\ref{source5.6}に示す．ここで，LINE公式アカウントの認証に用いるチャネルアクセストークンとチャネルシークレットは，セキュリティ上の理由から伏せる．
+
+    \begin{lstlisting}[language=Python, caption=LINEプラットフォームを通して利用者へ返信するためのコード, label=source5.6]
+from linebot import LineBotApi, WebhookHandler
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
+
+# 認証情報の設定
+LINE_CHANNEL_ACCESS_TOKEN = '' 
+LINE_CHANNEL_SECRET = '' 
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(LINE_CHANNEL_SECRET)
+
+# 最新データを保持する変数
+latest_data = {"ブルーベリー＆クリームチーズベーグル":{"timestamp": None, "value": None}}
+
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    text = event.message.text
+    if text == "「ブルーベリー＆クリームチーズベーグル」の在庫":
+        reply = f"現在の「ブルーベリー＆クリームチーズベーグル」は、{latest_data['value']}個です。"
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
+    \end{lstlisting}
+
+    \section{公式アカウント上のメッセージ送信手法}
+    本研究では，LINE公式アカウント上で利用者が在庫状況を確認する際，商品の選択を行うためのメッセージ送信手法として，リッチメニューおよびリッチメッセージを用いる．これは，画像およびテキストによって表現されたバナーを利用者が選択することにより，バナーごとに設定された固定メッセージが自動で送信されるものである．リッチメニューおよびリッチメッセージの特徴として，視覚的に情報を表現できること，テキストを入力する必要がなく，公式アカウント管理者が設定したメッセージを利用者に送信させられることの２つが挙げられる．また，リッチメニューは図6.7に示すように，トーク画面を開いたときに表示される選択式バナーであり，リッチメッセージは図6.8に示すように，リッチメニューを選択したとき，公式アカウントの返信として表示される選択式バナーである．
