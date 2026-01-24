@@ -1,4 +1,3 @@
-# receive_windows
 from datetime import datetime
 import serial
 

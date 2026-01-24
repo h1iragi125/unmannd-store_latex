@@ -1,4 +1,6 @@
 \graphicspath{{./contents/chapter3/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
+\lstset{inputpath=./contents/appendix/source_code/program_files/}
+
 \chapter{超音波センサによる在庫の把握}
 	本章では、本研究で行った超音波センサによる在庫把握の手段について述べる。
 	\section{超音波センサによる在庫把握の方法}
@@ -6,7 +8,7 @@
 		\begin{equation}
 			距離 = \frac{音速 \times 時間}{2}
 		\end{equation}
-		ここで、音速は約343m/sである。計測した距離の長短で在庫の状況を判断する。使用した超音波センサは\figref{ultrasound_sensor}に示すRainbow E-Technology社のHC-SR04である。このセンサは単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。
+		ここで、音速は約343m/sである。計測した距離の長短で在庫の状況を判断する。使用した超音波センサは\figref{ultrasound_sensor}に示すRainbow E-Technology社のHC-SR04である。このセンサは単体では動作しないため、マイコンボードと組み合わせて使用する必要がある。超音波センサで取得したデータをUSB経由でパソコンに送信し、そのデータをパソコンで評価する。
 
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
@@ -34,10 +36,28 @@
 			\end{table}
 	
 		\subsection{マイコンボードを含めた装置全体}
-			前述の通り、この超音波センサは単体では動作しないためマイコンボードと組み合わせる必要がある。マイコンボードにはRaspberry Pi Pico 2 WHを使用した。装置の全体図と
+			前述の通り、この超音波センサは単体では動作しないためマイコンボードと組み合わせる必要がある。マイコンボードにはRaspberry Pi Pico 2 WHを使用した。装置の全体図を\figref{souchi}に示す。
+			\vspace{0.5\baselineskip}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.1]{souchi1.jpg}
+				\caption{装置全体図}
+				\label{souchi}
+			\end{figure}
 
 	\section{超音波センサの配置}
-		超音波センサを11号館1階の無人店舗の商品棚の奥側のスペースに配置し、商品との距離を計測する。
+		超音波センサを商品棚の奥側のスペースに配置し、商品との距離を計測する。
+
+
+	\section{超音波センサの距離測定に使用するプログラム}
+		超音波センサで距離を測定するにあたり、ソースコード\ref{measurepy}に示すPythonのプログラムをマイコンボードに書き込んだ。
+		\hypertarget{measurepy}{
+			\lstinputlisting[style=mypystyle,caption=マイコンボードに書き込んだPythonプログラム,label=measurepy]{measure.py}
+		}
+		センサで取得したデータをパソコンで評価するためのプログラムをソースコード\ref{receivepy}に示す。パソコンのOSはWindowsを想定している。
+		\hypertarget{receivepy}{
+			\lstinputlisting[style=mypystyle,caption=パソコンで実行するPythonプログラム,label=receivepy]{receive_windows.py}
+		}
 
 	\section{超音波センサの試行の結果と考察}
-		今回は、何センチのとき在庫あり、何センチのとき在庫なしと設定した。だが、商品と棚の手前部分にスペースがある場合、正確に距離を計測できない。そのため、本研究では超音波センサ単体での在庫把握は困難であると判断した。
+		
