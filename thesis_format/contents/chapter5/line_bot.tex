@@ -208,11 +208,11 @@ def status():
     \end{lstlisting}
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\linewidth]{図5.6.png}
-			\caption{ブラウザで可視化した在庫データ}
-			\label{kasika}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.8\linewidth]{図5.6.png}
+		\caption{ブラウザで可視化した在庫データ}
+		\label{kasika}
 	\end{figure}
 
     Flaskサーバに最新の在庫データが格納されることを前提に，LINE公式アカウントに利用者がメッセージを送信してから返信されるまでの，LINEプラットフォームとFLASKサーバ間のMessaging APIとWebhookの通信の流れについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，利用者がメッセージを送信した際，そのメッセージはLINEプラットフォームが受け取る．その後，6.1.3節で述べたように，ngrokによる Webhookの利用で，Flaskサーバへイベント発生の通知を行い，利用者からのメッセージを認識，その内容があらかじめ定めたテキストと一致した場合，自動で返信を行う．この返信には6.1.2節で述べたように，Messaging APIが用いられ，本研究では商品名を「ブルーベリー＆クリームチーズベーグル」とし，「「ブルーベリー＆クリームチーズベーグル」の在庫」というメッセージを受信した際にその個数を返答するよう設定，検証を行う．この返答は，LINEプラットフォームを通じて，利用者へ送信される．利用者からのメッセージテキストを認識し，Messaging APIを用いて返答するためのコードをソースコード\ref{source5.6}に示す．ここで，LINE公式アカウントの認証に用いるチャネルアクセストークンとチャネルシークレットは，セキュリティ上の理由から伏せる．
@@ -285,37 +285,37 @@ def handle_message(event):
     リッチメニューおよびリッチメッセージの設定方法について説明する．\figref{menusettei}に示すLINE公式アカウントのリッチメニュー設定画面から，リッチメニューの表現テンプレート，適用する画像およびテキスト，タップ操作時のアクション，メニューバーをそれぞれ設定する．これに表示期間を設定し，公開することで \figref{menu}に示したように，トーク画面を開いた際にリッチメニューが表示される．
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\linewidth]{図5.11.png}
-			\caption{リッチメニュー設定画面}
-			\label{menusettei}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.9\linewidth]{図5.11.png}
+		\caption{リッチメニュー設定画面}
+		\label{menusettei}
 	\end{figure}
 
     \figref{messagesettei}に示すLINE公式アカウントのリッチメッセージ設定画面から，リッチメッセージの表現テンプレート，適用する画像およびテキスト，タップ操作時のアクションをそれぞれ設定する．その後，\figref{return}に示すLINE公式アカウントの応答メッセージ設定画面から，リッチメッセージが返信として表示されるためのキーワードを設定することで，図6.8に示したように，利用者がキーワードを公式アカウントに送信した際，対応するリッチメッセージが表示される．利用者のキーワード送信を，リッチメニューおよび別のリッチメッセージでタップ操作した際のアクションに設定することで，タップ操作のみで特定の商品に辿り着くことができる．リッチメニューおよびリッチメッセージを利用した商品検索の流れを\figref{search}に示す．
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\linewidth]{図5.12.png}
-			\caption{リッチメッセージ設定画面}
-			\label{messagesettei}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.9\linewidth]{図5.12.png}
+		\caption{リッチメッセージ設定画面}
+		\label{messagesettei}
 	\end{figure}
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\linewidth]{図5.13.png}
-			\caption{応答メッセージ設定画面}
-			\label{return}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.9\linewidth]{図5.13.png}
+		\caption{応答メッセージ設定画面}
+		\label{return}
 	\end{figure}
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.8\linewidth]{図5.14.png}
-			\caption{商品検索の流れ}
-			\label{search}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.95\linewidth]{図5.14.png}
+		\caption{商品検索の流れ}
+		\label{search}
 	\end{figure}
 
     \section{システムの動作結果と考察，課題}
@@ -323,11 +323,11 @@ def handle_message(event):
     6.2節で述べたように，Messaging API，Webhook，ngrokを用いて，利用者が「ブルーベリー＆クリームチーズベーグル」の在庫を把握するため，LINE公式アカウントにメッセージを送信した際の結果を\figref{result}に示す．この結果から，LINE Botを用いた在庫データの把握が可能であると判断した．
 
     \vspace{0.5\baselineskip}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[width=.6\linewidth]{図5.15.png}
-			\caption{遠隔在庫把握の結果}
-			\label{result}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.5\linewidth]{図5.15.png}
+		\caption{遠隔在庫把握の結果}
+		\label{result}
 	\end{figure}
 
     6.2節で述べたように，本研究では，処理の軽量化のためFlaskサーバに最新のデータのみを格納している．しかし，過去の在庫データの履歴を時刻情報などと併せて保持することで，遠隔の在庫把握以外，例えば，商品の時刻ごとの売れ行きや天気，季節による売れ行きの変化など，様々な目的に応用できると考える．
