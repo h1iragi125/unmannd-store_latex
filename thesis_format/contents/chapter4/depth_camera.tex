@@ -1,8 +1,8 @@
 \graphicspath{{./contents/chapter4/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
 \chapter{デプスカメラによるデータ収集}
-	本章では、本研究で行ったデプスカメラによる在庫数の把握について述べる。
-	\section{使用するデプスカメラの説明}
-		本研究では、超音波センサだけでなくデプスカメラも用いて無人店舗内の在庫数の把握を行った。使用したデプスカメラはDFRobot社のSEN0581とArducam社のB0410である。
+	本章では、本研究で行ったデプスカメラによる在庫把握の手段について述べる。
+	\section{デプスカメラによる在庫把握の方法}
+		本研究では、超音波センサだけではなくデプスカメラも用いて無人店舗内の在庫数の把握を行った。使用したデプスカメラは\figref{sen0581}に示すDFRobot社のSEN0581と\figref{b0410}Arducam社のB0410である。
 	
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
@@ -15,27 +15,28 @@
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
 			\centering
-			\includegraphics{SEN0581.jpg}
+			\includegraphics{b0410.jpg}
 			\caption{Arducam社 B0410}
 			\label{b0410}
 		\end{figure}
 
 			\subsection{デプスカメラの精度}
-				これらのデプスカメラの性能をに示す。
-				
+				これらのデプスカメラの性能を\tabref{depth_spec}に示す。
 				\vspace{0.5\baselineskip}
 				\begin{table}[h]
 					\centering
 					\caption{D435の精度}
-					\begin{tabular}{|c|r|}
-						\hline	動作電圧	& 5V \\
-						\hline	消費電流	&	150mA\\
-						\hline	視野	&  87°×58°\\
-						\hline	測定範囲	&	0.1m～10m\\
-						\hline	深度分解能	& 1mm\\
+					\begin{tabular}{|c|r|r|}
+						\hline  型番  & B0410 & SEN0581 \\
+						\hline	解像度	& 240x180 & 100x100 \\
+						\hline	コマ数	& 30fps & 1～20fps\\
+						\hline	計測範囲	& 2mまたは4m & 0.15m～1.5m\\
+						\hline	画角	&  対角70° & 対角約92°\\
+						\hline	接続方法	& Raspberry Pi本体に接続 & UARTまたはUSBでパソコンに接続\\
 						\hline
 					\end{tabular}
-					\label{sen5081_spec}
+					\label{depth_spec}
 				\end{table}
+
 	\section{デプスカメラの配置と距離の検出方法}
 		
