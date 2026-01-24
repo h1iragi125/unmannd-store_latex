@@ -280,7 +280,7 @@
 		\vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.6\linewidth]{図2.18.png}
+			\includegraphics[width=.7\linewidth]{図2.18.png}
 			\caption{RETR EXTERNALの輪郭抽出イメージ}
 			\label{retr}
 		\end{figure}
@@ -290,7 +290,7 @@
 		\vspace{0.5\baselineskip}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=.6\linewidth]{図2.19.png}
+			\includegraphics[width=.7\linewidth]{図2.19.png}
 			\caption{CHAIN APPROX SIMPLEの輪郭抽出イメージ}
 			\label{chain}
 		\end{figure}
@@ -331,4 +331,37 @@
 			\caption{バウンディングボックスおよび中心点イメージ}
 			\label{box}
 		\end{figure}
+
+		\figref{sirokuro}に示した抽出した輪郭を白で表現した画像から分かる通り，商品以外に対しても輪郭抽出は行われる．そのため，商品が存在する範囲のみにバウンディングボックスの表現を適用し，商品以外の輪郭の座標データを取得しないよう設定する．これによって，処理の高速化が期待できる．商品が存在する範囲のみでバウンディングボックスを表現するイメージを\figref{chushutujoken}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.7\linewidth]{図2.22.png}
+			\caption{商品のみ輪郭抽出のイメージ}
+			\label{chushutujoken}
+		\end{figure}
+
+		\figref{nosize}に示す輪郭のサイズ指定無しのバウンディングボックス表現から分かる通り，バウンディングボックスは極端に小さい輪郭や大きい輪郭も表現してしまう．そのため，座標データを取得するバウンディングボックスをサイズでフィルタリングする．具体的には，14500～75000画素数（画素面積）のバウンディングボックスのみ座標データを取得するように設定しており，これは様々な条件でフィルタリングを行った結果，極端なサイズの輪郭を排除し，全商品の輪郭を十分に表現できると判断した閾値である．輪郭のサイズによるフィルタリングを行うことで，ノイズを除去し，余計なデータの取得，計算を避け，処理を高速化できる．輪郭のサイズによるフィルタリングを行ったバウンディングボックス表現を\figref{oksize}に示す．
+
+		\vspace{0.5\baselineskip}
+		\begin{figure}[H]
+			\centering
+			\begin{minipage}{.45\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.23.png}
+				\caption{サイズ指定なしの検出}
+				\label{nosize}
+			\end{minipage}
+			\hfill
+			\vspace{0.5\baselineskip}
+			\begin{minipage}{.45\linewidth}
+				\centering
+				\includegraphics[width=\linewidth]{図2.24.png}
+				\caption{サイズ指定ありの検出}
+				\label{oksize}
+			\end{minipage}
+		\end{figure}
+
+		\subsection{座標による商品の識別}
 
