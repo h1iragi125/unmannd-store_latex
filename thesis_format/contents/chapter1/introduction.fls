@@ -60,16 +60,6 @@ INPUT c:/texlive/2025/texmf-dist/tex/luatex/luaotfload/luaotfload-tounicode.lua
 INPUT c:/texlive/2025/texmf-dist/tex/luatex/luaotfload/luaotfload-case.lua
 INPUT c:/texlive/2025/texmf-dist/tex/luatex/luaotfload/luaotfload-bcp47.lua
 INPUT c:/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.lua
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi5.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy5.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT C:/texlive/2025/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz
 INPUT C:/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc
 INPUT C:/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
