@@ -1,4 +1,5 @@
 \graphicspath{{./contents/chapter5/figures/}}	% 図・画像ファイルが保存されたディレクトリまでのパス
+\lstset{inputpath=./contents/appendix/source_code/program_files/}
 \chapter{LINE Botを用いた遠隔の在庫把握}
 	第4章で述べたように，無人店舗の在庫状況に関するデータの収集には，デプスカメラを用いる手法が最適と判断した．本章では，収集したデータとLINE Botを用いて，利用者が場所の制約なく無人店舗の在庫状況を閲覧できるシステムの構築について，LINE Bot，ngrok，システムの動作結果と考察を説明する．
 
@@ -74,144 +75,26 @@ ngrok http 5000
 			\label{Webhook}
 		\end{figure}
 
-        \begin{lstlisting}[language=Python, caption=Webhookの窓口設定用コード, label=source5.2]
-from flask import Flask, request, abort
-from linebot import WebhookHandler
-
-# Webhook受信
-@app.route("/callback", methods=['POST'])
-def callback():
-
-    # LINEからの改ざん防止用署名を取得
-    signature = request.headers['X-Line-Signature']
-
-    # イベント情報（JSON形式）を取得
-    body = request.get_data(as_text=True)
-    print("Received body:", body)
-
-    # 処理の受け渡し
-    try:
-        handler.handle(body, signature)
-
-    # エラー発生時の処理
-    except Exception as e:
-        print("[ERROR] LINE handler:", e)
-        abort(400)
-
-    return 'OK'
-		\end{lstlisting}
+        \hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=Webhookの窓口設定用コード,label=source5.2]{Webhook.py}
+		}
     
     \section{遠隔在庫把握システムの流れ}
-    まず，Flaskサーバに在庫データを格納する仕組みについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，デプスカメラで検出した商品在庫の個数情報を，Raspberry pi3を用いてJSON形式でFlaskサーバに送信する．この際，Flaskサーバに保持するデータは各商品１つであり，10秒間隔で最新のデータに更新する．ここで，最新のデータのみを格納している理由としては，Flaskサーバの処理を軽くするためである．また，素早く返信を行うために，利用者からのメッセージを検知してFlaskサーバがデータ取得を始めるのではなく，Flaskサーバにあらかじめ格納されている最新の在庫データを用いて返信を行う．Raspberry pi3に実装するFlaskサーバへデータを送信するためのコードをソースコード\ref{source5.3}に示し，Flaskサーバ側に実装するRaspberry pi3から送信されるデータ受信用のコードをソースコード\ref{source5.4}に示す．本研究では，LINE Botの有効性調査のため，実際に検出された値ではなく，１つの商品の検出値に見立てた実験用のダミー値を利用している．実用化の際には、無人店舗の全商品の在庫を検出，データとして格納することを想定している．注意点として，Flaskサーバを立てるPCとRaspberry pi3は同一LAN内で通信を行う必要がある．本研究では，学内LANを用いている．また，セキュリティ上の理由から，ソースコード\ref{source5.3}においてFlaskサーバを立てたPCのIPアドレスは，実際のものではなく，例を示している．
+    まず，Flaskサーバに在庫データを格納する仕組みについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，デプスカメラで検出した商品在庫の個数情報を，Raspberry pi3を用いてJSON形式でFlaskサーバに送信する．この際，Flaskサーバに保持するデータは各商品１つであり，10秒間隔で最新のデータに更新する．ここで，最新のデータのみを格納している理由としては，Flaskサーバの処理を軽くするためである．また，素早く返信を行うために，利用者からのメッセージを検知してFlaskサーバがデータ取得を始めるのではなく，Flaskサーバにあらかじめ格納されている最新の在庫データを用いて返信を行う．Raspberry pi3に実装するFlaskサーバへデータを送信するためのコードをソースコード\ref{source5.3}に示し，Flaskサーバ側に実装するRaspberry pi3から送信されるデータ受信用のコードをソースコード\ref{source5.4}に示す．本研究では，LINE Botの有効性調査のため，実際に検出された値ではなく，１つの商品の検出値に見立てた実験用のダミー値を利用している．実用化の際には無人店舗の全商品の在庫を検出，データとして格納することを想定している．注意点として，Flaskサーバを立てるPCとRaspberry pi3は同一LAN内で通信を行う必要がある．本研究では学内LANを用いている．また，セキュリティ上の理由から，ソースコード\ref{source5.3}においてFlaskサーバを立てたPCのIPアドレスは，実際のものではなく例を示している．
 
-    \begin{lstlisting}[language=Python, caption=Raspberry pi3におけるFlaskサーバへのデータ送信用コード, label=source5.3]
-import requests
-import json
-import time
+    \hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=Raspberry pi3からFlaskサーバへのデータ送信用コード,label=source5.3]{between_pi_flask.py}
+		}
 
-# サーバのURL指定
-FLASK_SERVER_URL = "http:// {サーバを立てたPCのIPアドレス（IPv4）}:5000/upload"
-
-# データ送信準備
-def send_data_to_server(value):
-    data = {"value": value}
-    try:
-        res = requests.post(FLASK_SERVER_URL, json=data)
-        print(f"[SEND] Sent{value}, Status: {res.status_code}")
-
-    # エラー処理
-    except Exception as e:
-        print(f"[ERROR] {e}")
-
-# データ定期送信
-if __name__ == "__main__":
-    while True:
-
-        # センサ値のダミーデータ
-        fake_value = 5
-        send_data_to_server(fake_value)
-        time.sleep(10)
-    \end{lstlisting}
-
-    \begin{lstlisting}[language=Python, caption=Flaskサーバ側に実装するRaspberryからのデータ受信用コード, label=source5.4]
-from flask import Flask, request, jsonify
-from datetime import datetime
-
-# Raspberry pi3からデータ受信
-@app.route("/upload", methods=['POST'])
-def upload():
-
-    # JSON形式でデータ受信
-    try:
-        data = request.get_json()
-
-	# データの妥当性確認
-        if not data or "value" not in data:
-            return jsonify({"error": "Invalid JSON"}), 400
-
-	# データ取得
-        value = data["value"]
-
-	# 最新データに更新
-        latest_data["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        latest_data["value"] = value
-
-        print(f"[UPLOAD] Received new data from device: {value}")
-
-        return jsonify({"status": "success", "received_value": value}), 200
-    except Exception as e:
-        print("[ERROR] Upload failed:", e)
-        return jsonify({"error": str(e)}), 500
-    \end{lstlisting}
+    \hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=Flaskサーバ側に実装するRaspberryからのデータ受信用コード,label=source5.4]{Flask_receive.py}
+		}
 
     ソースコード\ref{source5.5}に示すWebブラウザを用いたデータ閲覧のためのコードを用いて，Flaskサーバに格納される最新の在庫データを可視化する．\figref{kasika}示す可視化したデータから分かる通り，商品名，更新時間，数量を可視化している．
 
-    \begin{lstlisting}[language=Python, caption=ブラウザ上でのデータ閲覧用コード, label=source5.5]
-from flask import Flask
-
-@app.route("/status")
-
-# HTMLで記述
-def status():
-    html = (
-    <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>最新データ</title>
-        <style>
-            body {{
-                font-family: "Segoe UI", sans-serif;
-                background-color: #ffffff;
-                color: #000000;
-                padding: 50px;
-            }}
-            h1 {{
-                font-size: 28px;
-                font-weight: 700; /* 太め */
-                margin-bottom: 20px;
-            }}
-            ul {{
-                list-style-type: none;
-                padding-left: 10px;
-                font-size: 18px;
-                font-weight: 400; /* 通常の太さ */
-                line-height: 1.8;
-            }}
-        </style>
-    </head>
-    <body>
-        <h1>最新データ</h1>
-        <ul>
-            <li>商品名：ブルーベリー＆クリームチーズベーグル</li>
-            <li>時間：{latest_data['timestamp']}</li>
-            <li>数量：{latest_data['value']}</li>
-        </ul>
-    </body>
-    </html>
-    )
-    return html
-    \end{lstlisting}
+    \hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=ブラウザ上でのデータ閲覧用コード,label=source5.5]{status.py}
+		}
 
     \vspace{0.5\baselineskip}
 	\begin{figure}[H]
@@ -223,26 +106,9 @@ def status():
 
     Flaskサーバに最新の在庫データが格納されることを前提に，LINE公式アカウントに利用者がメッセージを送信してから返信されるまでの，LINEプラットフォームとFLASKサーバ間のMessaging APIとWebhookの通信の流れについて説明する．\figref{system}に示した遠隔在庫把握システムの構造から分かる通り，利用者がメッセージを送信した際，そのメッセージはLINEプラットフォームが受け取る．その後，6.1.3節で述べたように，ngrokによる Webhookの利用で，Flaskサーバへイベント発生の通知を行い，利用者からのメッセージを認識，その内容があらかじめ定めたテキストと一致した場合，自動で返信を行う．この返信には6.1.2節で述べたように，Messaging APIが用いられ，本研究では商品名を「ブルーベリー＆クリームチーズベーグル」とし，「「ブルーベリー＆クリームチーズベーグル」の在庫」というメッセージを受信した際にその個数を返答するよう設定，検証を行う．この返答は，LINEプラットフォームを通じて，利用者へ送信される．利用者からのメッセージテキストを認識し，Messaging APIを用いて返答するためのコードをソースコード\ref{source5.6}に示す．ここで，LINE公式アカウントの認証に用いるチャネルアクセストークンとチャネルシークレットは，セキュリティ上の理由から伏せる．
 
-    \begin{lstlisting}[language=Python, caption=LINEプラットフォームを通して利用者へ返信するためのコード, label=source5.6]
-from linebot import LineBotApi, WebhookHandler
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
-
-# 認証情報の設定
-LINE_CHANNEL_ACCESS_TOKEN = '' 
-LINE_CHANNEL_SECRET = '' 
-line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(LINE_CHANNEL_SECRET)
-
-# 最新データを保持する変数
-latest_data = {"ブルーベリー＆クリームチーズベーグル":{"timestamp": None, "value": None}}
-
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    text = event.message.text
-    if text == "「ブルーベリー＆クリームチーズベーグル」の在庫":
-        reply = f"現在の「ブルーベリー＆クリームチーズベーグル」は、{latest_data['value']}個です。"
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=reply))
-    \end{lstlisting}
+    \hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=LINEプラットフォームを通して利用者へ返信するためのコード,label=source5.6]{LINE_receive.py}
+		}
 
     \section{公式アカウント上のメッセージ送信手法}
     本研究では，LINE公式アカウント上で利用者が在庫状況を確認する際，商品の選択を行うためのメッセージ送信手法として，リッチメニューおよびリッチメッセージを用いる．これは，画像およびテキストによって表現されたバナーを利用者が選択することにより，バナーごとに設定された固定メッセージが自動で送信されるものである．リッチメニューおよびリッチメッセージの特徴として，視覚的に情報を表現できること，テキストを入力する必要がなく，公式アカウント管理者が設定したメッセージを利用者に送信させられることの２つが挙げられる．また，リッチメニューは\figref{menu}に示すように，トーク画面を開いたときに表示される選択式バナーであり，リッチメッセージは\figref{message}に示すように，リッチメニューを選択したとき，公式アカウントの返信として表示される選択式バナーである．
@@ -250,7 +116,7 @@ def handle_message(event):
     \vspace{0.5\baselineskip}
 	\begin{figure}[H]
 		\centering
-		\begin{minipage}{.45\linewidth}
+		\begin{minipage}{.42\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{図5.7.png}
 			\caption{リッチメニュー表示}
@@ -273,7 +139,7 @@ def handle_message(event):
     \vspace{0.5\baselineskip}
 	\begin{figure}[H]
 		\centering
-		\begin{minipage}{.45\linewidth}
+		\begin{minipage}{.42\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{図5.9.png}
 			\caption{リッチメニューのタップ操作}
@@ -281,7 +147,7 @@ def handle_message(event):
 		\end{minipage}
 		\hfill
 		\vspace{0.5\baselineskip}
-		\begin{minipage}{.45\linewidth}
+		\begin{minipage}{.46\linewidth}
 			\centering
 			\includegraphics[width=\linewidth]{図5.10.png}
 			\caption{リッチメッセージのタップ操作}
@@ -345,6 +211,6 @@ def handle_message(event):
     このシステムの実用化にあたり，２つの課題がある．
 
     １つ目は，Messaging APIの使用に関する通数制限である．6.1.2節で述べたようにMessaging APIには，３つのプランがあり，それぞれで送信できるメッセージの数量が変わる．具体的には，無料のコミュニケーションプランで月200通，月5000円のライトプランで月5000通，月15000円のスタンダードプランで月30000通となっており、この通数を超過すると，コミュニケーションプランおよびスタンダードプランではLINE公式アカウントからメッセージを送信ができなくなり，スタンダードプランでは利用できるが，１通の超過に対し３円の追加料金が発生する\cite{5.9}．そのため，無人店舗の遠隔在庫把握システムを多くの人が利用する場合，LINE Botを用いると費用が大きくなると考えられる．ここで使用している通数という単位は$通数 = 送信メッセージ数 \times 送信先アカウント数$で計算できる．
-    
+
     ２つ目は，PCでLINEを利用する場合，リッチメニューが表示されない点である．図5.16に示すPC版LINEで表示した公式アカウントのトーク画面から分かる通り，リッチメニューはモバイル専用機能であり，PC版およびWeb版のLINEでは表示できない\cite{5.10}．そのため，実用化の際，モバイル機器以外を用いる利用者に向けて遠隔在庫把握システムを構築する場合は，本章で説明したリッチメニューを利用した商品検索とは別の手法を用いる必要がある．
     

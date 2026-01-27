@@ -2,14 +2,39 @@
 \lstset{inputpath=./contents/appendix/source_code/program_files/}
 \chapter{プログラム}
 
-	\section{ソースコード}
-		以下はソースコードである。超音波センサでの在庫数把握において、マイコンボードで実行したプログラムが\ref{measurepy}である。
+	\section{画像処理のソースコード}
+	以下はソースコードである。OpenCVを用いた画像処理の在庫検出において，グレースケール変換を利用した検出プログラムを\ref{gray}に示す．
+	\hypertarget{measurepy}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=グレースケール画像の検出プログラム,label=gray]{grayscale.py}
+		}
+
+	OpenCVを用いた画像処理の在庫検出において，HSV変換を利用した検出プログラムを\ref{color}に示す．
+	\hypertarget{measurepy}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=HSV画像の検出プログラム,label=color]{colorful.py}
+		}
+
+	\section{超音波センサのソースコード}
+		超音波センサでの在庫数把握において，マイコンボードで実行したプログラムが\ref{measurepy}である．
 		\hypertarget{measurepy}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
 			\lstinputlisting[style=mypystyle,caption=findContours,label=measurepy]{measure.py}
 		}
 		超音波センサ
-		\ref{machine}に機械学習に用いた一連のプログラムを示す。
+		\ref{machine}に機械学習に用いた一連のプログラムを示す．
 		\hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
 			\lstinputlisting[style=mypystyle,caption=MachineLearning,label=machine]{countpeople.py}
+		}
+
+	\section{デプスカメラのソースコード}
+
+
+	\section{LINE Botのソースコード}
+	LINE Botを用いた在庫データの共有について，Raspberry pi3からFlaskサーバへデータを送信するためのプログラムを\ref{datasend}に示す．
+	\hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=Raspberry pi3とFlaskサーバ間のデータ送信プログラム,label=datasend]{between_pi_flask.py}
+		}
+
+	LINE Botを用いた在庫データの共有について，公式アカウント利用者からの在庫に関するメッセージに対し，FlaskサーバからLINEプラットフォームを通して返信を行うプログラムを\ref{message}に示す．
+	\hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
+			\lstinputlisting[style=mypystyle,caption=利用者への在庫通知プログラム,label=message]{LINEBot.py}
 		}
 	
