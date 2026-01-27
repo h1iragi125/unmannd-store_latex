@@ -531,6 +531,8 @@ INPUT C:/texlive/2025/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.
 INPUT C:/Users/66hii/.texlive2025/texmf-var/luatexja/extra_lmroman8-regular.luc
 INPUT ./contents/chapter1/figures/図1.1.jpg
 INPUT ./contents/chapter1/figures/図1.1.jpg
+INPUT ./contents/chapter1/figures/図1.2.png
+INPUT ./contents/chapter1/figures/図1.2.png
 OUTPUT ./contents/chapter2/image_processing.aux
 INPUT ./contents/chapter2/image_processing.tex
 INPUT ./contents/chapter2/figures/図2.1.png
