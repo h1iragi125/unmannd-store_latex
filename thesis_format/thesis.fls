@@ -628,8 +628,13 @@ INPUT ./contents/chapter5/figures/図5.4.png
 INPUT ./contents/chapter5/figures/図5.4.png
 INPUT ./contents/chapter5/figures/図5.5.png
 INPUT ./contents/chapter5/figures/図5.5.png
+INPUT ./contents/appendix/source_code/program_files/Webhook.py
+INPUT ./contents/appendix/source_code/program_files/between_pi_flask.py
+INPUT ./contents/appendix/source_code/program_files/Flask_receive.py
+INPUT ./contents/appendix/source_code/program_files/status.py
 INPUT ./contents/chapter5/figures/図5.6.png
 INPUT ./contents/chapter5/figures/図5.6.png
+INPUT ./contents/appendix/source_code/program_files/LINE_receive.py
 INPUT ./contents/chapter5/figures/図5.7.png
 INPUT ./contents/chapter5/figures/図5.7.png
 INPUT ./contents/chapter5/figures/図5.8.png
@@ -658,8 +663,12 @@ OUTPUT ./contents/sub/acknowledgement.aux
 INPUT ./contents/sub/acknowledgement.tex
 OUTPUT ./contents/appendix/source_code/print_sourcecode.aux
 INPUT ./contents/appendix/source_code/print_sourcecode.tex
+INPUT ./contents/appendix/source_code/program_files/grayscale.py
+INPUT ./contents/appendix/source_code/program_files/colorful.py
 INPUT ./contents/appendix/source_code/program_files/measure.py
 INPUT ./contents/appendix/source_code/program_files/countpeople.py
+INPUT ./contents/appendix/source_code/program_files/between_pi_flask.py
+INPUT ./contents/appendix/source_code/program_files/LINEBot.py
 OUTPUT ./contents/appendix/data/raw_data.aux
 INPUT ./contents/appendix/data/raw_data.tex
 INPUT c:/texlive/2025/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
