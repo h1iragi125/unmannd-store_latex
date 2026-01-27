@@ -2,15 +2,15 @@
 \chapter{デプスカメラによるデータ収集}
 	本章では、本研究で行ったデプスカメラによる在庫把握の手段について述べる。
 	\section{デプスカメラによる在庫把握の方法}
-		本研究では、超音波センサだけではなくデプスカメラも用いて無人店舗内の在庫数の把握を行った。使用したデプスカメラは\figref{sen0581}に示すDFRobot社のSEN0581と\figref{b0410}Arducam社のB0410である。
+		本研究では、超音波センサだけではなくデプスカメラも用いて無人店舗内の在庫数の把握を行った。使用したデプスカメラは\figref{b0410}に示すArducam社のB0410である。
 	
-		\vspace{0.5\baselineskip}
-		\begin{figure}[h]
-			\centering
-			\includegraphics{SEN0581.jpg}
-			\caption{DFRobot社 SEN0581}
-			\label{sen0581}
-		\end{figure}
+		% \vspace{0.5\baselineskip}
+		% \begin{figure}[h]
+		% 	\centering
+		% 	\includegraphics{SEN0581.jpg}
+		% 	\caption{DFRobot社 SEN0581}
+		% 	\label{sen0581}
+		% \end{figure}
 
 		\vspace{0.5\baselineskip}
 		\begin{figure}[h]
@@ -21,22 +21,30 @@
 		\end{figure}
 
 			\subsection{デプスカメラの精度}
-				これらのデプスカメラの性能を\tabref{depth_spec}に示す。
+				このデプスカメラの性能を\tabref{depth_spec}に示す。
 				\vspace{0.5\baselineskip}
 				\begin{table}[h]
 					\centering
-					\caption{D435の精度}
-					\begin{tabular}{|c|r|r|}
-						\hline  型番  & B0410 & SEN0581 \\
-						\hline	解像度	& 240x180 & 100x100 \\
-						\hline	コマ数	& 30fps & 1～20fps\\
-						\hline	計測範囲	& 2mまたは4m & 0.15m～1.5m\\
-						\hline	画角	&  対角70° & 対角約92°\\
-						\hline	接続方法	& Raspberry Pi本体に接続 & UARTまたはUSBでパソコンに接続\\
+					\caption{デプスカメラの性能}
+					\begin{tabular}{|c|r|}
+						\hline  型番  & B0410\\
+						\hline	解像度	& 240x180\\
+						\hline	コマ数	& 30fps\\
+						\hline	計測範囲	& 2mまたは4m\\
+						\hline	画角	&  対角70°\\
+						\hline	接続方法	& Raspberry Pi本体に接続\\
 						\hline
 					\end{tabular}
 					\label{depth_spec}
 				\end{table}
 
-	\section{デプスカメラの配置と距離の検出方法}
+	\section{デプスカメラでの距離測定に使用するプログラム}
+		デプスカメラで距離を測定するにあたり、Arducam社のSDK\cite{4.1}からRaspberry Piで実行するPythonのプログラムをダウンロードし、使用した。
 		
+		
+
+
+	\section{デプスカメラの配置と距離の検出方法}
+		デプスカメラの配置方法は、防犯カメラのように店舗の壁面に設置する方法または超音波センサと同じように商品棚の奥側に設置する方法の2通りがある。前者の設置方法では1台のカメラで複数の商品の在庫を把握できるという利点があるがが、今回使用したデプスカメラは解像度が非常に低く、実用は厳しい。よって、本研究では後者の商品棚の奥側に設置する方法を採用した。
+
+	\section{デプスカメラでの在庫把握に関する課題}
