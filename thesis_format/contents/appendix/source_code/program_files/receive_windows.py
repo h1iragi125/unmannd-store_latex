@@ -1,7 +1,7 @@
 from datetime import datetime
 import serial
 
-ser = serial.Serial('COM3',9600)
+ser = serial.Serial('COM3',9600) #Windowsの場合
 
 while(1):
     dt_now = datetime.now()
