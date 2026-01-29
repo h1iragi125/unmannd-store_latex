@@ -14,17 +14,14 @@
 		}
 
 	\section{超音波センサのソースコード}
-		超音波センサでの在庫数把握において，マイコンボードで実行したプログラムが\ref{measurepy}である．
+		超音波センサでの在庫把握において、マイコンボードで実行したプログラムが\ref{measurepy}である。
 		\hypertarget{measurepy}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
-			\lstinputlisting[style=mypystyle,caption=findContours,label=measurepy]{measure.py}
+			\lstinputlisting[style=mypystyle,caption=マイコンボードで実行したプログラム,label=measurepy]{measure.py}
 		}
-		超音波センサ
-		\ref{machine}に機械学習に用いた一連のプログラムを示す．
+		超音波センサから得られた数値を元に、パソコンで在庫を評価するプログラムが\ref{machine}である。
 		\hypertarget{machine}{% ハイパーリンク先の設定\hyperlink{label}{}でここに飛ぶ(内部のlabelと合わせると便利かも)
-			\lstinputlisting[style=mypystyle,caption=MachineLearning,label=machine]{countpeople.py}
+			\lstinputlisting[style=mypystyle,caption=パソコンで実行したプログラム,label=machine]{receive_windows.py}
 		}
-
-	\section{デプスカメラのソースコード}
 
 
 	\section{LINE Botのソースコード}

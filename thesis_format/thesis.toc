@@ -45,7 +45,6 @@
 \contentsline {chapter}{\numberline {付録A}プログラム}{1}{section*.102}%
 \contentsline {section}{\numberline {A.1}画像処理のソースコード}{1}{section*.103}%
 \contentsline {section}{\numberline {A.2}超音波センサのソースコード}{5}{section*.104}%
-\contentsline {section}{\numberline {A.3}デプスカメラのソースコード}{8}{section*.105}%
-\contentsline {section}{\numberline {A.4}LINE Botのソースコード}{8}{section*.106}%
-\contentsline {chapter}{\numberline {付録B}原稿非掲載データ}{12}{section*.107}%
-\contentsline {section}{\numberline {B.1}実験結果}{12}{section*.108}%
+\contentsline {section}{\numberline {A.3}LINE Botのソースコード}{6}{section*.105}%
+\contentsline {chapter}{\numberline {付録B}原稿非掲載データ}{10}{section*.106}%
+\contentsline {section}{\numberline {B.1}実験結果}{10}{section*.107}%

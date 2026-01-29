@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.13)  29 JAN 2026 21:25
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.13)  29 JAN 2026 21:39
  restricted system commands enabled.
  file:line:error style messages enabled.
 **c:/Users/daiki/OneDrive/デスクトップ/unmannd-store_latex/thesis_format/thesis.tex
@@ -2104,7 +2104,7 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (load cache: extra_lmroman8-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
 (Font)              scaled to size 6.99997pt on input line 4.
-<./contents/chapter1/figures/図1.1.jpg, id=110, 238.8925pt x 351.3125pt>
+<./contents/chapter1/figures/図1.1.jpg, id=108, 238.8925pt x 351.3125pt>
 File: ./contents/chapter1/figures/図1.1.jpg Graphic file (type jpg)
 <use ./contents/chapter1/figures/図1.1.jpg>
 Package luatex.def Info: ./contents/chapter1/figures/図1.1.jpg  used on input line 11.
@@ -2116,7 +2116,7 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 
 ]
-<./contents/chapter1/figures/図1.2.png, id=125, 835.62187pt x 497.60907pt>
+<./contents/chapter1/figures/図1.2.png, id=123, 835.62187pt x 497.60907pt>
 File: ./contents/chapter1/figures/図1.2.png Graphic file (type png)
 <use ./contents/chapter1/figures/図1.2.png>
 Package luatex.def Info: ./contents/chapter1/figures/図1.2.png  used on input line 19.
@@ -2124,17 +2124,17 @@ Package luatex.def Info: ./contents/chapter1/figures/図1.2.png  used on input l
  [2<./contents/chapter1/figures/図1.1.jpg><./contents/chapter1/figures/図1.2.png>]) [3]
 \openout2 = ./contents/chapter2/image_processing.aux
  (./contents/chapter2/image_processing.tex
-<./contents/chapter2/figures/図2.1.png, id=143, 820.56563pt x 833.36343pt>
+<./contents/chapter2/figures/図2.1.png, id=141, 820.56563pt x 833.36343pt>
 File: ./contents/chapter2/figures/図2.1.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.1.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.1.png  used on input line 11.
 (luatex.def)             Requested size: 175.99762pt x 178.73729pt.
-<./contents/chapter2/figures/図2.2.jpg, id=146, 4015.0pt x 3011.25pt>
+<./contents/chapter2/figures/図2.2.jpg, id=144, 4015.0pt x 3011.25pt>
 File: ./contents/chapter2/figures/図2.2.jpg Graphic file (type jpg)
 <use ./contents/chapter2/figures/図2.2.jpg>
 Package luatex.def Info: ./contents/chapter2/figures/図2.2.jpg  used on input line 21.
 (luatex.def)             Requested size: 197.999pt x 148.45772pt.
-<./contents/chapter2/figures/図2.3.png, id=147, 505.13719pt x 262.73157pt>
+<./contents/chapter2/figures/図2.3.png, id=145, 505.13719pt x 262.73157pt>
 File: ./contents/chapter2/figures/図2.3.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.3.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.3.png  used on input line 29.
@@ -2145,7 +2145,7 @@ Package luatex.def Info: ./contents/chapter2/figures/図2.3.png  used on input l
 
 
 <./contents/chapter2/figures/図2.1.png>]
-<./contents/chapter2/figures/図2.4.png, id=162, 903.375pt x 481.8pt>
+<./contents/chapter2/figures/図2.4.png, id=160, 903.375pt x 481.8pt>
 File: ./contents/chapter2/figures/図2.4.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.4.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.4.png  used on input line 40.
@@ -2167,62 +2167,62 @@ LaTeX Font Info:    Font shape `JY3/gt/b/n' in size <12.97745> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 12.00002pt on input line 65.
-<./contents/chapter2/figures/図2.5.png, id=179, 755.82375pt x 264.23718pt>
+<./contents/chapter2/figures/図2.5.png, id=177, 755.82375pt x 264.23718pt>
 File: ./contents/chapter2/figures/図2.5.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.5.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.5.png  used on input line 70.
 (luatex.def)             Requested size: 352.00195pt x 123.05852pt.
-<./contents/chapter2/figures/図2.6.png, id=182, 893.58844pt x 287.57437pt>
+<./contents/chapter2/figures/図2.6.png, id=180, 893.58844pt x 287.57437pt>
 File: ./contents/chapter2/figures/図2.6.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.6.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.6.png  used on input line 80.
 (luatex.def)             Requested size: 307.99919pt x 99.12111pt.
  [6<./contents/chapter2/figures/図2.5.png>]
-<./contents/chapter2/figures/図2.7.png, id=205, 286.06876pt x 270.25969pt>
+<./contents/chapter2/figures/図2.7.png, id=203, 286.06876pt x 270.25969pt>
 File: ./contents/chapter2/figures/図2.7.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.7.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.7.png  used on input line 104.
 (luatex.def)             Requested size: 175.99762pt x 166.27263pt.
-<./contents/chapter2/figures/図2.8.png, id=206, 855.94781pt x 370.38374pt>
+<./contents/chapter2/figures/図2.8.png, id=204, 855.94781pt x 370.38374pt>
 File: ./contents/chapter2/figures/図2.8.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.8.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.8.png  used on input line 112.
 (luatex.def)             Requested size: 220.00038pt x 95.19543pt.
  [7<./contents/chapter2/figures/図2.6.png>]
-<./contents/chapter2/figures/図2.9.png, id=226, 489.32813pt x 402.75468pt>
+<./contents/chapter2/figures/図2.9.png, id=224, 489.32813pt x 402.75468pt>
 File: ./contents/chapter2/figures/図2.9.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.9.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.9.png  used on input line 128.
 (luatex.def)             Requested size: 197.999pt x 162.96725pt.
-<./contents/chapter2/figures/図2.10.png, id=227, 450.18187pt x 402.75468pt>
+<./contents/chapter2/figures/図2.10.png, id=225, 450.18187pt x 402.75468pt>
 File: ./contents/chapter2/figures/図2.10.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.10.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.10.png  used on input line 136.
 (luatex.def)             Requested size: 175.99762pt x 157.45471pt.
  [8<./contents/chapter2/figures/図2.7.png><./contents/chapter2/figures/図2.8.png><./contents/chapter2/figures/図2.9.png><./contents/chapter2/figures/図2.10.png>]
-<./contents/chapter2/figures/図2.11.png, id=246, 1018.55531pt x 264.23718pt>
+<./contents/chapter2/figures/図2.11.png, id=244, 1018.55531pt x 264.23718pt>
 File: ./contents/chapter2/figures/図2.11.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.11.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.11.png  used on input line 147.
 (luatex.def)             Requested size: 307.99919pt x 79.90074pt.
-<./contents/chapter2/figures/図2.12.png, id=249, 1166.85938pt x 349.305pt>
+<./contents/chapter2/figures/図2.12.png, id=247, 1166.85938pt x 349.305pt>
 File: ./contents/chapter2/figures/図2.12.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.12.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.12.png  used on input line 157.
 (luatex.def)             Requested size: 307.99919pt x 92.1976pt.
  [9<./contents/chapter2/figures/図2.11.png><./contents/chapter2/figures/図2.12.png>]
-<./contents/chapter2/figures/図2.13.png, id=270, 454.69875pt x 446.41782pt>
+<./contents/chapter2/figures/図2.13.png, id=268, 454.69875pt x 446.41782pt>
 File: ./contents/chapter2/figures/図2.13.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.13.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.13.png  used on input line 212.
 (luatex.def)             Requested size: 264.00314pt x 259.19498pt.
  [10<./contents/chapter2/figures/図2.13.png>]
-<./contents/chapter2/figures/図2.14.png, id=286, 965.85844pt x 660.96938pt>
+<./contents/chapter2/figures/図2.14.png, id=284, 965.85844pt x 660.96938pt>
 File: ./contents/chapter2/figures/図2.14.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.14.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.14.png  used on input line 228.
 (luatex.def)             Requested size: 352.00195pt x 240.88368pt.
-<./contents/chapter2/figures/図2.15.png, id=287, 855.94781pt x 642.14906pt>
+<./contents/chapter2/figures/図2.15.png, id=285, 855.94781pt x 642.14906pt>
 File: ./contents/chapter2/figures/図2.15.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.15.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.15.png  used on input line 236.
@@ -2231,86 +2231,86 @@ Package luatex.def Info: ./contents/chapter2/figures/図2.15.png  used on input 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./contents/chapter2/figures/図2.16.png, id=308, 577.40718pt x 674.52pt>
+<./contents/chapter2/figures/図2.16.png, id=306, 577.40718pt x 674.52pt>
 File: ./contents/chapter2/figures/図2.16.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.16.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.16.png  used on input line 269.
 (luatex.def)             Requested size: 264.00314pt x 308.42006pt.
 [12<./contents/chapter2/figures/図2.15.png>] [13<./contents/chapter2/figures/図2.16.png>]
-<./contents/chapter2/figures/図2.17.png, id=333, 454.69875pt x 334.24875pt>
+<./contents/chapter2/figures/図2.17.png, id=331, 454.69875pt x 334.24875pt>
 File: ./contents/chapter2/figures/図2.17.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.17.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.17.png  used on input line 282.
 (luatex.def)             Requested size: 264.00314pt x 194.0684pt.
-<./contents/chapter2/figures/図2.18.png, id=334, 1115.66812pt x 556.32843pt>
+<./contents/chapter2/figures/図2.18.png, id=332, 1115.66812pt x 556.32843pt>
 File: ./contents/chapter2/figures/図2.18.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.18.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.18.png  used on input line 290.
 (luatex.def)             Requested size: 307.99919pt x 153.58076pt.
-<./contents/chapter2/figures/図2.19.png, id=337, 1114.91531pt x 550.30594pt>
+<./contents/chapter2/figures/図2.19.png, id=335, 1114.91531pt x 550.30594pt>
 File: ./contents/chapter2/figures/図2.19.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.19.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.19.png  used on input line 300.
 (luatex.def)             Requested size: 307.99919pt x 152.01895pt.
  [14<./contents/chapter2/figures/図2.17.png><./contents/chapter2/figures/図2.18.png>]
-<./contents/chapter2/figures/図2.20.png, id=352, 596.2275pt x 359.09157pt>
+<./contents/chapter2/figures/図2.20.png, id=350, 596.2275pt x 359.09157pt>
 File: ./contents/chapter2/figures/図2.20.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.20.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.20.png  used on input line 311.
 (luatex.def)             Requested size: 307.99919pt x 185.50133pt.
  [15<./contents/chapter2/figures/図2.19.png><./contents/chapter2/figures/図2.20.png>]
-<./contents/chapter2/figures/図2.21.png, id=367, 612.03656pt x 563.85657pt>
+<./contents/chapter2/figures/図2.21.png, id=365, 612.03656pt x 563.85657pt>
 File: ./contents/chapter2/figures/図2.21.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.21.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.21.png  used on input line 337.
 (luatex.def)             Requested size: 264.00314pt x 243.21933pt.
-<./contents/chapter2/figures/図2.22.png, id=370, 779.16093pt x 384.6872pt>
+<./contents/chapter2/figures/図2.22.png, id=368, 779.16093pt x 384.6872pt>
 File: ./contents/chapter2/figures/図2.22.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.22.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.22.png  used on input line 347.
 (luatex.def)             Requested size: 307.99919pt x 152.06422pt.
  [16<./contents/chapter2/figures/図2.21.png>]
-<./contents/chapter2/figures/図2.23.png, id=383, 453.94594pt x 535.2497pt>
+<./contents/chapter2/figures/図2.23.png, id=381, 453.94594pt x 535.2497pt>
 File: ./contents/chapter2/figures/図2.23.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.23.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.23.png  used on input line 359.
 (luatex.def)             Requested size: 197.999pt x 233.46062pt.
-<./contents/chapter2/figures/図2.24.png, id=384, 454.69875pt x 540.51938pt>
+<./contents/chapter2/figures/図2.24.png, id=382, 454.69875pt x 540.51938pt>
 File: ./contents/chapter2/figures/図2.24.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.24.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.24.png  used on input line 367.
 (luatex.def)             Requested size: 197.999pt x 235.37146pt.
  [17<./contents/chapter2/figures/図2.22.png><./contents/chapter2/figures/図2.23.png><./contents/chapter2/figures/図2.24.png>]
-<./contents/chapter2/figures/図2.25.png, id=396, 803.25093pt x 467.49657pt>
+<./contents/chapter2/figures/図2.25.png, id=394, 803.25093pt x 467.49657pt>
 File: ./contents/chapter2/figures/図2.25.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.25.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.25.png  used on input line 381.
 (luatex.def)             Requested size: 307.99919pt x 179.26268pt.
-<./contents/chapter2/figures/図2.26.png, id=398, 796.47563pt x 458.46281pt>
+<./contents/chapter2/figures/図2.26.png, id=396, 796.47563pt x 458.46281pt>
 File: ./contents/chapter2/figures/図2.26.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.26.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.26.png  used on input line 395.
 (luatex.def)             Requested size: 307.99919pt x 177.28873pt.
  [18<./contents/chapter2/figures/図2.25.png>]
-<./contents/chapter2/figures/図2.27.png, id=414, 454.69875pt x 478.78876pt>
+<./contents/chapter2/figures/図2.27.png, id=412, 454.69875pt x 478.78876pt>
 File: ./contents/chapter2/figures/図2.27.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.27.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.27.png  used on input line 409.
 (luatex.def)             Requested size: 264.00314pt x 277.9899pt.
  [19<./contents/chapter2/figures/図2.26.png>]
-<./contents/chapter2/figures/図2.28.png, id=429, 639.89063pt x 733.99219pt>
+<./contents/chapter2/figures/図2.28.png, id=427, 639.89063pt x 733.99219pt>
 File: ./contents/chapter2/figures/図2.28.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.28.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.28.png  used on input line 422.
 (luatex.def)             Requested size: 264.00314pt x 302.83151pt.
  [20<./contents/chapter2/figures/図2.27.png>]
-<./contents/chapter2/figures/図2.29.png, id=443, 888.31876pt x 455.45157pt>
+<./contents/chapter2/figures/図2.29.png, id=441, 888.31876pt x 455.45157pt>
 File: ./contents/chapter2/figures/図2.29.png Graphic file (type png)
 <use ./contents/chapter2/figures/図2.29.png>
 Package luatex.def Info: ./contents/chapter2/figures/図2.29.png  used on input line 435.
 (luatex.def)             Requested size: 264.00314pt x 135.35779pt.
  [21<./contents/chapter2/figures/図2.28.png>]
-<./contents/chapter2/figures/図2.30.JPG, id=456, 4015.0pt x 3011.25pt>
+<./contents/chapter2/figures/図2.30.JPG, id=454, 4015.0pt x 3011.25pt>
 File: ./contents/chapter2/figures/図2.30.JPG Graphic file (type jpg)
 <use ./contents/chapter2/figures/図2.30.JPG>
 Package luatex.def Info: ./contents/chapter2/figures/図2.30.JPG  used on input line 445.
@@ -2318,7 +2318,7 @@ Package luatex.def Info: ./contents/chapter2/figures/図2.30.JPG  used on input 
 ) [22<./contents/chapter2/figures/図2.29.png><./contents/chapter2/figures/図2.30.JPG>]
 \openout2 = ./contents/chapter3/dis_sensor.aux
  (./contents/chapter3/dis_sensor.tex
-<./contents/chapter3/figures/hcsr04.jpg, id=466, 256.96pt x 192.72pt>
+<./contents/chapter3/figures/hcsr04.jpg, id=464, 256.96pt x 192.72pt>
 File: ./contents/chapter3/figures/hcsr04.jpg Graphic file (type jpg)
 <use ./contents/chapter3/figures/hcsr04.jpg>
 Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input line 16.
@@ -2329,12 +2329,12 @@ Package luatex.def Info: ./contents/chapter3/figures/hcsr04.jpg  used on input l
 
 
 <./contents/chapter3/figures/hcsr04.jpg>]
-<./contents/chapter3/figures/souchi1.jpg, id=479, 1011.78pt x 758.835pt>
+<./contents/chapter3/figures/souchi1.jpg, id=477, 1011.78pt x 758.835pt>
 File: ./contents/chapter3/figures/souchi1.jpg Graphic file (type jpg)
 <use ./contents/chapter3/figures/souchi1.jpg>
 Package luatex.def Info: ./contents/chapter3/figures/souchi1.jpg  used on input line 45.
 (luatex.def)             Requested size: 202.35242pt x 151.76431pt.
-<./contents/chapter3/figures/gazou1.jpg, id=481, 322.587pt x 270.027pt>
+<./contents/chapter3/figures/gazou1.jpg, id=479, 322.587pt x 270.027pt>
 File: ./contents/chapter3/figures/gazou1.jpg Graphic file (type jpg)
 <use ./contents/chapter3/figures/gazou1.jpg>
 Package luatex.def Info: ./contents/chapter3/figures/gazou1.jpg  used on input line 56.
@@ -2374,7 +2374,7 @@ Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/receive_windows.py)
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
-<./contents/chapter3/figures/facingstand.jpg, id=543, 351.3125pt x 351.3125pt>
+<./contents/chapter3/figures/facingstand.jpg, id=541, 351.3125pt x 351.3125pt>
 File: ./contents/chapter3/figures/facingstand.jpg Graphic file (type jpg)
 <use ./contents/chapter3/figures/facingstand.jpg>
 Package luatex.def Info: ./contents/chapter3/figures/facingstand.jpg  used on input line 85.
@@ -2386,12 +2386,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) [26] [27<./contents/chapter3/figures/facingstand.jpg>]
 \openout2 = ./contents/chapter4/depth_camera.aux
  (./contents/chapter4/depth_camera.tex
-<./contents/chapter4/figures/b0410.jpg, id=576, 149.358pt x 120.45pt>
+<./contents/chapter4/figures/b0410.jpg, id=574, 149.358pt x 120.45pt>
 File: ./contents/chapter4/figures/b0410.jpg Graphic file (type jpg)
 <use ./contents/chapter4/figures/b0410.jpg>
 Package luatex.def Info: ./contents/chapter4/figures/b0410.jpg  used on input line 11.
 (luatex.def)             Requested size: 149.35762pt x 120.44969pt.
-<./contents/chapter4/figures/raspi.jpg, id=577, 4047.12pt x 3035.34pt>
+<./contents/chapter4/figures/raspi.jpg, id=575, 4047.12pt x 3035.34pt>
 File: ./contents/chapter4/figures/raspi.jpg Graphic file (type jpg)
 <use ./contents/chapter4/figures/raspi.jpg>
 Package luatex.def Info: ./contents/chapter4/figures/raspi.jpg  used on input line 19.
@@ -2405,7 +2405,7 @@ Package luatex.def Info: ./contents/chapter4/figures/raspi.jpg  used on input li
 
 LaTeX Warning: Reference `fig:raspigazou' on page 1 undefined on input line 46.
 
-<./contents/chapter4/figures/20260129_20h18m47s_grim.png, id=590, 1284.8pt x 722.7pt>
+<./contents/chapter4/figures/20260129_20h18m47s_grim.png, id=588, 1284.8pt x 722.7pt>
 File: ./contents/chapter4/figures/20260129_20h18m47s_grim.png Graphic file (type png)
 <use ./contents/chapter4/figures/20260129_20h18m47s_grim.png>
 Package luatex.def Info: ./contents/chapter4/figures/20260129_20h18m47s_grim.png  used on input line 51.
@@ -2416,7 +2416,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [29]) [30<./contents/chapter4/figures/20260129_20h18m47s_grim.png>]
 \openout2 = ./contents/chapter5/line_bot.aux
  (./contents/chapter5/line_bot.tex
-<./contents/chapter5/figures/図5.1.png, id=613, 709.90219pt x 377.15906pt>
+<./contents/chapter5/figures/図5.1.png, id=611, 709.90219pt x 377.15906pt>
 File: ./contents/chapter5/figures/図5.1.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.1.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.1.png  used on input line 17.
@@ -2427,13 +2427,13 @@ Package luatex.def Info: ./contents/chapter5/figures/図5.1.png  used on input l
 
 
 ]
-<./contents/chapter5/figures/図5.2.png, id=631, 1096.095pt x 420.82219pt>
+<./contents/chapter5/figures/図5.2.png, id=629, 1096.095pt x 420.82219pt>
 File: ./contents/chapter5/figures/図5.2.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.2.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.2.png  used on input line 34.
 (luatex.def)             Requested size: 352.00195pt x 135.141pt.
  [32<./contents/chapter5/figures/図5.1.png>]
-<./contents/chapter5/figures/図5.3.png, id=647, 1226.33156pt x 590.95781pt>
+<./contents/chapter5/figures/図5.3.png, id=645, 1226.33156pt x 590.95781pt>
 File: ./contents/chapter5/figures/図5.3.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.3.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.3.png  used on input line 44.
@@ -2443,12 +2443,12 @@ Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'.
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
-<./contents/chapter5/figures/図5.4.png, id=667, 1008.76875pt x 120.45pt>
+<./contents/chapter5/figures/図5.4.png, id=665, 1008.76875pt x 120.45pt>
 File: ./contents/chapter5/figures/図5.4.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.4.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.4.png  used on input line 63.
 (luatex.def)             Requested size: 395.998pt x 47.28407pt.
-<./contents/chapter5/figures/図5.5.png, id=672, 1085.55562pt x 531.48563pt>
+<./contents/chapter5/figures/図5.5.png, id=670, 1085.55562pt x 531.48563pt>
 File: ./contents/chapter5/figures/図5.5.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.5.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.5.png  used on input line 73.
@@ -2473,7 +2473,7 @@ Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/status.py [37])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
-<./contents/chapter5/figures/図5.6.png, id=811, 1116.42094pt x 667.74469pt>
+<./contents/chapter5/figures/図5.6.png, id=809, 1116.42094pt x 667.74469pt>
 File: ./contents/chapter5/figures/図5.6.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.6.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.6.png  used on input line 102.
@@ -2484,52 +2484,52 @@ Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/LINE_receive.py [39<./contents/chapter5/figures/図5.6.png>])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
-<./contents/chapter5/figures/図5.7.png, id=873, 371.88937pt x 582.67688pt>
+<./contents/chapter5/figures/図5.7.png, id=871, 371.88937pt x 582.67688pt>
 File: ./contents/chapter5/figures/図5.7.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.7.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.7.png  used on input line 121.
 (luatex.def)             Requested size: 184.79951pt x 289.55064pt.
-<./contents/chapter5/figures/図5.8.png, id=874, 393.72093pt x 581.92406pt>
+<./contents/chapter5/figures/図5.8.png, id=872, 393.72093pt x 581.92406pt>
 File: ./contents/chapter5/figures/図5.8.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.8.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.8.png  used on input line 129.
 (luatex.def)             Requested size: 197.999pt x 292.63953pt.
  [40]
-<./contents/chapter5/figures/図5.9.png, id=898, 421.575pt x 680.5425pt>
+<./contents/chapter5/figures/図5.9.png, id=896, 421.575pt x 680.5425pt>
 File: ./contents/chapter5/figures/図5.9.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.9.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.9.png  used on input line 144.
 (luatex.def)             Requested size: 184.79951pt x 298.31813pt.
-<./contents/chapter5/figures/図5.10.png, id=899, 457.71pt x 668.4975pt>
+<./contents/chapter5/figures/図5.10.png, id=897, 457.71pt x 668.4975pt>
 File: ./contents/chapter5/figures/図5.10.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.10.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.10.png  used on input line 152.
 (luatex.def)             Requested size: 202.4033pt x 295.61887pt.
  [41<./contents/chapter5/figures/図5.7.png><./contents/chapter5/figures/図5.8.png>]
-<./contents/chapter5/figures/図5.11.png, id=912, 1344.52313pt x 935.74594pt>
+<./contents/chapter5/figures/図5.11.png, id=910, 1344.52313pt x 935.74594pt>
 File: ./contents/chapter5/figures/図5.11.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.11.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.11.png  used on input line 163.
 (luatex.def)             Requested size: 395.998pt x 275.60004pt.
  [42<./contents/chapter5/figures/図5.9.png><./contents/chapter5/figures/図5.10.png>]
-<./contents/chapter5/figures/図5.12.png, id=925, 1335.48938pt x 892.08281pt>
+<./contents/chapter5/figures/図5.12.png, id=923, 1335.48938pt x 892.08281pt>
 File: ./contents/chapter5/figures/図5.12.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.12.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.12.png  used on input line 173.
 (luatex.def)             Requested size: 395.998pt x 264.50974pt.
  [43<./contents/chapter5/figures/図5.11.png>]
-<./contents/chapter5/figures/図5.13.png, id=936, 1352.80406pt x 925.95938pt>
+<./contents/chapter5/figures/図5.13.png, id=934, 1352.80406pt x 925.95938pt>
 File: ./contents/chapter5/figures/図5.13.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.13.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.13.png  used on input line 181.
 (luatex.def)             Requested size: 395.998pt x 271.05043pt.
-<./contents/chapter5/figures/図5.14.png, id=937, 1217.2978pt x 616.55344pt>
+<./contents/chapter5/figures/図5.14.png, id=935, 1217.2978pt x 616.55344pt>
 File: ./contents/chapter5/figures/図5.14.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.14.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.14.png  used on input line 189.
 (luatex.def)             Requested size: 417.99939pt x 211.71393pt.
  [44<./contents/chapter5/figures/図5.12.png><./contents/chapter5/figures/図5.13.png>]
-<./contents/chapter5/figures/図5.15.png, id=948, 400.49625pt x 697.10437pt>
+<./contents/chapter5/figures/図5.15.png, id=946, 400.49625pt x 697.10437pt>
 File: ./contents/chapter5/figures/図5.15.png Graphic file (type png)
 <use ./contents/chapter5/figures/図5.15.png>
 Package luatex.def Info: ./contents/chapter5/figures/図5.15.png  used on input line 202.
@@ -2593,39 +2593,34 @@ Removing  `ltj.listings_unicode' from `process_input_buffer'.
 warning  (pdf backend): ignoring duplicate destination with the name 'machine'
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/countpeople.py
-warning  (pdf backend): ignoring duplicate destination with the name 'page.6'
-[6]
-warning  (pdf backend): ignoring duplicate destination with the name 'page.7'
-[7])
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/receive_windows.py)
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
 warning  (pdf backend): ignoring duplicate destination with the name 'machine'
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
-Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/between_pi_flask.py)
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/between_pi_flask.py
+warning  (pdf backend): ignoring duplicate destination with the name 'page.6'
+[6])
 Removing  `ltj.listings_unicode' from `process_input_buffer'.
 warning  (pdf backend): ignoring duplicate destination with the name 'machine'
-
-warning  (pdf backend): ignoring duplicate destination with the name 'page.8'
-[8]
 Removing  `ltj.process_input_buffer' from `process_input_buffer'.
 Inserting `ltj.listings_unicode' in `process_input_buffer'.
 Inserting `ltj.process_input_buffer' in `process_input_buffer'. (./contents/appendix/source_code/program_files/LINEBot.py
+warning  (pdf backend): ignoring duplicate destination with the name 'page.7'
+[7]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.8'
+[8])
+Removing  `ltj.listings_unicode' from `process_input_buffer'.)
 warning  (pdf backend): ignoring duplicate destination with the name 'page.9'
 [9]
-warning  (pdf backend): ignoring duplicate destination with the name 'page.10'
-[10])
-Removing  `ltj.listings_unicode' from `process_input_buffer'.)
-warning  (pdf backend): ignoring duplicate destination with the name 'page.11'
-[11]
 \openout2 = ./contents/appendix/data/raw_data.aux
  (./contents/appendix/data/raw_data.tex)
-warning  (pdf backend): ignoring duplicate destination with the name 'page.12'
+warning  (pdf backend): ignoring duplicate destination with the name 'page.10'
 (c:/texlive/2025/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 ) (c:/texlive/2025/texmf-dist/tex/generic/stringenc/se-utf32be.def
 File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
-) [12
+) [10
 
 
 
@@ -2650,19 +2645,19 @@ LaTeX Warning: There were multiply-defined labels.
 )
 
 Here is how much of LuaTeX's memory you used:
- 57885 strings out of 476081
- 1458297,2373549 words of node,token memory allocated
- 2560 words of node memory still in use:
-   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 709 attribute, 101 glue_spec, 76 attribute_list, 4 write, 14 user_defined, 22 pdf_action nodes
-   avail lists: 1:25,2:199836,3:1252,4:34871,5:24989,6:111,7:21073,8:241,9:47173,10:47,11:1541
- 77520 multiletter control sequences out of 65536+600000
+ 57713 strings out of 476081
+ 1458302,2373549 words of node,token memory allocated
+ 2620 words of node memory still in use:
+   11 hlist, 2 vlist, 6 rule, 2 glue, 4 kern, 2 glyph, 731 attribute, 101 glue_spec, 78 attribute_list, 4 write, 14 user_defined, 24 pdf_action nodes
+   avail lists: 1:25,2:190454,3:1254,4:31194,5:22188,6:108,7:19906,8:241,9:43094,10:47,11:1342
+ 77437 multiletter control sequences out of 65536+600000
  146 fonts using 137269487 bytes
- 119i,9n,141p,2094b,2104s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,9n,141p,2094b,2080s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmonolt10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono9-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf>{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmsans10-regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2025/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on thesis.pdf (67 pages, 28582629 bytes).
+Output written on thesis.pdf (65 pages, 28560816 bytes).
 
-PDF statistics: 1874 PDF objects out of 2073 (max. 8388607)
- 1409 compressed objects within 15 object streams
- 932 named destinations out of 1000 (max. 131072)
- 311 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1772 PDF objects out of 2073 (max. 8388607)
+ 1316 compressed objects within 14 object streams
+ 843 named destinations out of 1000 (max. 131072)
+ 303 words of extra memory for PDF output out of 10000 (max. 100000000)
 

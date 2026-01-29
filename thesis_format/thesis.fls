@@ -674,7 +674,7 @@ INPUT ./contents/appendix/source_code/print_sourcecode.tex
 INPUT ./contents/appendix/source_code/program_files/grayscale.py
 INPUT ./contents/appendix/source_code/program_files/colorful.py
 INPUT ./contents/appendix/source_code/program_files/measure.py
-INPUT ./contents/appendix/source_code/program_files/countpeople.py
+INPUT ./contents/appendix/source_code/program_files/receive_windows.py
 INPUT ./contents/appendix/source_code/program_files/between_pi_flask.py
 INPUT ./contents/appendix/source_code/program_files/LINEBot.py
 OUTPUT ./contents/appendix/data/raw_data.aux
