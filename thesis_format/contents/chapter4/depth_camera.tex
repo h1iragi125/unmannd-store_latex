@@ -6,20 +6,20 @@
 		使用したデプスカメラは\figref{b0410}に示すArducam社のB0410である。このデプスカメラは3D-ToF（Time of Flight）方式のカメラで、赤外光を用いて距離を計測している。赤外光を用いることで、光が入らない暗い場所でも使用できる。
 
 		\vspace{0.5\baselineskip}
-		\begin{figure}[h]
-			\centering
-			\includegraphics{b0410.jpg}
-			\caption{Arducam社 B0410}
-			\label{b0410}
-		\end{figure}
+			\begin{figure}[h]
+				\centering
+				\includegraphics{b0410.jpg}
+				\caption{Arducam社 B0410}
+				\label{b0410}
+			\end{figure}
 
 		\vspace{0.5\baselineskip}
-		\begin{figure}[h]
-			\centering
-			\includegraphics[scale=0.05]{raspi.jpg}
-			\caption{B0410を接続したRaspberry Pi}
-			\label{raspi}
-		\end{figure}
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.03]{raspi.jpg}
+				\caption{B0410を接続したRaspberry Pi}
+				\label{raspi}
+			\end{figure}
 
 			\subsection{デプスカメラの精度}
 				B0410の性能を\tabref{depth_spec}に示す。
@@ -43,12 +43,12 @@
 		デプスカメラの配置方法は、防犯カメラのように店舗の壁面に設置する方法または超音波センサと同じように商品棚の奥側に設置する方法の2通りがある。前者の設置方法では1台のカメラで複数の商品の在庫を把握できるという利点があるが、今回使用したデプスカメラは解像度が非常に低いうえ、商品棚全体を認識できるようにデプスカメラを設置することが困難であった。そのため、本研究では後者の商品棚の奥側に設置する方法を採用した。
 
 	\section{デプスカメラでの距離測定に使用するプログラム}
-		デプスカメラで距離を測定するにあたり、Arducam社のSDKをダウンロードし、Raspberry Piで実行するPythonのプログラム（preview\_depth.py）を使用した。このプログラムを実行すると、デプスカメラで撮影された映像が\figref{fig:raspigazou}のようにRaspberry Pi上に表示される。ここで、画像左側の「preview\_confidence」は赤外線画像で、画面右側の「preview」は、計測した距離を並べて画像にしたものをOpenCVのカラーマップであるcv2.COLORMAP\_RAINBOWで擬似的にカラー化した画像である。
+		デプスカメラで距離を測定するにあたり、Arducam社のSDKをダウンロードし、Raspberry Piで実行するPythonのプログラム（preview\_depth.py）を使用した。このプログラムを実行すると、デプスカメラで撮影された映像が\figref{raspigazou}のようにRaspberry Pi上に表示される。ここで、画像左側の「preview\_confidence」は赤外線画像で、画面右側の「preview」は、計測した距離を並べて画像にしたものをOpenCVのカラーマップであるcv2.COLORMAP\_RAINBOWで擬似的にカラー化した画像である。
 		
 		\vspace{0.5\baselineskip}
 				\begin{figure}[h]
 					\centering
-					\includegraphics[scale=0.3]{20260129_20h18m47s_grim.png}
+					\includegraphics[scale=0.2]{20260129_20h18m47s_grim.png}
 					\caption{Raspberry Piのスクリーンショット}
 					\label{raspigazou}
 				\end{figure}
